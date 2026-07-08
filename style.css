@@ -2,7 +2,7 @@
 	--primary: #1a1a2e;
 	--secondary: #16213e;
 	--accent: #0f3460;
-	--highlight: #e94560;
+	--highlight: #09a560;
 	--light: #f8f9fa;
 	--dark: #1a1a2e;
 	--font-main: "Poppins", sans-serif;
@@ -40,9 +40,15 @@ header {
 	font-family: var(--font-logo);
 	font-size: 1.8rem;
 	font-weight: 700;
-	letter-spacing: 0.3rem;
+	letter-spacing: -0.1rem;
 	color: var(--highlight);
-	text-shadow: 0 0 10px rgba(233, 69, 96, 0.7);
+	text-shadow: 0 0 10px rgba(42, 199, 96, 0.7);
+}
+
+a {
+	color: var(--light);
+	text-decoration: none;
+	transition: color 0.3s;
 }
 
 nav a {
