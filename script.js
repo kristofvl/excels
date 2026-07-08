@@ -76,10 +76,13 @@ class Signal {
 		ctx.strokeStyle = this.color;
 		ctx.lineWidth = 2;
 		// Very subtle glow
-		ctx.shadowBlur = 15;
-		ctx.shadowColor = this.color;
+		ctx.strokeStyle = this.color;
+		ctx.lineWidth = 4;
+		ctx.globalAlpha = 0.3;
 		ctx.stroke();
-		ctx.shadowBlur = 0;
+		ctx.globalAlpha = 1;
+		ctx.lineWidth = 2;
+		ctx.stroke();
 	}
 }
 
@@ -116,20 +119,18 @@ function animate() {
 	requestAnimationFrame(animate);
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	// Draw a subtle grid
-	ctx.strokeStyle = "rgba(15, 52, 96, 0.1)";
+	ctx.beginPath();
+	ctx.strokeStyle = "rgba(15, 52, 96, 0.3)";
 	ctx.lineWidth = 1;
 	for (let i = 0; i < canvas.width; i += 30) {
-		ctx.beginPath();
 		ctx.moveTo(i, 0);
 		ctx.lineTo(i, canvas.height);
-		ctx.stroke();
 	}
 	for (let i = 0; i < canvas.height; i += 30) {
-		ctx.beginPath();
 		ctx.moveTo(0, i);
 		ctx.lineTo(canvas.width, i);
-		ctx.stroke();
 	}
+	ctx.stroke();
 	// Update and draw all elements
 	particles.forEach((p) => p.update());
 	// Additive blending only for glowing signals
