@@ -147,6 +147,14 @@ nav a:hover::after {
 	font-family: var(--font-logo);
 }
 
+#apply {
+	text-align: center;
+}
+
+#apply p {
+	margin-bottom: 2rem;
+}
+
 .target-countries {
 	display: flex;
 	flex-wrap: wrap;
