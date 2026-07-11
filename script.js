@@ -2,6 +2,25 @@
 const canvas = document.getElementById("tech-canvas");
 const ctx = canvas.getContext("2d");
 
+const navToggle = document.querySelector(".nav-toggle");
+const primaryNavigation = document.getElementById("primary-navigation");
+
+function closeNavigation() {
+	primaryNavigation.classList.remove("is-open");
+	navToggle.setAttribute("aria-expanded", "false");
+	navToggle.querySelector(".sr-only").textContent = "Open navigation";
+}
+
+navToggle.addEventListener("click", () => {
+	const willOpen = navToggle.getAttribute("aria-expanded") !== "true";
+	primaryNavigation.classList.toggle("is-open", willOpen);
+	navToggle.setAttribute("aria-expanded", String(willOpen));
+	navToggle.querySelector(".sr-only").textContent = willOpen ? "Close navigation" : "Open navigation";
+});
+
+primaryNavigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNavigation));
+document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeNavigation(); });
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -139,7 +158,7 @@ function animate() {
 	ctx.globalCompositeOperation = "source-over";
 	binaryDrops.forEach((b) => b.update());
 }
-animate();
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) animate();
 // Resize canvas
 window.addEventListener("resize", () => {
 	canvas.width = window.innerWidth;

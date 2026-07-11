@@ -3,14 +3,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="EXCELS prepares international bachelor’s students for research-oriented master’s studies at the University of Siegen." />
+		<meta name="theme-color" content="#1a1a2e" />
 		<title>EXCELS | University of Siegen</title>
 		<link rel="stylesheet" href="style.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 	</head>
 	<body>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header>
-			<div class="logo">EXCELS</div>
-			<nav>
+			<a class="logo" href="#main-content" aria-label="EXCELS home">EXCELS</a>
+			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+				<span class="sr-only">Open navigation</span><span></span><span></span><span></span>
+			</button>
+			<nav id="primary-navigation" aria-label="Primary navigation">
 				<a href="#about">About</a>
 				<a href="#target">For You</a>
 				<a href="#program">Program</a>
@@ -19,9 +25,10 @@
 			</nav>
 		</header>
 
-		<section class="hero">
+		<main id="main-content">
+		<section class="hero" aria-labelledby="hero-title">
 			<div class="hero-content">
-				<h1>Join EXCELS</h1>
+				<h1 id="hero-title">Join EXCELS</h1>
 				<p>Master AI & Sensor Systems<br />at the <a href="https://www.uni-siegen.de/en">University of Siegen</a>, Germany</p>
 				<a href="#apply" class="cta-button">Application Information</a>
 			</div>
@@ -115,8 +122,10 @@
 			<p>Application dates, selection criteria, and the application process will be published here in due course.</p>
 		</section>
 
+		</main>
+
 		<footer>
-			<p>© 2026 University of Siegen | <a href="#">Privacy Policy</a></p>
+			<p>&copy; 2026 University of Siegen</p>
 		</footer>
 
 		<script src="script.js"></script>
