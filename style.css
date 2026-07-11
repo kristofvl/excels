@@ -158,6 +158,9 @@ nav a:hover::after {
 
 #apply p {
 	margin-bottom: 2rem;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .target-countries {
@@ -210,8 +213,51 @@ nav a:hover::after {
 	margin-bottom: 0rem;
 }
 
+#about > p {
+	max-width: 850px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#target > p {
+	max-width: 850px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#target .target-region {
+	margin-top: 0.75rem;
+	color: rgba(255, 255, 255, 0.78);
+}
+
 .faq-section {
 	max-width: 1000px;
+}
+
+.research-section {
+	max-width: 1000px;
+	text-align: center;
+}
+
+.research-section > p {
+	max-width: 800px;
+	margin: 0 auto;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.research-topics {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-top: 1.75rem;
+}
+
+.research-topics span {
+	padding: 0.55rem 1rem;
+	border: 1px solid rgba(9, 165, 96, 0.55);
+	border-radius: 999px;
+	background: rgba(9, 165, 96, 0.08);
 }
 
 .faq-list {
@@ -283,6 +329,7 @@ nav a:hover::after {
 	nav a {
 		margin-left: 0;
 	}
+
 }
 
 footer {
