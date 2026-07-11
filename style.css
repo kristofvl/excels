@@ -23,6 +23,11 @@ body {
 	overflow-x: hidden;
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 5rem;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -203,6 +208,81 @@ nav a:hover::after {
 .step-icon {
 	font-size: 7.5rem;
 	margin-bottom: 0rem;
+}
+
+.faq-section {
+	max-width: 1000px;
+}
+
+.faq-list {
+	border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.faq-item {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.faq-item summary {
+	position: relative;
+	padding: 1.5rem 3.5rem 1.5rem 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	cursor: pointer;
+	list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+	display: none;
+}
+
+.faq-item summary::after {
+	content: "";
+	position: absolute;
+	right: 0.35rem;
+	top: 50%;
+	width: 0.65rem;
+	height: 0.65rem;
+	border-right: 2px solid var(--highlight);
+	border-bottom: 2px solid var(--highlight);
+	transform: translateY(-70%) rotate(45deg);
+	transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+	transform: translateY(-25%) rotate(225deg);
+}
+
+.faq-item summary:hover,
+.faq-item summary:focus-visible {
+	color: var(--highlight);
+}
+
+.faq-item summary:focus-visible {
+	outline: 2px solid var(--highlight);
+	outline-offset: 5px;
+}
+
+.faq-answer {
+	max-width: 850px;
+	padding: 0 3.5rem 1.5rem 0;
+	color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 640px) {
+	header {
+		align-items: flex-start;
+	}
+
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: 0.35rem 1rem;
+	}
+
+	nav a {
+		margin-left: 0;
+	}
 }
 
 footer {
