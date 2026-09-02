@@ -728,7 +728,7 @@ p { margin: 0; }
 }
 
 .section.pathway-section h2 {
-	max-width: 22ch;
+	max-width: 100%;
 	margin: 0;
 	font-family: var(--font-university);
 	font-size: clamp(2.25rem, 4vw, 3.35rem);
@@ -1346,7 +1346,7 @@ p { margin: 0; }
 }
 
 .section.support-life-section h2 {
-	max-width: 21ch;
+	max-width: 100%;
 	margin: 0;
 	font-family: var(--font-university);
 	font-size: clamp(2.25rem, 4vw, 3.35rem);
