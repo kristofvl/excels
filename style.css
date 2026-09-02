@@ -1734,6 +1734,21 @@ p { margin: 0; }
 
 .application-checklist a:hover { color: #005b8f; }
 
+.application-portal-placeholder {
+	display: block;
+	width: fit-content;
+	margin-top: 0.9rem;
+	padding: 0.55rem 0.75rem;
+	border: 1px dashed #8aa9bb;
+	background: #edf4f7;
+	font-size: 0.76rem;
+	font-weight: 700;
+	line-height: 1.35;
+	letter-spacing: 0.055em;
+	text-transform: uppercase;
+	color: var(--uni-dark-blue);
+}
+
 .application-materials { margin-top: clamp(4rem, 8vw, 6.5rem); }
 .application-materials-list .application-step-number { background: var(--faculty-purple); }
 
