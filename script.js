@@ -18,7 +18,19 @@ if (navToggle && primaryNavigation) {
 	});
 
 	primaryNavigation.querySelectorAll("a").forEach((link) => {
-		link.addEventListener("click", closeNavigation);
+		link.addEventListener("click", (event) => {
+			const targetSelector = link.getAttribute("href");
+			const target = targetSelector?.startsWith("#") ? document.querySelector(targetSelector) : null;
+			const navigationWasOpen = primaryNavigation.classList.contains("is-open");
+
+			closeNavigation();
+
+			if (navigationWasOpen && target) {
+				event.preventDefault();
+				window.history.pushState(null, "", targetSelector);
+				window.requestAnimationFrame(() => target.scrollIntoView());
+			}
+		});
 	});
 
 	document.addEventListener("keydown", (event) => {
