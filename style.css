@@ -724,7 +724,7 @@ p { margin: 0; }
 }
 
 .pathway-heading {
-	max-width: 59rem;
+	max-width: 100%;
 }
 
 .section.pathway-section h2 {
@@ -744,7 +744,7 @@ p { margin: 0; }
 }
 
 .pathway-heading .section-lead {
-	max-width: 55rem;
+	max-width: 100%;
 }
 
 .pathway-stages {
@@ -975,7 +975,7 @@ p { margin: 0; }
 }
 
 .study-research-heading {
-	max-width: 61rem;
+	max-width: 100%;
 }
 
 .section.study-research-section h2 {
@@ -995,7 +995,7 @@ p { margin: 0; }
 }
 
 .study-research-heading .section-lead {
-	max-width: 58rem;
+	max-width: 100%;
 }
 
 .degree-clarification {
@@ -1342,7 +1342,7 @@ p { margin: 0; }
 }
 
 .support-life-heading {
-	max-width: 63rem;
+	max-width: 100%;
 }
 
 .section.support-life-section h2 {
@@ -1362,7 +1362,7 @@ p { margin: 0; }
 }
 
 .support-life-heading .section-lead {
-	max-width: 59rem;
+	max-width: 100%;
 }
 
 .support-feature {
