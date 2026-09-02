@@ -267,6 +267,17 @@ p { margin: 0; }
 	color: var(--uni-text);
 }
 
+.hero .hero-lead a {
+	font-weight: 700;
+	color: var(--uni-dark-blue);
+	text-decoration: underline;
+	text-decoration-color: var(--uni-light-blue);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.18em;
+}
+
+.hero .hero-lead a:hover { color: #005b8f; }
+
 .hero-actions {
 	display: flex;
 	flex-wrap: wrap;
