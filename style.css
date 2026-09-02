@@ -307,11 +307,12 @@ p { margin: 0; }
 	background: #ffffff;
 	font: inherit;
 	font-size: 0.95rem;
-	font-weight: 700;
+	font-weight: 800;
 	line-height: 1.2;
 	color: var(--uni-dark-blue);
 	text-align: center;
 	text-decoration: none;
+	white-space: nowrap;
 	transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
