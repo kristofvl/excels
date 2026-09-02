@@ -164,7 +164,7 @@ González-Palacio et al. - 2023 - Machine-Learning-Based Combined Path Loss and 
 # Data files
 **/Results/
 CV_Results
-FM_Results 
+FM_Results
 Figures
 Residuals
 Data_Files
@@ -173,11 +173,11 @@ FL
 SVR_Search_Run
 
 
-KNN 
-RNN 
-SVR 
-XGBoost 
-ANN 
+KNN
+RNN
+SVR
+XGBoost
+ANN
 LightGBM
 RFs
 Archive
