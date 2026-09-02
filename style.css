@@ -1909,26 +1909,57 @@ p { margin: 0; }
 	color: var(--uni-dark-blue);
 }
 
+.application-invitation {
+	padding: clamp(3.5rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
+	background: #ffffff;
+	font-family: var(--font-university);
+	color: var(--uni-text);
+}
+
 .application-final-cta {
+	position: relative;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
-	align-items: end;
+	align-items: center;
 	gap: clamp(2rem, 5vw, 5rem);
-	margin-top: clamp(3rem, 6vw, 5rem);
+	overflow: hidden;
 	padding: clamp(2rem, 4vw, 3.25rem);
 	border-left: 0.4rem solid var(--uni-light-blue);
 	background: var(--uni-dark-blue);
 	color: #ffffff;
 }
 
+.application-final-cta::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	width: 22%;
+	background: var(--faculty-purple);
+	clip-path: polygon(62% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.application-final-cta > * {
+	position: relative;
+	z-index: 1;
+}
+
 .application-final-cta .panel-kicker { color: #8fd8f0; }
 
-.application-final-cta h3 {
+.application-final-cta h2 {
 	margin: 0;
 	font-size: clamp(1.65rem, 3vw, 2.3rem);
 	line-height: 1.1;
 	letter-spacing: -0.025em;
 	color: #ffffff;
+}
+
+.application-final-actions {
+	display: grid;
+	gap: 0.85rem;
+	min-width: 15rem;
 }
 
 .application-final-cta .application-button {
@@ -1944,6 +1975,35 @@ p { margin: 0; }
 .application-action-final .application-deadline { color: #ffffff; }
 .application-action-final .application-deadline-label { color: #b9dce8; }
 .application-action-final .application-deadline svg { stroke: #8fd8f0; }
+
+.application-contact-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 3rem;
+	padding: 0.65rem 1rem;
+	border: 1px solid rgba(255, 255, 255, 0.65);
+	font-size: 0.93rem;
+	font-weight: 700;
+	line-height: 1.25;
+	color: #ffffff;
+	transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.application-contact-link:hover {
+	border-color: #ffffff;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.application-contact-link svg {
+	flex: none;
+	fill: none;
+	stroke: #8fd8f0;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
 
 .process-date-note span { font-size: 0.94rem; line-height: 1.55; color: var(--uni-text); }
 
@@ -2530,7 +2590,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.progression-note,
 	.process-date-note { grid-template-columns: 1fr; gap: 0.35rem; }
 	.process-step { padding: 1.25rem; }
+	.application-invitation { padding: 3rem 1rem; }
 	.application-final-cta { grid-template-columns: 1fr; align-items: start; }
+	.application-final-actions { width: 100%; }
 	.application-final-cta .application-button { width: 100%; }
 	.masters-application-links a { align-items: flex-start; }
 	.faq-item summary { padding-right: 2.75rem; }
