@@ -293,6 +293,66 @@ p { margin: 0; }
 .hero-button-secondary { background: transparent; color: var(--uni-dark-blue); }
 .hero-button-secondary:hover { background: var(--uni-pale-blue); }
 
+.application-action {
+	display: grid;
+	justify-items: start;
+	gap: 0.35rem;
+}
+
+.application-action-hero {
+	width: 7.75rem;
+}
+
+.application-action-hero .application-button {
+	width: 100%;
+}
+
+.application-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 3.25rem;
+	padding: 0.8rem 1.25rem;
+	border: 2px solid var(--faculty-purple);
+	background: var(--faculty-purple);
+	font: inherit;
+	font-size: 0.95rem;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.application-button:not(:disabled):hover {
+	border-color: #51478a;
+	background: #51478a;
+	transform: translateY(-2px);
+}
+
+.application-button:disabled {
+	border-color: #536c7b;
+	background: #536c7b;
+	color: #ffffff;
+	cursor: not-allowed;
+	opacity: 1;
+}
+
+.application-action-note {
+	font-size: 0.69rem;
+	font-weight: 700;
+	line-height: 1.35;
+	letter-spacing: 0.045em;
+	text-transform: uppercase;
+	color: var(--uni-grey);
+}
+
+.application-action-hero .application-action-note {
+	max-width: 100%;
+	text-align: center;
+}
+
 .hero-media { position: relative; align-self: start; margin: 4.75rem 0 0; }
 
 .hero-media::before {
@@ -1734,21 +1794,6 @@ p { margin: 0; }
 
 .application-checklist a:hover { color: #005b8f; }
 
-.application-portal-placeholder {
-	display: block;
-	width: fit-content;
-	margin-top: 0.9rem;
-	padding: 0.55rem 0.75rem;
-	border: 1px dashed #8aa9bb;
-	background: #edf4f7;
-	font-size: 0.76rem;
-	font-weight: 700;
-	line-height: 1.35;
-	letter-spacing: 0.055em;
-	text-transform: uppercase;
-	color: var(--uni-dark-blue);
-}
-
 .application-materials { margin-top: clamp(4rem, 8vw, 6.5rem); }
 .application-materials-list .application-step-number { background: var(--faculty-purple); }
 
@@ -1918,6 +1963,47 @@ p { margin: 0; }
 	letter-spacing: 0.07em;
 	text-transform: uppercase;
 	color: var(--uni-dark-blue);
+}
+
+.application-final-cta {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: end;
+	gap: clamp(2rem, 5vw, 5rem);
+	margin-top: clamp(3rem, 6vw, 5rem);
+	padding: clamp(2rem, 4vw, 3.25rem);
+	border-left: 0.4rem solid var(--uni-light-blue);
+	background: var(--uni-dark-blue);
+	color: #ffffff;
+}
+
+.application-final-cta .panel-kicker { color: #8fd8f0; }
+
+.application-final-cta h3 {
+	margin: 0;
+	font-size: clamp(1.65rem, 3vw, 2.3rem);
+	line-height: 1.1;
+	letter-spacing: -0.025em;
+	color: #ffffff;
+}
+
+.application-final-cta div > p:last-child {
+	margin-top: 0.85rem;
+	font-size: 0.96rem;
+	line-height: 1.6;
+	color: #dce8ef;
+}
+
+.application-final-cta .application-button {
+	min-width: 10rem;
+	border-color: #8fd8f0;
+	background: #ffffff;
+	color: var(--uni-dark-blue);
+}
+
+.application-final-cta .application-button:not(:disabled):hover {
+	border-color: #8fd8f0;
+	background: #e5f7fc;
 }
 
 .process-date-note span { font-size: 0.94rem; line-height: 1.55; color: var(--uni-text); }
@@ -2470,6 +2556,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.hero .hero-lead { font-size: 1.03rem; }
 	.hero-actions { display: grid; }
 	.hero-button { width: 100%; }
+	.application-action-hero { width: 100%; }
+	.application-action-hero .application-action-note { max-width: none; text-align: left; }
 	.hero-image-frame { aspect-ratio: 4 / 3; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%); }
 	.hero-media::before { top: -0.8rem; right: -0.6rem; }
 	.section.overview-section,
@@ -2514,6 +2602,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.progression-note,
 	.process-date-note { grid-template-columns: 1fr; gap: 0.35rem; }
 	.process-step { padding: 1.25rem; }
+	.application-final-cta { grid-template-columns: 1fr; align-items: start; }
+	.application-final-cta .application-button { width: 100%; }
 	.masters-application-links a { align-items: flex-start; }
 	.faq-item summary { padding-right: 2.75rem; }
 	.faq-answer { padding-right: 2.75rem; }
