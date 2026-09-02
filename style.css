@@ -289,45 +289,55 @@ p { margin: 0; }
 }
 
 .application-action-hero {
-	width: 12rem;
+	width: 13rem;
 }
 
 .application-action-hero .application-button {
 	width: 100%;
-	padding-inline: 0.65rem;
 }
 
 .application-button {
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
-	min-height: 3.25rem;
-	padding: 0.8rem 1.25rem;
-	border: 2px solid var(--faculty-purple);
-	background: var(--faculty-purple);
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 3rem;
+	padding: 0.65rem 1rem;
+	border: 2px solid var(--uni-dark-blue);
+	background: #ffffff;
 	font: inherit;
 	font-size: 0.95rem;
 	font-weight: 700;
 	line-height: 1.2;
-	color: #ffffff;
+	color: var(--uni-dark-blue);
 	text-align: center;
 	text-decoration: none;
 	transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .application-button:not(:disabled):hover {
-	border-color: #51478a;
-	background: #51478a;
+	border-color: var(--uni-dark-blue);
+	background: var(--uni-pale-blue);
 	transform: translateY(-2px);
 }
 
 .application-button:disabled {
-	border-color: #536c7b;
-	background: #536c7b;
-	color: #ffffff;
+	border-color: var(--uni-dark-blue);
+	background: #ffffff;
+	color: var(--uni-dark-blue);
 	cursor: not-allowed;
 	opacity: 1;
 }
+
+.application-button-arrow {
+	flex: none;
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 1;
+	transition: transform 0.2s ease;
+}
+
+.application-button:not(:disabled):hover .application-button-arrow { transform: translateX(0.2rem); }
 
 .application-deadline {
 	display: grid;
@@ -2007,14 +2017,6 @@ p { margin: 0; }
 .application-final-cta .application-button {
 	width: 100%;
 	min-width: 10rem;
-	border-color: #8fd8f0;
-	background: #ffffff;
-	color: var(--uni-dark-blue);
-}
-
-.application-final-cta .application-button:disabled {
-	background: #536c7b;
-	color: #ffffff;
 }
 
 .application-action-final {
@@ -2025,11 +2027,6 @@ p { margin: 0; }
 .application-action-final .application-deadline { color: #ffffff; }
 .application-action-final .application-deadline-label { color: #b9dce8; }
 .application-action-final .application-deadline svg { stroke: #8fd8f0; }
-
-.application-final-cta .application-button:not(:disabled):hover {
-	border-color: #8fd8f0;
-	background: #e5f7fc;
-}
 
 .process-date-note span { font-size: 0.94rem; line-height: 1.55; color: var(--uni-text); }
 
