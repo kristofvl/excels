@@ -2178,28 +2178,36 @@ p { margin: 0; }
 
 .funding-organisations {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-items: stretch;
 	gap: 1px;
 	margin-top: 1.25rem;
 	padding: 1px;
 	background: #cad8e0;
 }
 
-.funding-organisations a {
+.funding-logo {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 1.4rem;
+	align-items: center;
+	justify-content: center;
 	min-width: 0;
-	min-height: 8.5rem;
-	padding: 1.25rem;
-	background: #f7fafc;
+	min-height: 14rem;
+	padding: clamp(1.5rem, 3vw, 2.25rem);
+	background: #ffffff;
 	transition: background 0.2s ease;
 }
 
-.funding-organisations a:hover { background: var(--uni-pale-blue); }
-.funding-organisations span { font-size: 0.68rem; font-weight: 700; line-height: 1.35; letter-spacing: 0.07em; text-transform: uppercase; color: var(--uni-grey); }
-.funding-organisations strong { font-size: 1rem; line-height: 1.35; color: var(--uni-dark-blue); }
+.funding-logo:hover { background: #f7fafc; }
+
+.funding-logo img {
+	display: block;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+}
+
+.funding-logo-bmftr img { max-width: min(100%, 22rem); }
+.funding-logo-daad img { max-width: min(100%, 24rem); }
 
 .site-footer {
 	padding: 0;
