@@ -1634,7 +1634,7 @@ p { margin: 0; }
 .section.application-section::before,
 .section.faq-section::before { display: none; }
 
-.application-heading { max-width: 62rem; }
+.application-heading { max-width: 100%; }
 
 .section.application-section h2,
 .section.faq-section h2 {
@@ -1651,6 +1651,9 @@ p { margin: 0; }
 
 .section.application-section h2::after,
 .section.faq-section h2::after { display: none; }
+
+.section.application-section h2,
+.application-heading .section-lead { max-width: 100%; }
 
 .application-checklist-block { margin-top: clamp(3rem, 6vw, 5rem); }
 
