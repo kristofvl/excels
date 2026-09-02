@@ -300,11 +300,12 @@ p { margin: 0; }
 }
 
 .application-action-hero {
-	width: 7.75rem;
+	width: 10.75rem;
 }
 
 .application-action-hero .application-button {
 	width: 100%;
+	padding-inline: 0.65rem;
 }
 
 .application-button {
@@ -1995,10 +1996,26 @@ p { margin: 0; }
 }
 
 .application-final-cta .application-button {
+	width: 100%;
 	min-width: 10rem;
 	border-color: #8fd8f0;
 	background: #ffffff;
 	color: var(--uni-dark-blue);
+}
+
+.application-final-cta .application-button:disabled {
+	background: #536c7b;
+	color: #ffffff;
+}
+
+.application-action-final {
+	justify-items: stretch;
+	min-width: 12rem;
+	text-align: center;
+}
+
+.application-action-final .application-action-note {
+	color: #dce8ef;
 }
 
 .application-final-cta .application-button:not(:disabled):hover {
