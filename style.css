@@ -1851,6 +1851,71 @@ p { margin: 0; }
 .faq-heading { position: sticky; top: 8rem; }
 .faq-heading .section-lead { font-size: 1rem; }
 
+.faq-topic-nav {
+	display: grid;
+	margin-top: 2rem;
+	border-top: 1px solid #cad8e0;
+}
+
+.faq-topic-nav a {
+	display: grid;
+	grid-template-columns: 2rem minmax(0, 1fr);
+	align-items: center;
+	gap: 0.65rem;
+	min-height: 3rem;
+	border-bottom: 1px solid #cad8e0;
+	font-size: 0.86rem;
+	font-weight: 700;
+	line-height: 1.35;
+	color: var(--uni-dark-blue);
+	text-decoration: none;
+	transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.faq-topic-nav a:hover {
+	padding-left: 0.2rem;
+	color: #005b8f;
+}
+
+.faq-topic-nav span {
+	font-size: 0.7rem;
+	letter-spacing: 0.08em;
+	color: var(--faculty-purple);
+}
+
+.faq-groups {
+	display: grid;
+	gap: clamp(3.25rem, 6vw, 5.25rem);
+}
+
+.faq-group { scroll-margin-top: 8rem; }
+
+.faq-group-header {
+	display: grid;
+	gap: 0.4rem;
+	margin-bottom: 1.25rem;
+}
+
+.faq-group-header p {
+	margin: 0;
+	font-size: 0.73rem;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--faculty-purple);
+}
+
+.faq-group-header h3 {
+	margin: 0;
+	font-family: var(--font-university);
+	font-size: clamp(1.45rem, 2.3vw, 1.9rem);
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	color: var(--uni-dark-blue);
+}
+
 .faq-list {
 	margin: 0;
 	border-top: 1px solid #cad8e0;
@@ -1897,6 +1962,17 @@ p { margin: 0; }
 	line-height: 1.65;
 	color: var(--uni-text);
 }
+
+.faq-answer p { margin: 0; }
+.faq-answer p + p { margin-top: 0.85rem; }
+
+.faq-answer a {
+	font-weight: 700;
+	color: #005b8f;
+	text-underline-offset: 0.2em;
+}
+
+.faq-answer a:hover { color: var(--faculty-purple); }
 
 .section.contact-section,
 .section.funding-section {
