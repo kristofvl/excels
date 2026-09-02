@@ -1668,6 +1668,9 @@ p { margin: 0; }
 
 .application-checklist a:hover { color: #005b8f; }
 
+.application-materials { margin-top: clamp(4rem, 8vw, 6.5rem); }
+.application-materials-list .application-step-number { background: var(--faculty-purple); }
+
 .application-assessment { margin-top: clamp(4rem, 8vw, 6.5rem); }
 
 .assessment-grid {
