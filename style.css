@@ -15,8 +15,8 @@
 	--uni-text: #3c444c;
 	--faculty-purple: #5f5b93;
 	--font-university: Calibri, Arial, system-ui, -apple-system, "Segoe UI", sans-serif;
-	--font-main: "Poppins", sans-serif;
-	--font-display: "Orbitron", sans-serif;
+	--font-main: Calibri, Arial, system-ui, -apple-system, "Segoe UI", sans-serif;
+	--font-display: Calibri, Arial, system-ui, -apple-system, "Segoe UI", sans-serif;
 	--content: 1180px;
 	--radius: 18px;
 }
@@ -1898,9 +1898,297 @@ p { margin: 0; }
 	color: var(--uni-text);
 }
 
-footer { padding: 2rem 5%; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 0.88rem; }
-footer a { color: var(--green); }
-footer a:hover { text-decoration: underline; }
+.section.contact-section,
+.section.funding-section {
+	max-width: none;
+	margin: 0;
+	padding: clamp(4.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
+	font-family: var(--font-university);
+}
+
+.section.contact-section::before,
+.section.funding-section::before { display: none; }
+
+.contact-section {
+	position: relative;
+	background: var(--uni-dark-blue);
+	color: #ffffff;
+}
+
+.contact-section::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: min(24rem, 32vw);
+	height: 0.42rem;
+	background: var(--faculty-purple);
+}
+
+.contact-layout {
+	display: grid;
+	grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
+	align-items: start;
+	gap: clamp(3rem, 7vw, 7rem);
+}
+
+.contact-heading .section-eyebrow { color: #a9e4f7; }
+.contact-heading .section-eyebrow::before { background: #8fd8f0; }
+
+.section.contact-section h2,
+.section.funding-section h2 {
+	max-width: 18ch;
+	margin: 0;
+	font-family: var(--font-university);
+	font-size: clamp(2.25rem, 4vw, 3.35rem);
+	font-weight: 700;
+	line-height: 1.05;
+	letter-spacing: -0.035em;
+	text-align: left;
+}
+
+.section.contact-section h2 { color: #ffffff; }
+.section.funding-section h2 { color: var(--uni-dark-blue); }
+.section.contact-section h2::after,
+.section.funding-section h2::after { display: none; }
+
+.contact-heading .section-lead {
+	margin-top: 1.35rem;
+	font-size: 1rem;
+	line-height: 1.65;
+	color: #dce8ef;
+}
+
+.contact-directory {
+	display: grid;
+	grid-template-columns: minmax(0, 1.08fr) minmax(15rem, 0.92fr);
+	gap: 1.25rem;
+	min-width: 0;
+}
+
+.project-contact-card,
+.contact-routes {
+	min-width: 0;
+	padding: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.project-contact-card {
+	background: #ffffff;
+	color: var(--uni-text);
+}
+
+.contact-routes {
+	background: #06466f;
+	border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.contact-role,
+.footer-heading {
+	font-size: 0.72rem;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+}
+
+.project-contact-card .contact-role { color: var(--uni-grey); }
+.contact-routes .contact-role { margin-bottom: 1.15rem; color: #a9e4f7; }
+
+.project-contact-card h3 {
+	margin: 0.55rem 0 0;
+	font-size: clamp(1.45rem, 2.3vw, 1.9rem);
+	line-height: 1.12;
+	letter-spacing: -0.025em;
+	color: var(--uni-dark-blue);
+}
+
+.project-contact-card > p:not(.contact-role) {
+	margin-top: 0.8rem;
+	font-size: 0.93rem;
+	line-height: 1.55;
+	color: var(--uni-text);
+}
+
+.project-contact-card address {
+	display: grid;
+	gap: 0.3rem;
+	margin-top: 1.35rem;
+	font-size: 0.94rem;
+	font-style: normal;
+	line-height: 1.55;
+	color: var(--uni-text);
+}
+
+.project-contact-card address a {
+	display: inline-flex;
+	align-items: center;
+	width: fit-content;
+	min-height: 2.75rem;
+	font-weight: 700;
+	color: var(--uni-dark-blue);
+	text-decoration: underline;
+	text-decoration-color: var(--uni-light-blue);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.2rem;
+}
+
+.project-contact-card address span { margin-top: 0.55rem; }
+
+.contact-profile-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 3rem;
+	margin-top: 1.45rem;
+	padding-top: 1rem;
+	border-top: 1px solid #cad8e0;
+	font-size: 0.88rem;
+	font-weight: 700;
+	line-height: 1.4;
+	color: var(--uni-dark-blue);
+}
+
+.contact-profile-link span { flex: none; color: var(--uni-light-blue); }
+
+.contact-routes > a {
+	display: grid;
+	gap: 0.35rem;
+	min-height: 6.25rem;
+	padding: 1.15rem 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.24);
+	color: #ffffff;
+}
+
+.contact-routes > a:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.24); }
+.contact-routes > a > span { font-size: 0.78rem; line-height: 1.4; color: #bcd3df; }
+.contact-routes strong { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.95rem; line-height: 1.4; }
+.contact-routes strong span { flex: none; color: #8fd8f0; }
+.contact-routes > a:hover strong,
+.contact-profile-link:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.2rem; }
+
+.funding-section {
+	background: #ffffff;
+	color: var(--uni-text);
+}
+
+.funding-layout {
+	display: grid;
+	grid-template-columns: minmax(18rem, 0.65fr) minmax(0, 1.35fr);
+	align-items: start;
+	gap: clamp(3rem, 7vw, 7rem);
+}
+
+.funding-content { min-width: 0; }
+
+.funding-lead {
+	font-size: clamp(1.15rem, 2vw, 1.4rem);
+	font-weight: 700;
+	line-height: 1.5;
+	color: var(--uni-dark-blue);
+}
+
+.funding-acknowledgement {
+	margin-top: 1.25rem;
+	padding: 1.25rem 1.4rem;
+	border-left: 0.3rem solid var(--faculty-purple);
+	background: var(--uni-pale-blue);
+	font-size: 0.96rem;
+	line-height: 1.65;
+	color: var(--uni-text);
+}
+
+.funding-acknowledgement cite { font-style: normal; font-weight: 700; color: var(--uni-dark-blue); }
+
+.funding-organisations {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1px;
+	margin-top: 1.25rem;
+	padding: 1px;
+	background: #cad8e0;
+}
+
+.funding-organisations a {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1.4rem;
+	min-width: 0;
+	min-height: 8.5rem;
+	padding: 1.25rem;
+	background: #f7fafc;
+	transition: background 0.2s ease;
+}
+
+.funding-organisations a:hover { background: var(--uni-pale-blue); }
+.funding-organisations span { font-size: 0.68rem; font-weight: 700; line-height: 1.35; letter-spacing: 0.07em; text-transform: uppercase; color: var(--uni-grey); }
+.funding-organisations strong { font-size: 1rem; line-height: 1.35; color: var(--uni-dark-blue); }
+
+.site-footer {
+	padding: 0;
+	border: 0;
+	background: #002b49;
+	font-family: var(--font-university);
+	font-size: 0.9rem;
+	color: #dce8ef;
+	text-align: left;
+}
+
+.site-footer-main,
+.site-footer-legal {
+	width: min(calc(100% - clamp(2rem, 8vw, 6rem)), 82rem);
+	margin-inline: auto;
+}
+
+.site-footer-main {
+	display: grid;
+	grid-template-columns: minmax(16rem, 1.1fr) minmax(14rem, 0.8fr) minmax(13rem, 0.65fr);
+	gap: clamp(2.5rem, 7vw, 7rem);
+	padding-block: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.footer-identity { display: grid; align-content: start; gap: 0.7rem; max-width: 28rem; }
+.footer-identity strong { font-size: clamp(2rem, 3vw, 2.65rem); line-height: 1; letter-spacing: 0.02em; color: #ffffff; }
+.footer-identity span { max-width: 34ch; font-size: 0.88rem; line-height: 1.55; color: #bcd3df; }
+.footer-heading { margin-bottom: 0.9rem; color: #8fd8f0; }
+
+.footer-address address {
+	font-style: normal;
+	line-height: 1.65;
+}
+
+.footer-address > a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.7rem;
+	min-height: 2.75rem;
+	margin-top: 0.85rem;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.footer-address > a span { color: #8fd8f0; }
+.footer-navigation { display: grid; align-content: start; }
+.footer-navigation a { display: inline-flex; align-items: center; width: fit-content; min-height: 2.75rem; padding-block: 0.35rem; color: #ffffff; }
+.footer-navigation a:hover,
+.footer-address > a:hover,
+.site-footer-legal a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.2rem; }
+
+.site-footer-legal {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	min-height: 5rem;
+	padding-block: 1rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.22);
+	font-size: 0.84rem;
+	color: #bcd3df;
+}
+
+.site-footer-legal nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem 1.5rem; }
+.site-footer-legal a { min-height: 2.75rem; display: inline-flex; align-items: center; color: #ffffff; }
 
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--uni-light-blue); outline-offset: 4px; }
 
@@ -1944,7 +2232,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.site-header nav {
 		grid-column: 1 / -1;
 		display: grid;
-		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 0;
 		width: 100%;
 		padding: 0.65rem 0 1rem;
@@ -1955,6 +2243,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.js .site-header nav.is-open { display: grid; }
 
 	.site-header nav a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.75rem;
 		padding: 0.8rem 0.65rem;
 		text-align: center;
 	}
@@ -1986,7 +2278,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.siegen-life-intro .panel-kicker { margin-bottom: -0.35rem; }
 	.assessment-grid,
 	.masters-application-note,
-	.faq-layout { grid-template-columns: 1fr; }
+	.faq-layout,
+	.contact-layout,
+	.funding-layout { grid-template-columns: 1fr; }
+	.contact-heading,
+	.funding-heading { max-width: 48rem; }
+	.contact-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.site-footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.footer-identity { grid-column: 1 / -1; }
 	.faq-heading { position: static; }
 }
 
@@ -1997,7 +2296,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.project-name { font-size: 1.15rem; }
 
 	.site-header nav { grid-template-columns: 1fr; padding: 0.5rem 0 0.85rem; }
-	.site-header nav a { min-height: 2.75rem; text-align: left; }
+	.site-header nav a { justify-content: flex-start; text-align: left; }
 	.site-header nav .nav-application { display: flex; align-items: center; justify-content: center; margin-top: 0.3rem; text-align: center; }
 
 	.hero { padding: 3.25rem 1rem 3.75rem; }
@@ -2035,7 +2334,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.life-service-grid { grid-template-columns: 1fr; }
 	.life-service { min-height: 0; }
 	.section.application-section,
-	.section.faq-section { padding: 4rem 1rem; }
+	.section.faq-section,
+	.section.contact-section,
+	.section.funding-section { padding: 4rem 1rem; }
 	.application-checklist li { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1rem; }
 	.application-step-number { width: 2.75rem; height: 2.75rem; }
 	.application-checklist li > div { grid-template-columns: 1fr; gap: 0.4rem; }
@@ -2047,6 +2348,18 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.masters-application-links a { align-items: flex-start; }
 	.faq-item summary { padding-right: 2.75rem; }
 	.faq-answer { padding-right: 2.75rem; }
+	.contact-directory,
+	.funding-organisations,
+	.site-footer-main { grid-template-columns: 1fr; }
+	.footer-identity { grid-column: auto; }
+	.project-contact-card,
+	.contact-routes { padding: 1.5rem 1.25rem; }
+	.site-footer-main { gap: 2.5rem; padding-block: 3.5rem; }
+	.site-footer-main,
+	.site-footer-legal { width: min(calc(100% - 2rem), 82rem); }
+	.site-footer-legal { display: grid; gap: 0.5rem; padding-block: 1.25rem; }
+	.site-footer-legal nav { display: grid; justify-content: stretch; gap: 0; }
+	.site-footer-legal a { width: fit-content; }
 }
 
 @media (prefers-reduced-motion: reduce) {

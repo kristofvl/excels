@@ -1,5 +1,11 @@
 document.documentElement.classList.add("js");
 
+const currentYear = document.querySelector("[data-current-year]");
+
+if (currentYear) {
+	currentYear.textContent = String(new Date().getFullYear());
+}
+
 const navToggle = document.querySelector(".nav-toggle");
 const primaryNavigation = document.getElementById("primary-navigation");
 
