@@ -2025,13 +2025,6 @@ p { margin: 0; }
 	color: #ffffff;
 }
 
-.application-final-cta div > p:last-child {
-	margin-top: 0.85rem;
-	font-size: 0.96rem;
-	line-height: 1.6;
-	color: #dce8ef;
-}
-
 .application-final-cta .application-button {
 	width: 100%;
 	min-width: 10rem;
