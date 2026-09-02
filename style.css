@@ -1047,10 +1047,6 @@ p { margin: 0; }
 }
 
 .degree-focus li {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
 	padding: 0.8rem 0;
 	border-bottom: 1px solid #cad8e0;
 }
@@ -1060,18 +1056,6 @@ p { margin: 0; }
 	font-weight: 700;
 	line-height: 1.4;
 	color: var(--uni-text);
-}
-
-.degree-focus li small {
-	flex: none;
-	padding: 0.25rem 0.45rem;
-	background: var(--uni-pale-blue);
-	font-size: 0.67rem;
-	font-weight: 700;
-	line-height: 1.25;
-	letter-spacing: 0.045em;
-	text-transform: uppercase;
-	color: var(--uni-dark-blue);
 }
 
 .official-programme-link {
@@ -2406,7 +2390,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.degree-clarification { grid-template-columns: 1fr; gap: 0.35rem; }
 	.degree-card { padding: 1.5rem 1.25rem; }
 	.degree-facts { grid-template-columns: 1fr; }
-	.degree-focus li { align-items: flex-start; }
 	.zess-intro-copy,
 	.zess-research-copy { padding: 2rem 1.4rem; }
 	.zess-focus-list { grid-template-columns: 1fr; }
