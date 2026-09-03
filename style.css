@@ -218,7 +218,7 @@ p { margin: 0; }
 	z-index: 1;
 	display: grid;
 	grid-template-columns: minmax(0, 1.02fr) minmax(24rem, 0.98fr);
-	align-items: center;
+	align-items: start;
 	gap: clamp(2.5rem, 6vw, 6rem);
 	width: min(100%, 82rem);
 	margin-inline: auto;
@@ -247,7 +247,7 @@ p { margin: 0; }
 }
 
 .hero h1 {
-	max-width: 16ch;
+	max-width: 100%;
 	margin: 0;
 	font-family: var(--font-university);
 	font-size: clamp(2.7rem, 4.3vw, 4rem);
@@ -257,8 +257,6 @@ p { margin: 0; }
 	color: var(--uni-dark-blue);
 }
 
-.hero h1 span { color: var(--faculty-purple); }
-
 .hero .hero-lead {
 	max-width: 40rem;
 	margin: 1.6rem 0 0;
@@ -266,17 +264,6 @@ p { margin: 0; }
 	line-height: 1.6;
 	color: var(--uni-text);
 }
-
-.hero .hero-lead a {
-	font-weight: 700;
-	color: var(--uni-dark-blue);
-	text-decoration: underline;
-	text-decoration-color: var(--uni-light-blue);
-	text-decoration-thickness: 2px;
-	text-underline-offset: 0.18em;
-}
-
-.hero .hero-lead a:hover { color: #005b8f; }
 
 .hero-actions {
 	margin-top: 2rem;
@@ -386,7 +373,7 @@ p { margin: 0; }
 	color: currentColor;
 }
 
-.hero-media { position: relative; align-self: start; margin: 4.75rem 0 0; }
+.hero-media { position: relative; align-self: start; margin: 0; }
 
 .hero-image-frame {
 	position: relative;
@@ -412,12 +399,40 @@ p { margin: 0; }
 	object-position: 50% 48%;
 }
 
-.hero-media figcaption {
-	max-width: 42rem;
-	margin-top: 0.75rem;
-	font-size: 0.78rem;
+.hero-glance {
+	position: relative;
+	z-index: 2;
+	width: min(22rem, calc(100% - 2rem));
+	margin: -2rem 0 0 -2.25rem;
+	padding: 1.5rem 1.65rem;
+	border: 1px solid #cfd8de;
+	background: #ffffff;
+	box-shadow: 0 0.75rem 2rem rgba(0, 56, 95, 0.06);
+}
+
+.hero-glance-kicker {
+	margin: 0 0 0.75rem;
+	font-size: 0.72rem;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--uni-dark-blue);
+}
+
+.hero-glance-title {
+	margin: 0;
+	font-size: 1.05rem;
+	font-weight: 700;
+	line-height: 1.35;
+	color: var(--uni-dark-blue);
+}
+
+.hero-glance-copy {
+	margin: 0.75rem 0 0;
+	font-size: 0.95rem;
 	line-height: 1.45;
-	color: var(--uni-grey);
+	color: var(--uni-text);
 }
 
 .section.overview-section,
@@ -2512,8 +2527,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 @media (max-width: 900px) {
 	.hero-shell { grid-template-columns: 1fr; gap: 3.25rem; }
 	.hero-content { max-width: 47rem; }
-	.hero h1 { max-width: 15ch; }
+	.hero h1 { max-width: 100%; }
 	.hero-media { max-width: 47rem; margin-top: 0; }
+	.hero-glance { margin-left: clamp(1rem, 5vw, 2.25rem); }
 }
 
 @media (max-width: 980px) {
@@ -2555,6 +2571,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.hero { padding: 3.25rem 1rem 3.75rem; }
 	.hero h1 { font-size: clamp(2.3rem, 10vw, 3rem); line-height: 1.02; }
 	.hero .hero-lead { font-size: 1.03rem; }
+	.hero-glance { width: calc(100% - 1rem); margin: -1.25rem 0.5rem 0; padding: 1.25rem; }
 	.application-action-hero { width: 100%; }
 	.section.overview-section { padding: 3rem 1rem; }
 	.section.eligibility-section { padding: 4rem 1rem; }
