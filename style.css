@@ -622,7 +622,7 @@ p { margin: 0; }
 	padding: clamp(1.35rem, 2.5vw, 2rem);
 	background: var(--faculty-purple);
 	color: #ffffff;
-	text-align: center;
+	text-align: left;
 }
 
 .panel-kicker {
