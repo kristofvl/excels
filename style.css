@@ -721,143 +721,6 @@ p { margin: 0; }
 	max-width: 100%;
 }
 
-.pathway-stages {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 1.15rem;
-	margin: clamp(3rem, 6vw, 4.75rem) 0 0;
-	padding: 0;
-	list-style: none;
-}
-
-.pathway-stage {
-	min-width: 0;
-}
-
-.pathway-stage article {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	padding: clamp(1.5rem, 2.5vw, 2rem);
-	border: 1px solid #cad8e0;
-	border-top: 0.35rem solid var(--faculty-purple);
-	background: #ffffff;
-	box-shadow: 0 0.75rem 2rem rgba(0, 56, 95, 0.06);
-}
-
-.pathway-stage:nth-child(2) article {
-	border-top-color: var(--uni-light-blue);
-}
-
-.pathway-stage:nth-child(3) article {
-	border-top-color: var(--uni-dark-blue);
-}
-
-.stage-header {
-	display: grid;
-	grid-template-columns: 3.25rem minmax(0, 1fr);
-	align-items: start;
-	gap: 1rem;
-}
-
-.stage-number {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 3.25rem;
-	height: 3.25rem;
-	background: var(--uni-dark-blue);
-	font-size: 0.9rem;
-	font-weight: 700;
-	letter-spacing: 0.06em;
-	color: #ffffff;
-}
-
-.stage-kicker {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	gap: 0.45rem 0.65rem;
-	margin: 0 0 0.45rem;
-	font-size: 0.73rem;
-	font-weight: 700;
-	line-height: 1.35;
-	letter-spacing: 0.075em;
-	text-transform: uppercase;
-	color: var(--uni-grey);
-}
-
-.stage-kicker span {
-	padding: 0.25rem 0.45rem;
-	background: var(--uni-pale-blue);
-	font-size: 0.67rem;
-	color: var(--uni-dark-blue);
-}
-
-.pathway-stage h3 {
-	margin: 0;
-	font-size: clamp(1.35rem, 2vw, 1.7rem);
-	line-height: 1.15;
-	letter-spacing: -0.02em;
-	color: var(--uni-dark-blue);
-}
-
-.stage-summary {
-	margin-top: 1.5rem;
-	font-size: 0.98rem;
-	line-height: 1.6;
-	color: var(--uni-text);
-}
-
-.stage-points {
-	display: grid;
-	gap: 0.7rem;
-	margin: 1.35rem 0 1.75rem;
-	padding: 0;
-	list-style: none;
-}
-
-.stage-points li {
-	position: relative;
-	padding-left: 1.25rem;
-	font-size: 0.92rem;
-	line-height: 1.45;
-	color: var(--uni-text);
-}
-
-.stage-points li::before {
-	content: "";
-	position: absolute;
-	top: 0.62em;
-	left: 0;
-	width: 0.55rem;
-	height: 0.2rem;
-	background: var(--uni-light-blue);
-}
-
-.stage-fact {
-	display: grid;
-	gap: 0.2rem;
-	margin-top: auto;
-	padding-top: 1.15rem;
-	border-top: 1px solid #d8e1e6;
-}
-
-.stage-fact strong {
-	font-size: 0.72rem;
-	line-height: 1.35;
-	letter-spacing: 0.075em;
-	text-transform: uppercase;
-	color: var(--uni-grey);
-}
-
-.stage-fact span {
-	font-size: 1rem;
-	font-weight: 700;
-	line-height: 1.4;
-	color: var(--uni-dark-blue);
-}
-
 .section.study-research-section {
 	max-width: none;
 	margin: 0;
@@ -1719,7 +1582,7 @@ p { margin: 0; }
 	justify-content: center;
 	width: 2.75rem;
 	height: 2.75rem;
-	margin-bottom: 1.35rem;
+	margin: 0 auto 1.35rem;
 	background: var(--uni-dark-blue);
 	font-size: 0.78rem;
 	font-weight: 700;
@@ -1734,24 +1597,6 @@ p { margin: 0; }
 	font-size: 0.88rem;
 	line-height: 1.55;
 	color: var(--uni-text);
-}
-
-.process-date-note {
-	display: grid;
-	grid-template-columns: minmax(12rem, 0.24fr) minmax(0, 0.76fr);
-	gap: 1.5rem;
-	margin-top: 1.25rem;
-	padding: 1.2rem 1.4rem;
-	border-left: 0.3rem solid var(--faculty-purple);
-	background: var(--uni-pale-blue);
-}
-
-.process-date-note strong {
-	font-size: 0.76rem;
-	line-height: 1.45;
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
-	color: var(--uni-dark-blue);
 }
 
 .application-invitation {
@@ -1849,8 +1694,6 @@ p { margin: 0; }
 	stroke-linecap: round;
 	stroke-linejoin: round;
 }
-
-.process-date-note span { font-size: 0.94rem; line-height: 1.55; color: var(--uni-text); }
 
 .faq-layout {
 	display: grid;
@@ -2354,7 +2197,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 @media (max-width: 980px) {
 	.eligibility-layout { grid-template-columns: 1fr; }
 	.outreach-panel { width: 100%; max-width: 36rem; justify-self: center; }
-	.pathway-stages { grid-template-columns: 1fr; }
 	.zess-story-grid,
 	.zess-research-grid { grid-template-columns: 1fr; }
 	.research-example-media { max-width: 36rem; margin-left: auto; }
@@ -2395,9 +2237,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.glance-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
 	.eligibility-list li { grid-template-columns: 1fr; gap: 0.25rem; }
 	.section.pathway-section { padding: 4rem 1rem; }
-	.pathway-stage article { padding: 1.5rem 1.25rem; }
-	.stage-header { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 0.85rem; }
-	.stage-number { width: 2.75rem; height: 2.75rem; }
 	.section.study-research-section { padding: 4rem 1rem; }
 	.degree-clarification { grid-template-columns: 1fr; gap: 0.35rem; }
 	.degree-card { padding: 1.5rem 1.25rem; }
@@ -2420,8 +2259,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-checklist li > div { grid-template-columns: 1fr; gap: 0.4rem; }
 	.assessment-card,
 	.masters-application-note { padding: 1.5rem 1.25rem; }
-	.progression-note,
-	.process-date-note { grid-template-columns: 1fr; gap: 0.35rem; }
+	.progression-note { grid-template-columns: 1fr; gap: 0.35rem; }
 	.process-step { padding: 1.25rem; }
 	.application-invitation { padding: 3rem 1rem; }
 	.application-final-cta { grid-template-columns: 1fr; align-items: start; }
