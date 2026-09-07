@@ -867,70 +867,69 @@ p { margin: 0; }
 
 .zess-story-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: clamp(1.5rem, 3vw, 3rem);
 }
 
-.zess-story-media {
-	margin: 0;
-	background: #ffffff;
+.zess-story-card {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	background: var(--uni-dark-blue);
 }
 
-.zess-story-media img {
+.zess-story-image {
+	overflow: hidden;
+	aspect-ratio: 16 / 9;
+	background: #d8e4ea;
+}
+
+.zess-story-image img {
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 100%;
+	object-fit: cover;
 }
 
-.zess-story-media figcaption {
-	padding: 0.75rem 1rem 0.9rem;
-	font-size: 0.76rem;
-	line-height: 1.45;
+.zess-story-forum .zess-story-image img {
+	object-position: 50% 45%;
 }
 
-.zess-story-media figcaption {
-	border: 1px solid #cad8e0;
-	border-top: 0;
-	color: var(--uni-text);
-}
-
-.zess-story-media figcaption span {
-	display: block;
-}
-
-.zess-story-media figcaption span {
-	color: var(--uni-grey);
+.zess-story-awards .zess-story-image img {
+	object-position: 50% 28%;
+	transform: scale(1.18);
 }
 
 .zess-story-copy {
 	display: flex;
+	flex: 1;
 	flex-direction: column;
-	justify-content: center;
-	padding: clamp(2rem, 4vw, 3.5rem);
+	justify-content: flex-start;
+	padding: clamp(1.5rem, 2.6vw, 2.25rem);
 	background: var(--uni-dark-blue);
 }
 
 .zess-story-copy h3 {
 	margin: 0;
-	font-size: clamp(1.9rem, 3vw, 2.6rem);
+	font-size: clamp(1.45rem, 2.2vw, 1.85rem);
 	line-height: 1.08;
 	letter-spacing: -0.025em;
 	color: #ffffff;
 }
 
-.zess-building-copy h3 {
-	max-width: 14ch;
-}
-
-.zess-forum-copy h3 {
-	max-width: 15ch;
-}
-
-.zess-story-copy > p:not(.panel-kicker) {
-	margin-top: 1.25rem;
-	font-size: 0.98rem;
-	line-height: 1.65;
+.zess-story-copy > p:not(.panel-kicker):not(.zess-story-credit) {
+	margin-top: 1rem;
+	font-size: 0.94rem;
+	line-height: 1.6;
 	color: #dce8ef;
+}
+
+.zess-story-credit {
+	margin-top: auto;
+	padding-top: 1.35rem;
+	font-size: 0.72rem;
+	line-height: 1.45;
+	color: #a9c2d1;
 }
 
 .zess-link {
@@ -938,7 +937,7 @@ p { margin: 0; }
 	align-items: center;
 	gap: 0.6rem;
 	align-self: flex-start;
-	margin-top: 1.75rem;
+	margin-top: 1.4rem;
 	padding-bottom: 0.25rem;
 	border-bottom: 2px solid var(--uni-light-blue);
 	font-size: 0.92rem;
@@ -2180,7 +2179,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 @media (max-width: 980px) {
 	.eligibility-layout { grid-template-columns: 1fr; }
 	.outreach-panel { width: 100%; max-width: 36rem; justify-self: center; }
-	.zess-story-grid { grid-template-columns: 1fr; }
+	.zess-story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.zess-research-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.support-feature { grid-template-columns: 1fr; }
 	.support-image-frame { aspect-ratio: 3 / 2; }
@@ -2223,6 +2222,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.section.study-research-section { padding: 4rem 1rem; }
 	.degree-clarification { grid-template-columns: 1fr; gap: 0.35rem; }
 	.degree-card { padding: 1.5rem 1.25rem; }
+	.zess-story-grid { grid-template-columns: 1fr; }
 	.zess-story-copy { padding: 2rem 1.4rem; }
 	.zess-research-cards { grid-template-columns: 1fr; }
 	.section.support-life-section { padding: 4rem 1rem; }
