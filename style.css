@@ -1363,8 +1363,7 @@ p { margin: 0; }
 .application-checklist-block { margin-top: clamp(3rem, 6vw, 5rem); }
 
 .application-subheading { max-width: 58rem; }
-.application-subheading .panel-kicker,
-.process-timeline .panel-kicker { color: var(--uni-dark-blue); }
+.application-subheading .panel-kicker { color: var(--uni-dark-blue); }
 
 .application-subheading h3,
 .masters-application-note h3 {
@@ -1421,7 +1420,7 @@ p { margin: 0; }
 
 .application-checklist h4,
 .assessment-card h4,
-.process-step h4 {
+.process-step h3 {
 	margin: 0;
 	font-size: clamp(1.2rem, 1.8vw, 1.45rem);
 	line-height: 1.15;
@@ -1555,13 +1554,11 @@ p { margin: 0; }
 .masters-application-links a:hover { background: rgba(255, 255, 255, 0.1); }
 .masters-application-links span { flex: none; color: #8fd8f0; }
 
-.process-timeline { margin-top: clamp(4rem, 8vw, 6.5rem); }
-
 .process-track {
 	display: grid;
-	grid-template-columns: repeat(5, minmax(0, 1fr));
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 1px;
-	margin: clamp(2rem, 4vw, 3rem) 0 0;
+	margin: clamp(3rem, 6vw, 4.75rem) 0 0;
 	padding: 1px;
 	background: #cad8e0;
 	list-style: none;
@@ -2134,14 +2131,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.project-brand { grid-template-columns: auto; }
 	.project-expansion { display: none; }
 	.degree-grid { grid-template-columns: 1fr; }
-	.process-track { grid-template-columns: 1fr; }
-	.process-step {
-		display: grid;
-		grid-template-columns: 2.75rem minmax(0, 1fr);
-		gap: 1.25rem;
-		min-height: 0;
-	}
-	.process-number { margin-bottom: 0; }
+	.process-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.process-step { min-height: 0; }
 }
 
 @media (max-width: 1080px) {
@@ -2237,6 +2228,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.glance-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
 	.eligibility-list li { grid-template-columns: 1fr; gap: 0.25rem; }
 	.section.pathway-section { padding: 4rem 1rem; }
+	.process-track { grid-template-columns: 1fr; }
 	.section.study-research-section { padding: 4rem 1rem; }
 	.degree-clarification { grid-template-columns: 1fr; gap: 0.35rem; }
 	.degree-card { padding: 1.5rem 1.25rem; }
