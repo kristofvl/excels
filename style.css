@@ -858,61 +858,6 @@ p { margin: 0; }
 	color: var(--uni-dark-blue);
 }
 
-.pathway-research-feature {
-	display: grid;
-	grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
-	margin-top: 1.15rem;
-}
-
-.pathway-media {
-	margin: 0;
-	background: #ffffff;
-}
-
-.pathway-media img {
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-.pathway-media figcaption {
-	padding: 0.75rem 1rem 0.9rem;
-	border: 1px solid #cad8e0;
-	border-top: 0;
-	font-size: 0.76rem;
-	line-height: 1.45;
-	color: var(--uni-text);
-}
-
-.pathway-media figcaption span {
-	display: block;
-	color: var(--uni-grey);
-}
-
-.research-forum-copy {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: clamp(2rem, 4vw, 3.5rem);
-	background: var(--uni-dark-blue);
-}
-
-.research-forum-copy h3 {
-	max-width: 15ch;
-	margin: 0;
-	font-size: clamp(1.75rem, 3vw, 2.4rem);
-	line-height: 1.1;
-	letter-spacing: -0.025em;
-	color: #ffffff;
-}
-
-.research-forum-copy > p:last-child {
-	margin-top: 1.25rem;
-	font-size: 0.98rem;
-	line-height: 1.65;
-	color: #dce8ef;
-}
-
 .section.study-research-section {
 	max-width: none;
 	margin: 0;
@@ -1123,53 +1068,55 @@ p { margin: 0; }
 	margin-top: clamp(4rem, 8vw, 7rem);
 }
 
-.zess-intro {
+.zess-story-grid {
 	display: grid;
-	grid-template-columns: minmax(0, 1.15fr) minmax(21rem, 0.85fr);
-	background: var(--uni-dark-blue);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: clamp(1.5rem, 3vw, 3rem);
 }
 
-.zess-place-media {
+.zess-story-media {
 	margin: 0;
-	background: #002f50;
+	background: #ffffff;
 }
 
-.zess-place-media img,
+.zess-story-media img,
 .research-example-media img {
 	display: block;
 	width: 100%;
 	height: auto;
 }
 
-.zess-place-media figcaption,
+.zess-story-media figcaption,
 .research-example-media figcaption {
 	padding: 0.75rem 1rem 0.9rem;
 	font-size: 0.76rem;
 	line-height: 1.45;
 }
 
-.zess-place-media figcaption {
-	color: #dce8ef;
+.zess-story-media figcaption {
+	border: 1px solid #cad8e0;
+	border-top: 0;
+	color: var(--uni-text);
 }
 
-.zess-place-media figcaption span,
+.zess-story-media figcaption span,
 .research-example-media figcaption span {
 	display: block;
 }
 
-.zess-place-media figcaption span {
-	color: #a9c2d1;
+.zess-story-media figcaption span {
+	color: var(--uni-grey);
 }
 
-.zess-intro-copy {
+.zess-story-copy {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	padding: clamp(2rem, 4vw, 3.5rem);
+	background: var(--uni-dark-blue);
 }
 
-.zess-intro-copy h3 {
-	max-width: 14ch;
+.zess-story-copy h3 {
 	margin: 0;
 	font-size: clamp(1.9rem, 3vw, 2.6rem);
 	line-height: 1.08;
@@ -1177,7 +1124,15 @@ p { margin: 0; }
 	color: #ffffff;
 }
 
-.zess-intro-copy > p:not(.panel-kicker) {
+.zess-building-copy h3 {
+	max-width: 14ch;
+}
+
+.zess-forum-copy h3 {
+	max-width: 15ch;
+}
+
+.zess-story-copy > p:not(.panel-kicker) {
 	margin-top: 1.25rem;
 	font-size: 0.98rem;
 	line-height: 1.65;
@@ -1205,6 +1160,7 @@ p { margin: 0; }
 .zess-research-grid {
 	display: grid;
 	grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+	margin-top: clamp(3rem, 6vw, 5rem);
 	background: #f7fafc;
 }
 
@@ -2473,9 +2429,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.eligibility-layout { grid-template-columns: 1fr; }
 	.outreach-panel { width: 100%; max-width: 36rem; justify-self: center; }
 	.pathway-stages { grid-template-columns: 1fr; }
-	.pathway-research-feature { grid-template-columns: 1fr; }
 	.degree-grid { grid-template-columns: 1fr; }
-	.zess-intro,
+	.zess-story-grid,
 	.zess-research-grid { grid-template-columns: 1fr; }
 	.research-example-media { max-width: 36rem; margin-left: auto; }
 	.support-feature { grid-template-columns: 1fr; }
@@ -2518,12 +2473,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.pathway-stage article { padding: 1.5rem 1.25rem; }
 	.stage-header { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 0.85rem; }
 	.stage-number { width: 2.75rem; height: 2.75rem; }
-	.research-forum-copy { padding: 2rem 1.4rem; }
 	.section.study-research-section { padding: 4rem 1rem; }
 	.degree-clarification { grid-template-columns: 1fr; gap: 0.35rem; }
 	.degree-card { padding: 1.5rem 1.25rem; }
 	.degree-facts { grid-template-columns: 1fr; }
-	.zess-intro-copy,
+	.zess-story-copy,
 	.zess-research-copy { padding: 2rem 1.4rem; }
 	.zess-focus-list { grid-template-columns: 1fr; }
 	.section.support-life-section { padding: 4rem 1rem; }
