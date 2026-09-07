@@ -620,7 +620,7 @@ p { margin: 0; }
 .outreach-glance {
 	width: 100%;
 	padding: clamp(1.35rem, 2.5vw, 2rem);
-	background: var(--faculty-purple);
+	background: var(--uni-dark-blue);
 	color: #ffffff;
 	text-align: left;
 }
