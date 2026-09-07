@@ -106,6 +106,10 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
 .venv
 env/
 venv/
@@ -144,48 +148,16 @@ cython_debug/
 
 # OS files
 .DS_Store
+Thumbs.db
+Desktop.ini
 
-# Specific files
+# Local tooling and temporary files
+node_modules/
+coverage/
+*.swp
+*.swo
+*~
 
-
-# Commonly Reused with confidential Info
-
-#FILES (ALSO PERSONAL NOTES)
-
-To Do List and Research Directions.txt
-ML Stages0.png
-ML Stages1.jpg
-z_Exploratory Transmission Analysis.ipynb
-z_SHADOW FADING ANALYSIS.ipynb
-07_SVR.txt
-
-González-Palacio et al. - 2023 - Machine-Learning-Based Combined Path Loss and Shadowing Model in LoRaWAN for Energy Efficiency Enhan.pdf
-
-# Data files
-**/Results/
-CV_Results
-FM_Results
-Figures
-Residuals
-Data_Files
-Shadow_Results
-FL
-SVR_Search_Run
-
-
-KNN
-RNN
-SVR
-XGBoost
-ANN
-LightGBM
-RFs
-Archive
-
-# ML artifacts
-Models/
-*.pkl
-*.joblib
-*.pt
-*.pth
-*.onnx
+# Local planning documents (website assets in Assets/ must remain tracked)
+/Projektbeschreibung_WoM_Academic_Horizons_2026-2029_v7_KVL-KS_clean.docx
+/Finanzierungsplan_KVLv2.pdf
