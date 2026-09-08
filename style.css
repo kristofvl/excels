@@ -1611,7 +1611,7 @@ p { margin: 0; }
 }
 
 .application-invitation {
-	padding: clamp(3.5rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
+	padding: clamp(3.5rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem) clamp(1.75rem, 3vw, 2.5rem);
 	background: #ffffff;
 	font-family: var(--font-university);
 	color: var(--uni-text);
@@ -1863,7 +1863,7 @@ p { margin: 0; }
 .section.funding-section {
 	max-width: none;
 	margin: 0;
-	padding: clamp(4.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
+	padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1rem, 4vw, 3rem) clamp(3.5rem, 5vw, 4.75rem);
 	font-family: var(--font-university);
 }
 
@@ -1898,23 +1898,25 @@ p { margin: 0; }
 
 .funding-layout {
 	display: grid;
-	grid-template-columns: minmax(18rem, 0.65fr) minmax(0, 1.35fr);
+	grid-template-columns: minmax(20rem, 0.8fr) minmax(0, 1.2fr);
 	align-items: start;
-	gap: clamp(3rem, 7vw, 7rem);
+	gap: clamp(2.5rem, 4vw, 4rem);
 }
 
 .funding-content { min-width: 0; }
 
 .funding-lead {
-	font-size: clamp(1.15rem, 2vw, 1.4rem);
+	max-width: 40ch;
+	margin-top: 1.15rem;
+	font-size: clamp(1.05rem, 1.5vw, 1.2rem);
 	font-weight: 700;
-	line-height: 1.5;
+	line-height: 1.45;
 	color: var(--uni-dark-blue);
 }
 
 .funding-acknowledgement {
-	margin-top: 1.25rem;
-	padding: 1.25rem 1.4rem;
+	margin: 0;
+	padding: 1rem 1.2rem;
 	border-left: 0.3rem solid var(--faculty-purple);
 	background: var(--uni-pale-blue);
 	font-size: 0.96rem;
@@ -1929,7 +1931,7 @@ p { margin: 0; }
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	align-items: stretch;
 	gap: 1px;
-	margin-top: 1.25rem;
+	margin-top: 1rem;
 	padding: 1px;
 	background: #cad8e0;
 }
@@ -1939,8 +1941,8 @@ p { margin: 0; }
 	align-items: center;
 	justify-content: center;
 	min-width: 0;
-	min-height: 14rem;
-	padding: clamp(1.5rem, 3vw, 2.25rem);
+	min-height: 10.5rem;
+	padding: clamp(1.25rem, 2.5vw, 1.8rem);
 	background: #ffffff;
 	transition: background 0.2s ease;
 }
@@ -1949,6 +1951,8 @@ p { margin: 0; }
 
 .funding-logo img {
 	display: block;
+	max-width: 100%;
+	max-height: 7.25rem;
 	width: auto;
 	height: auto;
 	object-fit: contain;
@@ -2102,7 +2106,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-ready-card { width: min(100%, 38rem); }
 	.masters-admission-note,
 	.funding-layout { grid-template-columns: 1fr; }
+	.funding-layout { gap: 1.75rem; }
 	.funding-heading { max-width: 48rem; }
+	.funding-heading .funding-lead { max-width: 58ch; }
 	.site-footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.footer-identity { grid-column: 1 / -1; }
 }
@@ -2140,8 +2146,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.student-support-media img { clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%); }
 	.student-support-links a { padding: 0.85rem 1rem; }
 	.section.application-section,
-	.section.faq-section,
-	.section.funding-section { padding: 4rem 1rem; }
+	.section.faq-section { padding: 4rem 1rem; }
+	.section.funding-section { padding: 2rem 1rem 3rem; }
 	.application-checklist li { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1rem; }
 	.application-step-number { width: 2.75rem; height: 2.75rem; }
 	.application-checklist li > div { grid-template-columns: 1fr; gap: 0.4rem; }
@@ -2160,7 +2166,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.masters-admission-note { padding: 1.5rem 1.25rem; }
 	.masters-admission-links a { align-items: flex-start; }
 	.process-step { padding: 1.25rem; }
-	.application-invitation { padding: 3rem 1rem; }
+	.application-invitation { padding: 3rem 1rem 1.5rem; }
 	.application-final-cta { grid-template-columns: 1fr; align-items: start; }
 	.application-final-actions { width: 100%; }
 	.application-final-cta .application-button { width: 100%; }
@@ -2170,8 +2176,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.faq-item summary { padding: 1.05rem 3rem 1.05rem 1rem; }
 	.faq-item summary::after { right: 1.15rem; }
 	.faq-answer { padding: 1rem; }
+	.funding-layout { gap: 1.5rem; }
 	.funding-organisations,
 	.site-footer-main { grid-template-columns: 1fr; }
+	.funding-logo { min-height: 8.5rem; padding: 1rem 1.25rem; }
+	.funding-logo img { max-height: 6.5rem; }
 	.footer-identity { grid-column: auto; }
 	.site-footer-main { gap: 2.5rem; padding-block: 3.5rem; }
 	.site-footer-main,
