@@ -1037,10 +1037,7 @@ p { margin: 0; }
 }
 
 .siegen-experience-heading {
-	display: grid;
-	grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.7fr);
-	align-items: end;
-	gap: clamp(2rem, 6vw, 6rem);
+	max-width: 76rem;
 }
 
 .siegen-experience-lead,
@@ -1051,45 +1048,36 @@ p { margin: 0; }
 	color: var(--uni-text);
 }
 
+.siegen-experience-lead {
+	max-width: 72rem;
+	margin-top: 1.35rem;
+}
+
 .siegen-experience-grid {
 	display: grid;
-	grid-template-columns: minmax(17rem, 0.55fr) minmax(0, 1.45fr);
+	grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
 	align-items: center;
 	gap: clamp(2rem, 5vw, 4.5rem);
 	margin-top: clamp(2.75rem, 5vw, 4rem);
 }
 
 .siegen-link-panel {
-	display: flex;
-	flex-direction: column;
 	min-width: 0;
-	padding: clamp(1.75rem, 3vw, 2.5rem);
-	border: 1px solid #cad8e0;
-	background: #f7fafc;
-}
-
-.siegen-link-label,
-.siegen-city-kicker {
-	margin: 0 0 0.7rem;
-	font-size: 0.72rem;
-	font-weight: 700;
-	line-height: 1.35;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: var(--uni-grey);
+	width: 100%;
+	max-width: 29rem;
 }
 
 .siegen-link-panel h3 {
-	max-width: 15ch;
 	margin: 0;
-	font-size: clamp(1.55rem, 2.5vw, 2.05rem);
-	line-height: 1.08;
-	letter-spacing: -0.025em;
+	font-size: clamp(1.9rem, 3vw, 2.6rem);
+	line-height: 1.06;
+	letter-spacing: -0.03em;
 	color: var(--uni-dark-blue);
 }
 
 .siegen-link-list {
 	display: grid;
+	gap: 0.75rem;
 	margin-top: 2rem;
 }
 
@@ -1099,15 +1087,18 @@ p { margin: 0; }
 	align-items: center;
 	justify-content: space-between;
 	gap: 1.25rem;
-	border-top: 1px solid #cad8e0;
 	font-size: 0.95rem;
 	font-weight: 700;
 	line-height: 1.4;
-	color: var(--uni-dark-blue);
 }
 
-.siegen-link-list a { padding: 1.05rem 0; }
-.siegen-link-list a:last-child { border-bottom: 1px solid #cad8e0; }
+.siegen-link-list a {
+	min-height: 3.75rem;
+	padding: 1rem 1.15rem;
+	border: 1px solid var(--uni-dark-blue);
+	background: var(--uni-dark-blue);
+	color: #ffffff;
+}
 
 .siegen-link-list a > span:last-child,
 .student-support-links a > span:last-child {
@@ -1118,30 +1109,41 @@ p { margin: 0; }
 	transition: transform 0.2s ease;
 }
 
-.siegen-link-list a:hover,
-.student-support-links a:hover {
-	color: #005b8f;
+.siegen-link-list a:hover {
+	border-color: #005b8f;
+	background: #005b8f;
+	color: #ffffff;
 }
 
+.student-support-links a:hover { color: #005b8f; }
+
 .siegen-link-list a:hover > span:last-child,
-.student-support-links a:hover > span:last-child,
-.siegen-city-card:hover .siegen-city-arrow {
+.student-support-links a:hover > span:last-child {
 	transform: translateX(0.25rem);
 }
 
-.siegen-city-card {
-	display: flex;
-	flex-direction: column;
+.siegen-city-media {
+	position: relative;
 	min-width: 0;
-	border: 1px solid #cad8e0;
-	background: #ffffff;
-	color: var(--uni-text);
+	width: min(100%, 44rem);
+	margin: 0;
+	justify-self: end;
 }
 
 .siegen-city-image {
+	position: relative;
 	overflow: hidden;
 	aspect-ratio: 16 / 9;
 	background: #d8e4ea;
+}
+
+.siegen-city-image::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: var(--faculty-purple);
+	clip-path: polygon(100% 0, 100% 100%, 76% 100%);
+	pointer-events: none;
 }
 
 .siegen-city-image img {
@@ -1150,45 +1152,6 @@ p { margin: 0; }
 	height: 100%;
 	object-fit: cover;
 	object-position: 50% 44%;
-	transition: transform 0.35s ease;
-}
-
-.siegen-city-card:hover .siegen-city-image img {
-	transform: scale(1.015);
-}
-
-.siegen-city-copy {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) auto;
-	align-items: end;
-	gap: 2rem;
-	padding: clamp(1.35rem, 2.5vw, 2rem);
-}
-
-.siegen-city-copy h3 {
-	margin: 0;
-	font-size: clamp(1.75rem, 3vw, 2.4rem);
-	line-height: 1.06;
-	letter-spacing: -0.03em;
-	color: var(--uni-dark-blue);
-}
-
-.siegen-city-copy h3 + p {
-	margin-top: 0.7rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	color: var(--uni-text);
-}
-
-.siegen-city-arrow {
-	display: grid;
-	place-items: center;
-	width: 3rem;
-	height: 3rem;
-	border: 1px solid var(--uni-dark-blue);
-	font-size: 1.25rem;
-	color: var(--uni-dark-blue);
-	transition: transform 0.2s ease;
 }
 
 .student-support-layout {
@@ -1217,8 +1180,9 @@ p { margin: 0; }
 
 .student-support-links a {
 	padding: 1rem 0;
-	border-color: #c4d3dc;
+	border-top: 1px solid #c4d3dc;
 	font-size: 1rem;
+	color: var(--uni-dark-blue);
 }
 
 .student-support-media {
@@ -2103,11 +2067,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.outreach-panel { width: 100%; max-width: 36rem; justify-self: center; }
 	.zess-story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.zess-research-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-	.siegen-experience-heading,
 	.siegen-experience-grid { grid-template-columns: 1fr; }
-	.siegen-experience-heading { gap: 1.25rem; }
 	.siegen-experience-lead { max-width: 46rem; }
 	.siegen-experience-grid { gap: 2.5rem; }
+	.siegen-link-panel,
+	.siegen-city-media { max-width: 44rem; }
+	.siegen-city-media { justify-self: start; }
 	.student-support-layout { grid-template-columns: 1fr; grid-template-areas: "copy" "visual"; gap: 3rem; }
 	.student-support-media { width: 100%; max-width: 44rem; }
 	.assessment-grid,
@@ -2151,10 +2116,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.zess-research-cards { grid-template-columns: 1fr; }
 	.section.siegen-experience-section,
 	.section.student-support-section { padding: 4rem 1rem; }
-	.siegen-link-panel { padding: 1.5rem 1.25rem; }
 	.siegen-city-image { aspect-ratio: 4 / 3; }
-	.siegen-city-copy { gap: 1rem; padding: 1.25rem; }
-	.siegen-city-arrow { width: 2.75rem; height: 2.75rem; }
+	.siegen-link-list a { padding: 0.95rem 1rem; }
 	.student-support-media img { clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%); }
 	.student-support-links a { padding: 0.9rem 0; }
 	.section.application-section,
