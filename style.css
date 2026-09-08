@@ -364,7 +364,8 @@ p { margin: 0; }
 	color: var(--uni-grey);
 }
 
-.application-deadline time {
+.application-deadline time,
+.application-deadline-value {
 	display: block;
 	margin-top: 0.08rem;
 	font-size: 0.9rem;
@@ -1418,7 +1419,88 @@ p { margin: 0; }
 }
 
 .application-materials { margin-top: clamp(4rem, 8vw, 6.5rem); }
-.application-materials-list .application-step-number { background: var(--faculty-purple); }
+
+.application-materials-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(18rem, 0.8fr);
+	align-items: start;
+	gap: clamp(2rem, 5vw, 4.5rem);
+	margin-top: 2rem;
+}
+
+.application-materials-layout .application-materials-list { margin-top: 0; }
+.application-materials-list .application-step-number { background: var(--uni-dark-blue); }
+
+.application-ready-card {
+	display: grid;
+	gap: 1rem;
+	padding: clamp(1.5rem, 3vw, 2.25rem);
+	background: #eef3f6;
+	color: var(--uni-dark-blue);
+}
+
+.application-ready-icon {
+	fill: none;
+	stroke: var(--uni-dark-blue);
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.application-ready-card .panel-kicker {
+	margin: 0;
+	color: var(--uni-dark-blue);
+}
+
+.application-ready-card h4 {
+	margin: 0;
+	font-size: clamp(1.65rem, 2.5vw, 2.1rem);
+	line-height: 1.08;
+	letter-spacing: -0.025em;
+	color: var(--uni-dark-blue);
+}
+
+.application-ready-card h4 + p {
+	font-size: 1rem;
+	line-height: 1.55;
+	color: var(--uni-dark-blue);
+}
+
+.application-ready-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 3.75rem;
+	margin-top: 0.35rem;
+	padding: 0.9rem 1rem;
+	background: var(--uni-dark-blue);
+	font-weight: 700;
+	line-height: 1.25;
+	color: #ffffff;
+	transition: background 0.2s ease;
+}
+
+.application-ready-link:hover { background: #005b8f; }
+
+.application-review-note {
+	display: grid;
+	gap: 0.35rem;
+	margin: 0.4rem 0 0;
+	padding-top: 1rem;
+	border-top: 1px solid #cad8e0;
+	font-size: 0.82rem;
+	line-height: 1.5;
+	color: var(--uni-dark-blue);
+}
+
+.application-review-note strong {
+	font-size: 0.76rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.application-review-note span { display: block; }
 
 .process-track {
 	display: grid;
@@ -2067,6 +2149,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.siegen-city-media { justify-self: start; }
 	.student-support-layout { grid-template-columns: 1fr; grid-template-areas: "copy" "visual"; gap: 3rem; }
 	.student-support-media { width: 100%; max-width: 44rem; }
+	.application-materials-layout { grid-template-columns: 1fr; }
+	.application-ready-card { width: min(100%, 38rem); }
 	.masters-admission-note,
 	.faq-layout,
 	.contact-layout,
@@ -2121,6 +2205,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-process-list { grid-template-columns: 1fr; }
 	.application-process-list li,
 	.application-process-list li:nth-last-child(-n+2) { grid-column: 1; min-height: 0; gap: 0; }
+	.application-ready-card { width: 100%; padding: 1.4rem; }
 	.masters-admission-note { padding: 1.5rem 1.25rem; }
 	.masters-admission-links a { align-items: flex-start; }
 	.process-step { padding: 1.25rem; }
