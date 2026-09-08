@@ -9,7 +9,8 @@
 		<link rel="icon" type="image/svg+xml" href="Assets/favicon.svg" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
+	<!-- Add the dedicated EXCELS MoveON form URL here once it is published. Do not use a generic MoveON portal. -->
+	<body data-application-url="">
 		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header class="site-header">
 			<div class="header-shell">
@@ -45,7 +46,7 @@
 						(EXCELS) programme prepares selected international Bachelor&rsquo;s students for a tuition-free and research-oriented Master&rsquo;s study at the University of Siegen.</p>
 					<div class="hero-actions">
 						<div class="application-action application-action-hero">
-							<button type="button" class="application-button" aria-describedby="hero-application-deadline" disabled><span>Apply for EXCELS</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></button>
+							<a class="application-button" data-application-link aria-describedby="hero-application-deadline" aria-disabled="true"><span>Start your application</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
 							<span id="hero-application-deadline" class="application-deadline">
 								<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
 									<path d="M7 2.5v4M17 2.5v4M3.5 9h17M5.5 4.5h13a2 2 0 0 1 2 2v14h-17v-14a2 2 0 0 1 2-2Z" />
@@ -409,7 +410,7 @@
 
 				<section class="application-materials" aria-labelledby="application-materials-title">
 					<header class="application-subheading">
-						<p class="panel-kicker">Application materials</p>
+						<p class="panel-kicker">Application requirements</p>
 						<h3 id="application-materials-title">Have these core items ready?</h3>
 					</header>
 
@@ -452,11 +453,9 @@
 								<path d="M8.5 3.5h10l5 5v20h-15Z" />
 								<path d="M18.5 3.5v6h5" />
 							</svg>
-							<p class="panel-kicker">Application submission</p>
-							<h4 id="application-ready-title">Ready to apply?</h4>
-							<p>Gather the documents required for your intake, then submit them through the official EXCELS application form by the published deadline.</p>
-							<a class="application-ready-link" href="#faq-application"><span>Read the application guidance</span><span aria-hidden="true">&rarr;</span></a>
-							<p class="application-review-note"><strong>Who reviews?</strong><span>Summer School selection decisions are made jointly by representatives of ETI, ZESS, and the International Office.</span></p>
+							<h4 id="application-ready-title" class="panel-kicker">Submit application</h4>
+							<p class="application-ready-copy">Gather the documents required for your intake, then submit them through the official EXCELS application form by the published deadline.</p>
+							<a class="application-ready-link" data-application-link aria-disabled="true"><span>Start your application</span><span aria-hidden="true">&rarr;</span></a>
 						</aside>
 					</div>
 				</section>
@@ -617,7 +616,7 @@
 					</div>
 					<div class="application-final-actions">
 						<div class="application-action application-action-final">
-							<button type="button" class="application-button" aria-describedby="application-cta-deadline" disabled><span>Apply for EXCELS</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></button>
+							<a class="application-button" data-application-link aria-describedby="application-cta-deadline" aria-disabled="true"><span>Start your application</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
 							<span id="application-cta-deadline" class="application-deadline">
 								<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
 									<path d="M7 2.5v4M17 2.5v4M3.5 9h17M5.5 4.5h13a2 2 0 0 1 2 2v14h-17v-14a2 2 0 0 1 2-2Z" />

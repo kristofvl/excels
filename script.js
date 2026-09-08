@@ -6,6 +6,18 @@ if (currentYear) {
 	currentYear.textContent = String(new Date().getFullYear());
 }
 
+const applicationUrl = document.body.dataset.applicationUrl?.trim();
+
+document.querySelectorAll("[data-application-link]").forEach((link) => {
+	if (applicationUrl) {
+		link.href = applicationUrl;
+		link.removeAttribute("aria-disabled");
+	} else {
+		link.removeAttribute("href");
+		link.setAttribute("aria-disabled", "true");
+	}
+});
+
 const navToggle = document.querySelector(".nav-toggle");
 const primaryNavigation = document.getElementById("primary-navigation");
 
