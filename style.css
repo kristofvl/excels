@@ -1002,25 +1002,25 @@ p { margin: 0; }
 	color: var(--uni-grey);
 }
 
-.section.support-life-section {
+.section.siegen-experience-section,
+.section.student-support-section {
 	max-width: none;
 	margin: 0;
 	padding: clamp(4.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
-	background: var(--uni-pale-blue);
 	font-family: var(--font-university);
 	color: var(--uni-text);
 }
 
-.section.support-life-section::before {
+.section.siegen-experience-section { background: #ffffff; }
+.section.student-support-section { background: #e7eef2; }
+
+.section.siegen-experience-section::before,
+.section.student-support-section::before {
 	display: none;
 }
 
-.support-life-heading {
-	max-width: 100%;
-}
-
-.section.support-life-section h2 {
-	max-width: 100%;
+.section.siegen-experience-section h2,
+.section.student-support-section h2 {
 	margin: 0;
 	font-family: var(--font-university);
 	font-size: clamp(2.25rem, 4vw, 3.35rem);
@@ -1031,266 +1031,210 @@ p { margin: 0; }
 	text-align: left;
 }
 
-.section.support-life-section h2::after {
+.section.siegen-experience-section h2::after,
+.section.student-support-section h2::after {
 	display: none;
 }
 
-.support-life-heading .section-lead {
-	max-width: 100%;
-}
-
-.support-feature {
+.siegen-experience-heading {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(26rem, 0.95fr);
-	align-items: stretch;
-	gap: 1.25rem;
-	margin-top: clamp(2.75rem, 5vw, 4rem);
-}
-
-.support-continuum {
-	display: flex;
-	flex-direction: column;
-	border: 1px solid #c8d9e2;
-	background: #ffffff;
-}
-
-.support-steps {
-	display: grid;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.support-steps > li {
-	display: grid;
-	grid-template-columns: 3.25rem minmax(0, 1fr);
-	gap: 1.25rem;
-	padding: clamp(1.6rem, 3vw, 2.2rem);
-	border-bottom: 1px solid #d7e2e8;
-}
-
-.support-number {
-	display: grid;
-	place-items: center;
-	width: 3.25rem;
-	height: 3.25rem;
-	border: 1px solid #b7d8e5;
-	background: var(--uni-pale-blue);
-	font-size: 0.74rem;
-	font-weight: 700;
-	letter-spacing: 0.08em;
-	color: var(--uni-light-blue);
-}
-
-.support-stage {
-	margin-bottom: 0.4rem;
-	font-size: 0.7rem;
-	font-weight: 700;
-	line-height: 1.35;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	color: var(--uni-grey);
-}
-
-.support-steps h3 {
-	margin: 0;
-	font-size: clamp(1.35rem, 2vw, 1.7rem);
-	line-height: 1.15;
-	letter-spacing: -0.02em;
-	color: var(--uni-dark-blue);
-}
-
-.support-steps h3 + p {
-	margin-top: 0.75rem;
-	font-size: 0.96rem;
-	line-height: 1.62;
-	color: var(--uni-text);
-}
-
-.support-scope {
-	display: grid;
-	grid-template-columns: minmax(9rem, 0.28fr) minmax(0, 0.72fr);
-	gap: 1rem;
-	margin-top: auto;
-	padding: 1.25rem 1.4rem;
-	border-left: 0.3rem solid var(--faculty-purple);
-	background: #f3f0f8;
-}
-
-.support-scope strong {
-	font-size: 0.76rem;
-	line-height: 1.4;
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
-	color: var(--uni-dark-blue);
-}
-
-.support-scope p {
-	font-size: 0.91rem;
-	line-height: 1.55;
-	color: var(--uni-text);
-}
-
-.support-media {
-	position: relative;
-	display: grid;
-	grid-template-rows: minmax(0, 1fr) auto;
-	min-width: 0;
-	margin: 0;
-	background: var(--uni-dark-blue);
-}
-
-.support-media::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 1;
-	width: 7rem;
-	height: 0.4rem;
-	background: var(--faculty-purple);
-}
-
-.support-image-frame {
-	min-height: 0;
-	overflow: hidden;
-	background: #d8e4ea;
-}
-
-.support-image-frame img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: 50% 50%;
-}
-
-.support-media figcaption {
-	padding: 0.85rem 1rem 1rem;
-	font-size: 0.76rem;
-	line-height: 1.45;
-	color: #dce8ef;
-}
-
-.support-media figcaption span {
-	display: block;
-	color: #a9c2d1;
-}
-
-.siegen-life {
-	position: relative;
-	margin-top: clamp(4rem, 8vw, 7rem);
-	padding: clamp(2.5rem, 5vw, 4.5rem);
-	background: var(--uni-dark-blue);
-	color: #ffffff;
-}
-
-.siegen-life::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: min(26rem, 34%);
-	height: 0.42rem;
-	background: var(--faculty-purple);
-}
-
-.siegen-life-intro {
-	display: grid;
-	grid-template-columns: minmax(0, 0.85fr) minmax(19rem, 0.65fr);
+	grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.7fr);
 	align-items: end;
 	gap: clamp(2rem, 6vw, 6rem);
 }
 
-.siegen-life-intro .panel-kicker {
-	grid-column: 1 / -1;
-	margin-bottom: -1.2rem;
-}
-
-.siegen-life-intro h3 {
-	max-width: 17ch;
+.siegen-experience-lead,
+.student-support-lead {
 	margin: 0;
-	font-size: clamp(2rem, 3.5vw, 3rem);
-	line-height: 1.06;
-	letter-spacing: -0.03em;
-	color: #ffffff;
+	font-size: clamp(1.04rem, 1.4vw, 1.18rem);
+	line-height: 1.6;
+	color: var(--uni-text);
 }
 
-.siegen-life-intro > p:not(.panel-kicker) {
-	font-size: 1rem;
-	line-height: 1.65;
-	color: #dce8ef;
-}
-
-.life-service-grid {
+.siegen-experience-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1px;
-	margin-top: clamp(2.5rem, 5vw, 4rem);
-	padding: 1px;
-	background: rgba(255, 255, 255, 0.25);
+	grid-template-columns: minmax(17rem, 0.55fr) minmax(0, 1.45fr);
+	align-items: center;
+	gap: clamp(2rem, 5vw, 4.5rem);
+	margin-top: clamp(2.75rem, 5vw, 4rem);
 }
 
-.life-service {
+.siegen-link-panel {
 	display: flex;
 	flex-direction: column;
-	min-height: 18rem;
-	padding: clamp(1.5rem, 3vw, 2.25rem);
-	background: #06466f;
-	transition: background 0.2s ease;
+	min-width: 0;
+	padding: clamp(1.75rem, 3vw, 2.5rem);
+	border: 1px solid #cad8e0;
+	background: #f7fafc;
 }
 
-.life-service:hover,
-.life-service:focus-within {
-	background: #0a507d;
-}
-
-.life-service-label {
-	margin-bottom: 0.7rem;
-	font-size: 0.7rem;
+.siegen-link-label,
+.siegen-city-kicker {
+	margin: 0 0 0.7rem;
+	font-size: 0.72rem;
 	font-weight: 700;
 	line-height: 1.35;
-	letter-spacing: 0.09em;
+	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: #8fd8f0;
+	color: var(--uni-grey);
 }
 
-.life-service h4 {
+.siegen-link-panel h3 {
+	max-width: 15ch;
 	margin: 0;
-	font-size: clamp(1.35rem, 2vw, 1.65rem);
-	line-height: 1.16;
-	letter-spacing: -0.02em;
-	color: #ffffff;
+	font-size: clamp(1.55rem, 2.5vw, 2.05rem);
+	line-height: 1.08;
+	letter-spacing: -0.025em;
+	color: var(--uni-dark-blue);
 }
 
-.life-service > p:not(.life-service-label) {
-	margin-top: 0.85rem;
-	font-size: 0.94rem;
-	line-height: 1.6;
-	color: #dce8ef;
+.siegen-link-list {
+	display: grid;
+	margin-top: 2rem;
 }
 
-.life-service a {
+.siegen-link-list a,
+.student-support-links a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 1rem;
-	margin-top: auto;
-	padding-top: 1.5rem;
-	font-size: 0.9rem;
+	gap: 1.25rem;
+	border-top: 1px solid #cad8e0;
+	font-size: 0.95rem;
 	font-weight: 700;
 	line-height: 1.4;
-	color: #ffffff;
+	color: var(--uni-dark-blue);
 }
 
-.life-service a span {
+.siegen-link-list a { padding: 1.05rem 0; }
+.siegen-link-list a:last-child { border-bottom: 1px solid #cad8e0; }
+
+.siegen-link-list a > span:last-child,
+.student-support-links a > span:last-child {
 	flex: none;
-	font-size: 1.15rem;
-	color: #8fd8f0;
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: var(--uni-light-blue);
+	transition: transform 0.2s ease;
 }
 
-.life-service a:hover {
-	color: #c9f1ff;
+.siegen-link-list a:hover,
+.student-support-links a:hover {
+	color: #005b8f;
+}
+
+.siegen-link-list a:hover > span:last-child,
+.student-support-links a:hover > span:last-child,
+.siegen-city-card:hover .siegen-city-arrow {
+	transform: translateX(0.25rem);
+}
+
+.siegen-city-card {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	border: 1px solid #cad8e0;
+	background: #ffffff;
+	color: var(--uni-text);
+}
+
+.siegen-city-image {
+	overflow: hidden;
+	aspect-ratio: 16 / 9;
+	background: #d8e4ea;
+}
+
+.siegen-city-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 44%;
+	transition: transform 0.35s ease;
+}
+
+.siegen-city-card:hover .siegen-city-image img {
+	transform: scale(1.015);
+}
+
+.siegen-city-copy {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: end;
+	gap: 2rem;
+	padding: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+.siegen-city-copy h3 {
+	margin: 0;
+	font-size: clamp(1.75rem, 3vw, 2.4rem);
+	line-height: 1.06;
+	letter-spacing: -0.03em;
+	color: var(--uni-dark-blue);
+}
+
+.siegen-city-copy h3 + p {
+	margin-top: 0.7rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--uni-text);
+}
+
+.siegen-city-arrow {
+	display: grid;
+	place-items: center;
+	width: 3rem;
+	height: 3rem;
+	border: 1px solid var(--uni-dark-blue);
+	font-size: 1.25rem;
+	color: var(--uni-dark-blue);
+	transition: transform 0.2s ease;
+}
+
+.student-support-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.95fr) minmax(24rem, 1fr);
+	grid-template-areas: "visual copy";
+	align-items: center;
+	gap: clamp(3rem, 7vw, 7rem);
+}
+
+.student-support-copy {
+	grid-area: copy;
+	min-width: 0;
+}
+
+.student-support-lead {
+	max-width: 43rem;
+	margin-top: 1.35rem;
+}
+
+.student-support-links {
+	display: grid;
+	margin-top: clamp(2rem, 4vw, 3rem);
+	border-bottom: 1px solid #c4d3dc;
+}
+
+.student-support-links a {
+	padding: 1rem 0;
+	border-color: #c4d3dc;
+	font-size: 1rem;
+}
+
+.student-support-media {
+	grid-area: visual;
+	min-width: 0;
+	margin: 0;
+}
+
+.student-support-media img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
+	object-fit: cover;
+	object-position: 50% 42%;
 }
 
 .section.application-section,
@@ -2159,10 +2103,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.outreach-panel { width: 100%; max-width: 36rem; justify-self: center; }
 	.zess-story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.zess-research-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-	.support-feature { grid-template-columns: 1fr; }
-	.support-image-frame { aspect-ratio: 3 / 2; }
-	.siegen-life-intro { grid-template-columns: 1fr; gap: 1.25rem; }
-	.siegen-life-intro .panel-kicker { margin-bottom: -0.35rem; }
+	.siegen-experience-heading,
+	.siegen-experience-grid { grid-template-columns: 1fr; }
+	.siegen-experience-heading { gap: 1.25rem; }
+	.siegen-experience-lead { max-width: 46rem; }
+	.siegen-experience-grid { gap: 2.5rem; }
+	.student-support-layout { grid-template-columns: 1fr; grid-template-areas: "copy" "visual"; gap: 3rem; }
+	.student-support-media { width: 100%; max-width: 44rem; }
 	.assessment-grid,
 	.masters-application-note,
 	.faq-layout,
@@ -2202,13 +2149,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.zess-story-grid { grid-template-columns: 1fr; }
 	.zess-story-copy { padding: 2rem 1.4rem; }
 	.zess-research-cards { grid-template-columns: 1fr; }
-	.section.support-life-section { padding: 4rem 1rem; }
-	.support-steps > li { grid-template-columns: 1fr; gap: 0.9rem; padding: 1.5rem 1.25rem; }
-	.support-number { width: 2.75rem; height: 2.75rem; }
-	.support-scope { grid-template-columns: 1fr; gap: 0.35rem; }
-	.siegen-life { padding: 2.25rem 1.25rem; }
-	.life-service-grid { grid-template-columns: 1fr; }
-	.life-service { min-height: 0; }
+	.section.siegen-experience-section,
+	.section.student-support-section { padding: 4rem 1rem; }
+	.siegen-link-panel { padding: 1.5rem 1.25rem; }
+	.siegen-city-image { aspect-ratio: 4 / 3; }
+	.siegen-city-copy { gap: 1rem; padding: 1.25rem; }
+	.siegen-city-arrow { width: 2.75rem; height: 2.75rem; }
+	.student-support-media img { clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%); }
+	.student-support-links a { padding: 0.9rem 0; }
 	.section.application-section,
 	.section.faq-section,
 	.section.contact-section,
