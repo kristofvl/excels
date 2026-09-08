@@ -841,10 +841,24 @@ p { margin: 0; }
 	margin-top: clamp(4rem, 8vw, 7rem);
 }
 
+.zess-stories {
+	margin-top: clamp(4rem, 8vw, 7rem);
+}
+
+.zess-stories-heading h3,
+.zess-research-heading h3 {
+	margin: 0;
+	font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+	line-height: 1.08;
+	letter-spacing: -0.03em;
+	color: var(--uni-dark-blue);
+}
+
 .zess-story-grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: clamp(1.5rem, 3vw, 3rem);
+	margin-top: clamp(2rem, 4vw, 3rem);
 }
 
 .zess-story-card {
@@ -885,7 +899,7 @@ p { margin: 0; }
 	background: var(--uni-dark-blue);
 }
 
-.zess-story-copy h3 {
+.zess-story-copy h4 {
 	margin: 0;
 	font-size: clamp(1.45rem, 2.2vw, 1.85rem);
 	line-height: 1.08;
@@ -924,18 +938,6 @@ p { margin: 0; }
 
 .zess-link:hover {
 	color: #c6effc;
-}
-
-.zess-research {
-	margin-top: clamp(4rem, 8vw, 7rem);
-}
-
-.zess-research-heading h4 {
-	margin: 0;
-	font-size: clamp(1.9rem, 3.2vw, 2.7rem);
-	line-height: 1.08;
-	letter-spacing: -0.03em;
-	color: var(--uni-dark-blue);
 }
 
 .zess-research-intro {
@@ -978,7 +980,7 @@ p { margin: 0; }
 	object-position: 50% 52%;
 }
 
-.zess-research-card h5 {
+.zess-research-card h4 {
 	margin: 1rem 0 0;
 	font-size: clamp(1.25rem, 2vw, 1.55rem);
 	line-height: 1.15;
