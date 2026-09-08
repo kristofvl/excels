@@ -869,22 +869,10 @@ p { margin: 0; }
 }
 
 .zess-story-image {
-	position: relative;
 	overflow: hidden;
 	aspect-ratio: 16 / 9;
-	background: #d8e4ea;
-}
-
-.zess-story-image::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	width: 20%;
 	background: var(--uni-dark-blue);
-	clip-path: polygon(100% 0, 100% 100%, 0 100%);
-	pointer-events: none;
+	clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
 }
 
 .zess-story-image img {
@@ -909,7 +897,6 @@ p { margin: 0; }
 	flex-direction: column;
 	justify-content: flex-start;
 	padding: clamp(1.5rem, 2.6vw, 2.25rem);
-	background: var(--uni-dark-blue);
 }
 
 .zess-story-copy h4 {
