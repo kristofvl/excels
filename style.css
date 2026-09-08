@@ -1248,8 +1248,7 @@ p { margin: 0; }
 .application-subheading { max-width: 58rem; }
 .application-subheading .panel-kicker { color: var(--uni-dark-blue); }
 
-.application-subheading h3,
-.masters-application-note h3 {
+.application-subheading h3 {
 	margin: 0;
 	font-size: clamp(1.65rem, 3vw, 2.3rem);
 	line-height: 1.1;
@@ -1302,7 +1301,6 @@ p { margin: 0; }
 }
 
 .application-checklist h4,
-.assessment-card h4,
 .process-step h3 {
 	margin: 0;
 	font-size: clamp(1.2rem, 1.8vw, 1.45rem);
@@ -1330,112 +1328,6 @@ p { margin: 0; }
 
 .application-materials { margin-top: clamp(4rem, 8vw, 6.5rem); }
 .application-materials-list .application-step-number { background: var(--faculty-purple); }
-
-.application-assessment { margin-top: clamp(4rem, 8vw, 6.5rem); }
-
-.assessment-grid {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1.25rem;
-	margin-top: clamp(2rem, 4vw, 3rem);
-}
-
-.assessment-card {
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	padding: clamp(1.75rem, 3vw, 2.5rem);
-	border: 1px solid #cad8e0;
-	border-top: 0.35rem solid var(--faculty-purple);
-	background: #f7fafc;
-}
-
-.assessment-card:nth-child(2) { border-top-color: var(--uni-light-blue); }
-
-.assessment-label {
-	margin-bottom: 0.65rem;
-	font-size: 0.72rem;
-	font-weight: 700;
-	line-height: 1.35;
-	letter-spacing: 0.075em;
-	text-transform: uppercase;
-	color: var(--uni-grey);
-}
-
-.assessment-card > p:not(.assessment-label, .assessment-fact) {
-	margin-top: 1rem;
-	font-size: 0.95rem;
-	line-height: 1.6;
-	color: var(--uni-text);
-}
-
-.assessment-fact {
-	display: grid;
-	gap: 0.2rem;
-	margin-top: auto;
-	padding-top: 1.35rem;
-	border-top: 1px solid #cad8e0;
-}
-
-.assessment-fact strong { font-size: 0.7rem; line-height: 1.4; letter-spacing: 0.07em; text-transform: uppercase; color: var(--uni-grey); }
-.assessment-fact span { font-size: 0.95rem; font-weight: 700; line-height: 1.45; color: var(--uni-dark-blue); }
-
-.progression-note {
-	display: grid;
-	grid-template-columns: minmax(10rem, 0.22fr) minmax(0, 0.78fr);
-	gap: 1.5rem;
-	margin-top: 1.25rem;
-	padding: 1.2rem 1.4rem;
-	border-left: 0.3rem solid var(--uni-light-blue);
-	background: var(--uni-pale-blue);
-}
-
-.progression-note strong {
-	font-size: 0.76rem;
-	line-height: 1.45;
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
-	color: var(--uni-dark-blue);
-}
-
-.progression-note p { font-size: 0.94rem; line-height: 1.55; color: var(--uni-text); }
-
-.masters-application-note {
-	display: grid;
-	grid-template-columns: minmax(0, 0.62fr) minmax(18rem, 0.38fr);
-	align-items: end;
-	gap: clamp(2rem, 5vw, 5rem);
-	margin-top: 1.25rem;
-	padding: clamp(2rem, 4vw, 3.25rem);
-	background: var(--uni-dark-blue);
-	color: #ffffff;
-}
-
-.masters-application-note .panel-kicker { color: #8fd8f0; }
-.masters-application-note h3 { color: #ffffff; }
-.masters-application-note > div > p:last-child { margin-top: 1rem; font-size: 0.96rem; line-height: 1.65; color: #dce8ef; }
-
-.masters-application-links {
-	display: grid;
-	gap: 0.7rem;
-}
-
-.masters-application-links a {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
-	min-height: 3.3rem;
-	padding: 0.85rem 1rem;
-	border: 1px solid rgba(255, 255, 255, 0.55);
-	font-size: 0.88rem;
-	font-weight: 700;
-	line-height: 1.4;
-	color: #ffffff;
-}
-
-.masters-application-links a:hover { background: rgba(255, 255, 255, 0.1); }
-.masters-application-links span { flex: none; color: #8fd8f0; }
 
 .process-track {
 	display: grid;
@@ -2081,8 +1973,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.siegen-city-media { justify-self: start; }
 	.student-support-layout { grid-template-columns: 1fr; grid-template-areas: "copy" "visual"; gap: 3rem; }
 	.student-support-media { width: 100%; max-width: 44rem; }
-	.assessment-grid,
-	.masters-application-note,
 	.faq-layout,
 	.contact-layout,
 	.funding-layout { grid-template-columns: 1fr; }
@@ -2133,15 +2023,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-checklist li { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1rem; }
 	.application-step-number { width: 2.75rem; height: 2.75rem; }
 	.application-checklist li > div { grid-template-columns: 1fr; gap: 0.4rem; }
-	.assessment-card,
-	.masters-application-note { padding: 1.5rem 1.25rem; }
-	.progression-note { grid-template-columns: 1fr; gap: 0.35rem; }
 	.process-step { padding: 1.25rem; }
 	.application-invitation { padding: 3rem 1rem; }
 	.application-final-cta { grid-template-columns: 1fr; align-items: start; }
 	.application-final-actions { width: 100%; }
 	.application-final-cta .application-button { width: 100%; }
-	.masters-application-links a { align-items: flex-start; }
 	.faq-item summary { padding-right: 2.75rem; }
 	.faq-answer { padding-right: 2.75rem; }
 	.contact-directory,
