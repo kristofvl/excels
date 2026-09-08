@@ -48,3 +48,20 @@ if (navToggle && primaryNavigation) {
 
 	window.matchMedia("(min-width: 1081px)").addEventListener("change", closeNavigation);
 }
+
+const openFaqCategory = (hash) => {
+	if (!hash?.startsWith("#faq-")) return;
+
+	const category = document.getElementById(hash.slice(1));
+
+	if (category?.matches("details.faq-group")) {
+		category.open = true;
+	}
+};
+
+document.querySelectorAll('a[href^="#faq-"]').forEach((link) => {
+	link.addEventListener("click", () => openFaqCategory(link.hash));
+});
+
+window.addEventListener("hashchange", () => openFaqCategory(window.location.hash));
+openFaqCategory(window.location.hash);

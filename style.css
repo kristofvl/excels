@@ -1428,8 +1428,88 @@ p { margin: 0; }
 	margin-top: 2rem;
 }
 
-.application-materials-layout .application-materials-list { margin-top: 0; }
-.application-materials-list .application-step-number { background: var(--uni-dark-blue); }
+.application-materials-list {
+	display: grid;
+	gap: 0.75rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.application-material-item {
+	border: 1px solid #adbdc7;
+	background: #ffffff;
+}
+
+.application-material-item summary {
+	position: relative;
+	display: grid;
+	grid-template-columns: 3.25rem minmax(0, 1fr);
+	align-items: center;
+	gap: 1.25rem;
+	min-height: 5rem;
+	padding: 0.8rem 3.75rem 0.8rem 0.8rem;
+	list-style: none;
+	color: var(--uni-dark-blue);
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.application-material-item summary::-webkit-details-marker { display: none; }
+.application-material-item summary::marker { content: ""; }
+
+.application-material-item summary::after {
+	content: "";
+	position: absolute;
+	right: 1.35rem;
+	top: 50%;
+	width: 0.65rem;
+	height: 0.65rem;
+	border-right: 2px solid var(--uni-light-blue);
+	border-bottom: 2px solid var(--uni-light-blue);
+	transform: translateY(-70%) rotate(45deg);
+	transition: transform 0.2s ease;
+}
+
+.application-material-item details[open] summary {
+	background: #f7fafc;
+}
+
+.application-material-item details[open] summary::after {
+	transform: translateY(-25%) rotate(225deg);
+}
+
+.application-material-item summary:hover { color: #005b8f; }
+
+.application-material-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 3.25rem;
+	height: 3.25rem;
+	background: var(--uni-dark-blue);
+	font-size: 0.86rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	color: #ffffff;
+}
+
+.application-material-title {
+	font-size: clamp(1.08rem, 1.55vw, 1.3rem);
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+.application-material-answer {
+	padding: 1.1rem 3.75rem 1.35rem 5.3rem;
+	border-top: 1px solid #d7e1e6;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: var(--uni-text);
+}
+
+.application-material-answer p { margin: 0; }
 
 .application-ready-card {
 	display: grid;
@@ -1641,84 +1721,94 @@ p { margin: 0; }
 }
 
 .faq-layout {
-	display: grid;
-	grid-template-columns: minmax(18rem, 0.38fr) minmax(0, 0.62fr);
-	align-items: start;
-	gap: clamp(3rem, 7vw, 7rem);
+	display: block;
 }
 
-.faq-heading { position: sticky; top: 8rem; }
+.faq-heading {
+	position: static;
+	max-width: 58rem;
+}
+
 .faq-heading .section-lead { font-size: 1rem; }
-
-.faq-topic-nav {
-	display: grid;
-	margin-top: 2rem;
-	border-top: 1px solid #cad8e0;
-}
-
-.faq-topic-nav a {
-	display: grid;
-	grid-template-columns: 2rem minmax(0, 1fr);
-	align-items: center;
-	gap: 0.65rem;
-	min-height: 3rem;
-	border-bottom: 1px solid #cad8e0;
-	font-size: 0.86rem;
-	font-weight: 700;
-	line-height: 1.35;
-	color: var(--uni-dark-blue);
-	text-decoration: none;
-	transition: color 0.2s ease, padding-left 0.2s ease;
-}
-
-.faq-topic-nav a:hover {
-	padding-left: 0.2rem;
-	color: #005b8f;
-}
-
-.faq-topic-nav span {
-	font-size: 0.7rem;
-	letter-spacing: 0.08em;
-	color: var(--faculty-purple);
-}
 
 .faq-groups {
 	display: grid;
-	gap: clamp(3.25rem, 6vw, 5.25rem);
+	gap: 0.75rem;
+	margin-top: clamp(2.5rem, 5vw, 4rem);
 }
 
-.faq-group { scroll-margin-top: 8rem; }
+.faq-group {
+	border: 1px solid #adbdc7;
+	background: #ffffff;
+	scroll-margin-top: 8rem;
+}
 
 .faq-group-header {
-	display: grid;
-	gap: 0.4rem;
-	margin-bottom: 1.25rem;
+	position: relative;
+	margin: 0;
+	padding: 1.35rem 4rem 1.35rem 1.5rem;
+	list-style: none;
+	cursor: pointer;
+	transition: background 0.2s ease;
 }
 
-.faq-group-header p {
+.faq-group-header::-webkit-details-marker { display: none; }
+.faq-group-header::marker { content: ""; }
+
+.faq-group-header::after {
+	content: "";
+	position: absolute;
+	right: 1.5rem;
+	top: 50%;
+	width: 0.75rem;
+	height: 0.75rem;
+	border-right: 2px solid var(--uni-dark-blue);
+	border-bottom: 2px solid var(--uni-dark-blue);
+	transform: translateY(-70%) rotate(45deg);
+	transition: transform 0.2s ease;
+}
+
+.faq-group[open] > .faq-group-header {
+	background: #f7fafc;
+}
+
+.faq-group[open] > .faq-group-header::after {
+	transform: translateY(-25%) rotate(225deg);
+}
+
+.faq-group-header:hover { background: #f7fafc; }
+
+.faq-group-header h3 {
+	display: grid;
+	gap: 0.3rem;
 	margin: 0;
-	font-size: 0.73rem;
+	font-family: var(--font-university);
 	font-weight: 700;
+	color: var(--uni-dark-blue);
+}
+
+.faq-group-kicker {
+	font-size: 0.7rem;
 	line-height: 1.4;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	color: var(--faculty-purple);
 }
 
-.faq-group-header h3 {
-	margin: 0;
-	font-family: var(--font-university);
+.faq-group-title {
+	display: block;
 	font-size: clamp(1.45rem, 2.3vw, 1.9rem);
-	font-weight: 700;
 	line-height: 1.2;
 	letter-spacing: -0.02em;
-	color: var(--uni-dark-blue);
 }
 
 .faq-list {
 	margin: 0;
 	border-top: 1px solid #cad8e0;
 }
+
+.faq-group > .faq-list { padding: 0 1.5rem; }
+.faq-group > .faq-list > .faq-item:last-child { border-bottom: 0; }
 
 .faq-item { border-bottom: 1px solid #cad8e0; }
 
@@ -2152,7 +2242,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-materials-layout { grid-template-columns: 1fr; }
 	.application-ready-card { width: min(100%, 38rem); }
 	.masters-admission-note,
-	.faq-layout,
 	.contact-layout,
 	.funding-layout { grid-template-columns: 1fr; }
 	.contact-heading,
@@ -2160,7 +2249,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.contact-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.site-footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.footer-identity { grid-column: 1 / -1; }
-	.faq-heading { position: static; }
 }
 
 @media (max-width: 700px) {
@@ -2205,6 +2293,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-process-list { grid-template-columns: 1fr; }
 	.application-process-list li,
 	.application-process-list li:nth-last-child(-n+2) { grid-column: 1; min-height: 0; gap: 0; }
+	.application-material-item summary {
+		grid-template-columns: 2.75rem minmax(0, 1fr);
+		gap: 0.9rem;
+		min-height: 4.5rem;
+		padding: 0.75rem 3rem 0.75rem 0.75rem;
+	}
+	.application-material-number { width: 2.75rem; height: 2.75rem; }
+	.application-material-answer { padding: 1rem 1rem 1.2rem; }
 	.application-ready-card { width: 100%; padding: 1.4rem; }
 	.masters-admission-note { padding: 1.5rem 1.25rem; }
 	.masters-admission-links a { align-items: flex-start; }
@@ -2213,6 +2309,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-final-cta { grid-template-columns: 1fr; align-items: start; }
 	.application-final-actions { width: 100%; }
 	.application-final-cta .application-button { width: 100%; }
+	.faq-group-header { padding: 1.15rem 3.25rem 1.15rem 1rem; }
+	.faq-group-header::after { right: 1.15rem; }
+	.faq-group > .faq-list { padding-inline: 1rem; }
 	.faq-item summary { padding-right: 2.75rem; }
 	.faq-answer { padding-right: 2.75rem; }
 	.contact-directory,
