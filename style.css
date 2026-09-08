@@ -1011,8 +1011,8 @@ p { margin: 0; }
 	color: var(--uni-text);
 }
 
-.section.siegen-experience-section { background: #ffffff; }
-.section.student-support-section { background: #e7eef2; }
+.section.siegen-experience-section { background: #e7eef2; }
+.section.student-support-section { background: #ffffff; }
 
 .section.siegen-experience-section::before,
 .section.student-support-section::before {
