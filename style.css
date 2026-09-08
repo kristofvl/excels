@@ -1115,8 +1115,6 @@ p { margin: 0; }
 	color: #ffffff;
 }
 
-.student-support-links a:hover { color: #005b8f; }
-
 .siegen-link-list a:hover > span:last-child,
 .student-support-links a:hover > span:last-child {
 	transform: translateX(0.25rem);
@@ -1174,15 +1172,23 @@ p { margin: 0; }
 
 .student-support-links {
 	display: grid;
+	gap: 0.65rem;
 	margin-top: clamp(2rem, 4vw, 3rem);
-	border-bottom: 1px solid #c4d3dc;
 }
 
 .student-support-links a {
-	padding: 1rem 0;
-	border-top: 1px solid #c4d3dc;
+	min-height: 3.5rem;
+	padding: 0.85rem 1.1rem;
+	border: 1px solid var(--uni-dark-blue);
+	background: var(--uni-dark-blue);
 	font-size: 1rem;
-	color: var(--uni-dark-blue);
+	color: #ffffff;
+}
+
+.student-support-links a:hover {
+	border-color: #005b8f;
+	background: #005b8f;
+	color: #ffffff;
 }
 
 .student-support-media {
@@ -2119,7 +2125,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.siegen-city-image { aspect-ratio: 4 / 3; }
 	.siegen-link-list a { padding: 0.95rem 1rem; }
 	.student-support-media img { clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%); }
-	.student-support-links a { padding: 0.9rem 0; }
+	.student-support-links a { padding: 0.85rem 1rem; }
 	.section.application-section,
 	.section.faq-section,
 	.section.contact-section,
