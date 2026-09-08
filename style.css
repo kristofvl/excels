@@ -1860,7 +1860,6 @@ p { margin: 0; }
 
 .faq-answer a:hover { color: var(--faculty-purple); }
 
-.section.contact-section,
 .section.funding-section {
 	max-width: none;
 	margin: 0;
@@ -1868,36 +1867,8 @@ p { margin: 0; }
 	font-family: var(--font-university);
 }
 
-.section.contact-section::before,
 .section.funding-section::before { display: none; }
 
-.contact-section {
-	position: relative;
-	background: var(--uni-dark-blue);
-	color: #ffffff;
-}
-
-.contact-section::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: min(24rem, 32vw);
-	height: 0.42rem;
-	background: var(--faculty-purple);
-}
-
-.contact-layout {
-	display: grid;
-	grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
-	align-items: start;
-	gap: clamp(3rem, 7vw, 7rem);
-}
-
-.contact-heading .section-eyebrow { color: #a9e4f7; }
-.contact-heading .section-eyebrow::before { background: #8fd8f0; }
-
-.section.contact-section h2,
 .section.funding-section h2 {
 	max-width: 18ch;
 	margin: 0;
@@ -1909,42 +1880,9 @@ p { margin: 0; }
 	text-align: left;
 }
 
-.section.contact-section h2 { color: #ffffff; }
 .section.funding-section h2 { color: var(--uni-dark-blue); }
-.section.contact-section h2::after,
 .section.funding-section h2::after { display: none; }
 
-.contact-heading .section-lead {
-	margin-top: 1.35rem;
-	font-size: 1rem;
-	line-height: 1.65;
-	color: #dce8ef;
-}
-
-.contact-directory {
-	display: grid;
-	grid-template-columns: minmax(0, 1.08fr) minmax(15rem, 0.92fr);
-	gap: 1.25rem;
-	min-width: 0;
-}
-
-.project-contact-card,
-.contact-routes {
-	min-width: 0;
-	padding: clamp(1.6rem, 3vw, 2.25rem);
-}
-
-.project-contact-card {
-	background: #ffffff;
-	color: var(--uni-text);
-}
-
-.contact-routes {
-	background: #06466f;
-	border: 1px solid rgba(255, 255, 255, 0.24);
-}
-
-.contact-role,
 .footer-heading {
 	font-size: 0.72rem;
 	font-weight: 700;
@@ -1952,82 +1890,6 @@ p { margin: 0; }
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
 }
-
-.project-contact-card .contact-role { color: var(--uni-grey); }
-.contact-routes .contact-role { margin-bottom: 1.15rem; color: #a9e4f7; }
-
-.project-contact-card h3 {
-	margin: 0.55rem 0 0;
-	font-size: clamp(1.45rem, 2.3vw, 1.9rem);
-	line-height: 1.12;
-	letter-spacing: -0.025em;
-	color: var(--uni-dark-blue);
-}
-
-.project-contact-card > p:not(.contact-role) {
-	margin-top: 0.8rem;
-	font-size: 0.93rem;
-	line-height: 1.55;
-	color: var(--uni-text);
-}
-
-.project-contact-card address {
-	display: grid;
-	gap: 0.3rem;
-	margin-top: 1.35rem;
-	font-size: 0.94rem;
-	font-style: normal;
-	line-height: 1.55;
-	color: var(--uni-text);
-}
-
-.project-contact-card address a {
-	display: inline-flex;
-	align-items: center;
-	width: fit-content;
-	min-height: 2.75rem;
-	font-weight: 700;
-	color: var(--uni-dark-blue);
-	text-decoration: underline;
-	text-decoration-color: var(--uni-light-blue);
-	text-decoration-thickness: 2px;
-	text-underline-offset: 0.2rem;
-}
-
-.project-contact-card address span { margin-top: 0.55rem; }
-
-.contact-profile-link {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
-	min-height: 3rem;
-	margin-top: 1.45rem;
-	padding-top: 1rem;
-	border-top: 1px solid #cad8e0;
-	font-size: 0.88rem;
-	font-weight: 700;
-	line-height: 1.4;
-	color: var(--uni-dark-blue);
-}
-
-.contact-profile-link span { flex: none; color: var(--uni-light-blue); }
-
-.contact-routes > a {
-	display: grid;
-	gap: 0.35rem;
-	min-height: 6.25rem;
-	padding: 1.15rem 0;
-	border-top: 1px solid rgba(255, 255, 255, 0.24);
-	color: #ffffff;
-}
-
-.contact-routes > a:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.24); }
-.contact-routes > a > span { font-size: 0.78rem; line-height: 1.4; color: #bcd3df; }
-.contact-routes strong { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.95rem; line-height: 1.4; }
-.contact-routes strong span { flex: none; color: #8fd8f0; }
-.contact-routes > a:hover strong,
-.contact-profile-link:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.2rem; }
 
 .funding-section {
 	background: #ffffff;
@@ -2239,11 +2101,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-materials-layout { grid-template-columns: 1fr; }
 	.application-ready-card { width: min(100%, 38rem); }
 	.masters-admission-note,
-	.contact-layout,
 	.funding-layout { grid-template-columns: 1fr; }
-	.contact-heading,
 	.funding-heading { max-width: 48rem; }
-	.contact-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.site-footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.footer-identity { grid-column: 1 / -1; }
 }
@@ -2282,7 +2141,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.student-support-links a { padding: 0.85rem 1rem; }
 	.section.application-section,
 	.section.faq-section,
-	.section.contact-section,
 	.section.funding-section { padding: 4rem 1rem; }
 	.application-checklist li { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1rem; }
 	.application-step-number { width: 2.75rem; height: 2.75rem; }
@@ -2312,12 +2170,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.faq-item summary { padding: 1.05rem 3rem 1.05rem 1rem; }
 	.faq-item summary::after { right: 1.15rem; }
 	.faq-answer { padding: 1rem; }
-	.contact-directory,
 	.funding-organisations,
 	.site-footer-main { grid-template-columns: 1fr; }
 	.footer-identity { grid-column: auto; }
-	.project-contact-card,
-	.contact-routes { padding: 1.5rem 1.25rem; }
 	.site-footer-main { gap: 2.5rem; padding-block: 3.5rem; }
 	.site-footer-main,
 	.site-footer-legal { width: min(calc(100% - 2rem), 82rem); }
