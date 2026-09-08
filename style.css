@@ -869,9 +869,22 @@ p { margin: 0; }
 }
 
 .zess-story-image {
+	position: relative;
 	overflow: hidden;
 	aspect-ratio: 16 / 9;
 	background: #d8e4ea;
+}
+
+.zess-story-image::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 20%;
+	background: var(--uni-dark-blue);
+	clip-path: polygon(100% 0, 100% 100%, 0 100%);
+	pointer-events: none;
 }
 
 .zess-story-image img {
