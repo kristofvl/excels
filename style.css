@@ -837,6 +837,56 @@ p { margin: 0; }
 	font-size: 1.2rem;
 }
 
+.masters-admission-note {
+	display: grid;
+	grid-template-columns: minmax(0, 0.62fr) minmax(18rem, 0.38fr);
+	align-items: end;
+	gap: clamp(2rem, 5vw, 5rem);
+	margin-top: clamp(2rem, 4vw, 3rem);
+	padding: clamp(2rem, 4vw, 3.25rem);
+	background: var(--uni-dark-blue);
+	color: #ffffff;
+}
+
+.masters-admission-note .panel-kicker { color: #8fd8f0; }
+
+.masters-admission-note h3 {
+	margin: 0;
+	font-size: clamp(1.65rem, 3vw, 2.3rem);
+	line-height: 1.1;
+	letter-spacing: -0.025em;
+	color: #ffffff;
+}
+
+.masters-admission-note > div > p:last-child {
+	margin-top: 1rem;
+	font-size: 0.96rem;
+	line-height: 1.65;
+	color: #dce8ef;
+}
+
+.masters-admission-links {
+	display: grid;
+	gap: 0.7rem;
+}
+
+.masters-admission-links a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 3.3rem;
+	padding: 0.85rem 1rem;
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	font-size: 0.88rem;
+	font-weight: 700;
+	line-height: 1.4;
+	color: #ffffff;
+}
+
+.masters-admission-links a:hover { background: rgba(255, 255, 255, 0.1); }
+.masters-admission-links span { flex: none; color: #8fd8f0; }
+
 .zess-environment {
 	margin-top: clamp(4rem, 8vw, 7rem);
 }
@@ -1973,6 +2023,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.siegen-city-media { justify-self: start; }
 	.student-support-layout { grid-template-columns: 1fr; grid-template-areas: "copy" "visual"; gap: 3rem; }
 	.student-support-media { width: 100%; max-width: 44rem; }
+	.masters-admission-note,
 	.faq-layout,
 	.contact-layout,
 	.funding-layout { grid-template-columns: 1fr; }
@@ -2023,6 +2074,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-checklist li { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1rem; }
 	.application-step-number { width: 2.75rem; height: 2.75rem; }
 	.application-checklist li > div { grid-template-columns: 1fr; gap: 0.4rem; }
+	.masters-admission-note { padding: 1.5rem 1.25rem; }
+	.masters-admission-links a { align-items: flex-start; }
 	.process-step { padding: 1.25rem; }
 	.application-invitation { padding: 3rem 1rem; }
 	.application-final-cta { grid-template-columns: 1fr; align-items: start; }
