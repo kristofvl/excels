@@ -1633,13 +1633,12 @@ p { margin: 0; }
 }
 
 .key-date-icon {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+	display: inline-grid;
+	place-items: center;
 	width: 2.25rem;
 	min-height: 3.25rem;
 	font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
-	font-size: 1.3rem;
+	font-size: 1.55rem;
 	line-height: 1;
 }
 
@@ -2275,7 +2274,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	}
 	.key-date-number { grid-row: 1 / span 2; width: 2.75rem; height: 2.75rem; font-size: 0.78rem; }
 	.key-date-window { grid-column: 3; font-size: 0.9rem; }
-	.key-date-icon { grid-column: 2; grid-row: 1 / span 2; width: 1.75rem; min-height: 2.75rem; font-size: 1.15rem; }
+	.key-date-icon { grid-column: 2; grid-row: 1 / span 2; width: 1.75rem; min-height: 2.75rem; font-size: 1.35rem; }
 	.key-date-copy { grid-column: 3; }
 	.key-date-copy h3 { font-size: 1.08rem; }
 	.masters-admission-note { padding: 1.5rem 1.25rem; }
