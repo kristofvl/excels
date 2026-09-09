@@ -1621,9 +1621,9 @@ p { margin: 0; }
 
 .key-dates-list li {
 	display: grid;
-	grid-template-columns: 3.25rem minmax(12rem, 13.5rem) 3.25rem minmax(0, 1fr);
+	grid-template-columns: 3.25rem minmax(12rem, 14rem) 4.5rem minmax(0, 1fr);
 	align-items: start;
-	column-gap: clamp(1.25rem, 2vw, 1.75rem);
+	column-gap: clamp(1.5rem, 2.4vw, 2.25rem);
 	padding: 1rem 0;
 	border-bottom: 1px solid #b9ccd7;
 }
@@ -1652,7 +1652,7 @@ p { margin: 0; }
 .key-date-icon {
 	display: inline-grid;
 	place-items: center;
-	width: 3.25rem;
+	width: 100%;
 	min-height: 3.25rem;
 	font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
 	font-size: 1.6rem;
@@ -2216,23 +2216,22 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-ready-card { width: min(100%, 38rem); }
 	.masters-admission-note { grid-template-columns: 1fr; }
 	.key-dates-list li {
-		grid-template-columns: 3.25rem minmax(11rem, 12rem) 3rem minmax(0, 1fr);
-		column-gap: 1.25rem;
+		grid-template-columns: 3.25rem minmax(11rem, 12.5rem) 4rem minmax(0, 1fr);
+		column-gap: 1.5rem;
 	}
-	.key-date-icon { width: 3rem; }
 	.site-footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.footer-identity { grid-column: 1 / -1; }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 	.key-dates-list li {
-		grid-template-columns: 2.75rem 2.25rem minmax(0, 1fr);
-		gap: 0.3rem 0.75rem;
+		grid-template-columns: 2.75rem 2.75rem minmax(0, 1fr);
+		gap: 0.4rem 1rem;
 		padding: 0.9rem 0;
 	}
 	.key-date-number { grid-row: 1 / span 2; width: 2.75rem; height: 2.75rem; font-size: 0.78rem; }
 	.key-date-window { grid-column: 3; font-size: 0.9rem; }
-	.key-date-icon { grid-column: 2; grid-row: 1 / span 2; width: 2.25rem; min-height: 2.75rem; font-size: 1.35rem; }
+	.key-date-icon { grid-column: 2; grid-row: 1 / span 2; min-height: 2.75rem; font-size: 1.35rem; }
 	.key-date-copy { grid-column: 3; }
 	.key-date-copy h3 { font-size: 1.08rem; }
 }
