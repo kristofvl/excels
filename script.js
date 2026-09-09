@@ -6,17 +6,24 @@ if (currentYear) {
 	currentYear.textContent = String(new Date().getFullYear());
 }
 
-const applicationUrl = document.body.dataset.applicationUrl?.trim();
+const configureOptionalLinks = (selector, url) => {
+	document.querySelectorAll(selector).forEach((link) => {
+		const unavailableStatus = link.querySelector("[data-unavailable-status]");
 
-document.querySelectorAll("[data-application-link]").forEach((link) => {
-	if (applicationUrl) {
-		link.href = applicationUrl;
-		link.removeAttribute("aria-disabled");
-	} else {
-		link.removeAttribute("href");
-		link.setAttribute("aria-disabled", "true");
-	}
-});
+		if (url) {
+			link.href = url;
+			link.removeAttribute("aria-disabled");
+			unavailableStatus?.setAttribute("hidden", "");
+		} else {
+			link.removeAttribute("href");
+			link.setAttribute("aria-disabled", "true");
+			unavailableStatus?.removeAttribute("hidden");
+		}
+	});
+};
+
+configureOptionalLinks("[data-application-link]", document.body.dataset.applicationUrl?.trim());
+configureOptionalLinks("[data-contact-link]", document.body.dataset.contactUrl?.trim());
 
 const navToggle = document.querySelector(".nav-toggle");
 const primaryNavigation = document.getElementById("primary-navigation");
