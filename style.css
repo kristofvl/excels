@@ -1659,55 +1659,6 @@ p { margin: 0; }
 
 .key-date-copy a:hover { color: #005b8f; }
 
-.key-dates-note {
-	display: grid;
-	grid-template-columns: minmax(0, 1.25fr) minmax(22rem, 0.75fr);
-	align-items: center;
-	gap: clamp(1.5rem, 4vw, 4rem);
-	margin-top: clamp(2rem, 4vw, 3rem);
-	padding: clamp(1.5rem, 3vw, 2.2rem);
-	border-left: 0.3rem solid var(--uni-light-blue);
-	background: var(--uni-dark-blue);
-	color: #ffffff;
-}
-
-.key-dates-note .panel-kicker {
-	margin: 0 0 0.65rem;
-	color: #8fd8f0;
-}
-
-.key-dates-note p:last-child {
-	max-width: 50rem;
-	margin: 0;
-	font-size: 0.95rem;
-	line-height: 1.6;
-}
-
-.key-dates-note-links {
-	display: grid;
-	gap: 0.7rem;
-}
-
-.key-dates-note-links a {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
-	min-height: 3.25rem;
-	padding: 0.75rem 1rem;
-	border: 1px solid rgba(255, 255, 255, 0.65);
-	font-size: 0.9rem;
-	font-weight: 700;
-	line-height: 1.3;
-	color: #ffffff;
-	transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.key-dates-note-links a:hover {
-	border-color: #ffffff;
-	background: rgba(255, 255, 255, 0.1);
-}
-
 .process-track {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2244,8 +2195,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.student-support-media { width: 100%; max-width: 44rem; }
 	.application-materials-layout { grid-template-columns: 1fr; }
 	.application-ready-card { width: min(100%, 38rem); }
-	.key-dates-note { grid-template-columns: 1fr; }
-	.key-dates-note-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.masters-admission-note,
 	.funding-layout { grid-template-columns: 1fr; }
 	.funding-layout { gap: 1.75rem; }
@@ -2316,8 +2265,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.key-date-window { font-size: 0.9rem; }
 	.key-date-copy { grid-column: 2; }
 	.key-date-copy h3 { font-size: 1.08rem; }
-	.key-dates-note { padding: 1.35rem 1.2rem; }
-	.key-dates-note-links { grid-template-columns: 1fr; }
 	.masters-admission-note { padding: 1.5rem 1.25rem; }
 	.masters-admission-links a { align-items: flex-start; }
 	.process-step { padding: 1.25rem; }
