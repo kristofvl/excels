@@ -19,6 +19,12 @@
 	--font-display: Calibri, Arial, system-ui, -apple-system, "Segoe UI", sans-serif;
 	--content: 1180px;
 	--radius: 18px;
+	--section-space: clamp(3.5rem, 5vw, 5rem);
+	--section-space-compact: clamp(3rem, 4vw, 4rem);
+	--section-inline: clamp(1rem, 4vw, 3rem);
+	--section-content-gap: clamp(1.75rem, 3vw, 2.5rem);
+	--section-major-gap: clamp(3rem, 5vw, 4.5rem);
+	--section-transition-space: clamp(2rem, 3vw, 2.5rem);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -441,13 +447,13 @@ p { margin: 0; }
 .section.eligibility-section {
 	max-width: none;
 	margin: 0;
-	padding: clamp(4.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
+	padding: var(--section-space) var(--section-inline);
 	font-family: var(--font-university);
 	color: var(--uni-text);
 }
 
 .section.overview-section {
-	padding-block: clamp(3.5rem, 6vw, 5rem);
+	padding-block: var(--section-space-compact);
 	background: #e7eef2;
 }
 
@@ -469,9 +475,7 @@ p { margin: 0; }
 	max-width: 48rem;
 }
 
-.overview-section .section-heading {
-	margin-bottom: clamp(2rem, 4vw, 3rem);
-}
+.overview-section .section-heading { margin-bottom: var(--section-content-gap); }
 
 .section-eyebrow {
 	display: flex;
@@ -548,7 +552,7 @@ p { margin: 0; }
 
 .glance-note {
 	max-width: 76rem;
-	margin-top: clamp(2rem, 4vw, 3rem);
+	margin-top: var(--section-content-gap);
 	font-size: 0.79rem;
 	line-height: 1.55;
 	color: #53616c;
@@ -652,7 +656,7 @@ p { margin: 0; }
 	position: relative;
 	max-width: var(--content);
 	margin: 0 auto;
-	padding: clamp(4.5rem, 9vw, 7.5rem) 5%;
+	padding: var(--section-space) 5%;
 }
 
 .section + .section::before {
@@ -689,7 +693,7 @@ p { margin: 0; }
 .section.pathway-section {
 	max-width: none;
 	margin: 0;
-	padding: clamp(4.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
+	padding: var(--section-space) var(--section-inline);
 	background: var(--uni-pale-blue);
 	font-family: var(--font-university);
 	color: var(--uni-text);
@@ -726,7 +730,7 @@ p { margin: 0; }
 .section.study-research-section {
 	max-width: none;
 	margin: 0;
-	padding: clamp(4.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
+	padding: var(--section-space) var(--section-inline);
 	background: #ffffff;
 	font-family: var(--font-university);
 	color: var(--uni-text);
@@ -764,7 +768,7 @@ p { margin: 0; }
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 1.25rem;
-	margin-top: clamp(2rem, 4vw, 3rem);
+	margin-top: var(--section-content-gap);
 }
 
 .degree-card {
@@ -844,7 +848,7 @@ p { margin: 0; }
 	grid-template-columns: minmax(0, 0.62fr) minmax(18rem, 0.38fr);
 	align-items: end;
 	gap: clamp(2rem, 5vw, 5rem);
-	margin-top: clamp(2rem, 4vw, 3rem);
+	margin-top: var(--section-content-gap);
 	padding: clamp(2rem, 4vw, 3.25rem);
 	background: var(--uni-dark-blue);
 	color: #ffffff;
@@ -890,11 +894,11 @@ p { margin: 0; }
 .masters-admission-links span { flex: none; color: #8fd8f0; }
 
 .zess-environment {
-	margin-top: clamp(4rem, 8vw, 7rem);
+	margin-top: var(--section-major-gap);
 }
 
 .zess-stories {
-	margin-top: clamp(4rem, 8vw, 7rem);
+	margin-top: var(--section-major-gap);
 }
 
 .zess-stories-heading h3,
@@ -910,7 +914,7 @@ p { margin: 0; }
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: clamp(1.5rem, 3vw, 3rem);
-	margin-top: clamp(2rem, 4vw, 3rem);
+	margin-top: var(--section-content-gap);
 }
 
 .zess-story-card {
@@ -1005,7 +1009,7 @@ p { margin: 0; }
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: clamp(1.25rem, 2.5vw, 2.25rem);
-	margin-top: clamp(2rem, 4vw, 3rem);
+	margin-top: var(--section-content-gap);
 }
 
 .zess-research-card {
@@ -1058,13 +1062,16 @@ p { margin: 0; }
 .section.student-support-section {
 	max-width: none;
 	margin: 0;
-	padding: clamp(4.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
+	padding: var(--section-space) var(--section-inline);
 	font-family: var(--font-university);
 	color: var(--uni-text);
 }
 
 .section.siegen-experience-section { background: #e7eef2; }
-.section.student-support-section { background: #ffffff; }
+.section.student-support-section {
+	padding-bottom: var(--section-transition-space);
+	background: #ffffff;
+}
 
 .section.siegen-experience-section::before,
 .section.student-support-section::before {
@@ -1110,7 +1117,7 @@ p { margin: 0; }
 	grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
 	align-items: center;
 	gap: clamp(2rem, 5vw, 4.5rem);
-	margin-top: clamp(2.75rem, 5vw, 4rem);
+	margin-top: var(--section-content-gap);
 }
 
 .siegen-link-panel {
@@ -1130,7 +1137,7 @@ p { margin: 0; }
 .siegen-link-list {
 	display: grid;
 	gap: 0.75rem;
-	margin-top: 2rem;
+	margin-top: var(--section-content-gap);
 }
 
 .siegen-link-list a,
@@ -1225,7 +1232,7 @@ p { margin: 0; }
 .student-support-links {
 	display: grid;
 	gap: 0.65rem;
-	margin-top: clamp(2rem, 4vw, 3rem);
+	margin-top: var(--section-content-gap);
 }
 
 .student-support-links a {
@@ -1264,14 +1271,23 @@ p { margin: 0; }
 .section.faq-section {
 	max-width: none;
 	margin: 0;
-	padding: clamp(4.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
+	padding: var(--section-space) var(--section-inline);
 	font-family: var(--font-university);
 	color: var(--uni-text);
 }
 
-.section.application-section { background: #ffffff; }
-.section.key-dates-section { background: #e7f1f7; }
-.section.faq-section { background: #f7fafc; }
+.section.application-section {
+	padding-top: var(--section-transition-space);
+	background: #ffffff;
+}
+.section.key-dates-section {
+	padding-block: var(--section-space-compact);
+	background: #e7f1f7;
+}
+.section.faq-section {
+	padding-bottom: var(--section-transition-space);
+	background: #f7fafc;
+}
 
 .section.application-section::before,
 .section.key-dates-section::before,
@@ -1300,7 +1316,7 @@ p { margin: 0; }
 .section.application-section h2,
 .application-heading .section-lead { max-width: 100%; }
 
-.application-checklist-block { margin-top: clamp(3rem, 6vw, 5rem); }
+.application-checklist-block { margin-top: var(--section-major-gap); }
 
 .application-subheading { max-width: 58rem; }
 .application-subheading .panel-kicker { color: var(--uni-dark-blue); }
@@ -1424,14 +1440,14 @@ p { margin: 0; }
 	line-height: 1.55;
 }
 
-.application-materials { margin-top: clamp(4rem, 8vw, 6.5rem); }
+.application-materials { margin-top: var(--section-major-gap); }
 
 .application-materials-layout {
 	display: grid;
 	grid-template-columns: minmax(0, 2fr) minmax(18rem, 0.8fr);
 	align-items: start;
 	gap: clamp(2rem, 5vw, 4.5rem);
-	margin-top: 2rem;
+	margin-top: var(--section-content-gap);
 }
 
 .application-materials-list {
@@ -1580,7 +1596,7 @@ p { margin: 0; }
 .key-dates-heading .section-lead { max-width: 64rem; }
 
 .key-dates-list {
-	margin: clamp(2rem, 4vw, 3rem) 0 0;
+	margin: clamp(1.5rem, 2.5vw, 2rem) 0 0;
 	padding: 0;
 	border-top: 1px solid #b9ccd7;
 	list-style: none;
@@ -1591,7 +1607,7 @@ p { margin: 0; }
 	grid-template-columns: 3.25rem minmax(13rem, 0.3fr) minmax(0, 1fr);
 	align-items: start;
 	gap: clamp(1rem, 3vw, 3rem);
-	padding: 1.2rem 0;
+	padding: 1rem 0;
 	border-bottom: 1px solid #b9ccd7;
 }
 
@@ -1626,9 +1642,9 @@ p { margin: 0; }
 
 .key-date-copy p {
 	max-width: 53rem;
-	margin: 0.45rem 0 0;
+	margin: 0.35rem 0 0;
 	font-size: 0.92rem;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 
 .key-date-copy a {
@@ -1646,7 +1662,7 @@ p { margin: 0; }
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 1px;
-	margin: clamp(3rem, 6vw, 4.75rem) 0 0;
+	margin: var(--section-content-gap) 0 0;
 	padding: 1px;
 	background: #cad8e0;
 	list-style: none;
@@ -1685,7 +1701,7 @@ p { margin: 0; }
 }
 
 .application-invitation {
-	padding: clamp(3.5rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem) clamp(1.75rem, 3vw, 2.5rem);
+	padding: var(--section-transition-space) var(--section-inline);
 	background: #ffffff;
 	font-family: var(--font-university);
 	color: var(--uni-text);
@@ -1797,7 +1813,7 @@ p { margin: 0; }
 .faq-groups {
 	display: grid;
 	gap: 0.75rem;
-	margin-top: clamp(2.5rem, 5vw, 4rem);
+	margin-top: var(--section-content-gap);
 }
 
 .faq-group {
@@ -2107,7 +2123,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.project-expansion { display: none; }
 	.degree-grid { grid-template-columns: 1fr; }
 	.application-process-list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-	.application-process-list li { grid-column: span 2; min-height: 17rem; }
+	.application-process-list li { grid-column: span 2; min-height: 0; }
 	.application-process-list li:nth-last-child(-n+2) { grid-column: span 3; }
 	.process-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.process-step { min-height: 0; }
@@ -2202,26 +2218,29 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.hero .hero-lead { font-size: 1.03rem; }
 	.hero-glance { width: calc(100% - 1rem); margin: -1.25rem 0.5rem 0; padding: 1.25rem; }
 	.application-action-hero { width: 100%; }
-	.section.overview-section { padding: 3rem 1rem; }
-	.section.eligibility-section { padding: 4rem 1rem; }
+	.section.overview-section,
+	.section.key-dates-section { padding: 3rem 1rem; }
+	.section.eligibility-section,
+	.section.pathway-section,
+	.section.study-research-section,
+	.section.siegen-experience-section,
+	.section.student-support-section,
+	.section.application-section,
+	.section.faq-section { padding: 3.25rem 1rem; }
+	.section.student-support-section { padding-bottom: 2rem; }
+	.section.application-section { padding-top: 2rem; }
+	.section.faq-section { padding-bottom: 2rem; }
 	.glance-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
 	.eligibility-list li { grid-template-columns: 1fr; gap: 0.25rem; }
-	.section.pathway-section { padding: 4rem 1rem; }
 	.process-track { grid-template-columns: 1fr; }
-	.section.study-research-section { padding: 4rem 1rem; }
 	.degree-card { padding: 1.5rem 1.25rem; }
 	.zess-story-grid { grid-template-columns: 1fr; }
 	.zess-story-copy { padding: 2rem 1.4rem; }
 	.zess-research-cards { grid-template-columns: 1fr; }
-	.section.siegen-experience-section,
-	.section.student-support-section { padding: 4rem 1rem; }
 	.siegen-city-image { aspect-ratio: 4 / 3; }
 	.siegen-link-list a { padding: 0.95rem 1rem; }
 	.student-support-media img { clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%); }
 	.student-support-links a { padding: 0.85rem 1rem; }
-	.section.application-section,
-	.section.key-dates-section,
-	.section.faq-section { padding: 4rem 1rem; }
 	.section.funding-section { padding: 2rem 1rem 3rem; }
 	.application-checklist li { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1rem; }
 	.application-step-number { width: 2.75rem; height: 2.75rem; }
@@ -2241,7 +2260,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.key-dates-list li {
 		grid-template-columns: 2.75rem minmax(0, 1fr);
 		gap: 0.3rem 1rem;
-		padding: 1.15rem 0;
+		padding: 0.9rem 0;
 	}
 	.key-date-number { grid-row: 1 / span 2; width: 2.75rem; height: 2.75rem; font-size: 0.78rem; }
 	.key-date-window { font-size: 0.9rem; }
@@ -2250,7 +2269,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.masters-admission-note { padding: 1.5rem 1.25rem; }
 	.masters-admission-links a { align-items: flex-start; }
 	.process-step { padding: 1.25rem; }
-	.application-invitation { padding: 3rem 1rem 1.5rem; }
+	.application-invitation { padding: 2rem 1rem; }
 	.application-final-cta { grid-template-columns: 1fr; align-items: start; }
 	.application-final-actions { width: 100%; }
 	.application-final-cta .application-button { width: 100%; }
