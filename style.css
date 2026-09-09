@@ -1593,7 +1593,7 @@ p { margin: 0; }
 
 .section.key-dates-section h2 { max-width: 100%; }
 
-.key-dates-heading .section-lead { max-width: 64rem; }
+.key-dates-heading .section-lead { max-width: none; }
 
 .key-dates-list {
 	margin: clamp(1.5rem, 2.5vw, 2rem) 0 0;
