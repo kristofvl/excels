@@ -6,12 +6,18 @@ if (currentYear) {
 	currentYear.textContent = String(new Date().getFullYear());
 }
 
+const openLinkInNewTab = (link) => {
+	link.target = "_blank";
+	link.rel = "noopener noreferrer";
+};
+
 const configureOptionalLinks = (selector, url) => {
 	document.querySelectorAll(selector).forEach((link) => {
 		const unavailableStatus = link.querySelector("[data-unavailable-status]");
 
 		if (url) {
 			link.href = url;
+			openLinkInNewTab(link);
 			link.removeAttribute("aria-disabled");
 			unavailableStatus?.setAttribute("hidden", "");
 		} else {
@@ -24,6 +30,8 @@ const configureOptionalLinks = (selector, url) => {
 
 configureOptionalLinks("[data-application-link]", document.body.dataset.applicationUrl?.trim());
 configureOptionalLinks("[data-contact-link]", document.body.dataset.contactUrl?.trim());
+
+document.querySelectorAll('a[href^="http://"], a[href^="https://"], a[href^="//"]').forEach(openLinkInNewTab);
 
 const navToggle = document.querySelector(".nav-toggle");
 const primaryNavigation = document.getElementById("primary-navigation");
