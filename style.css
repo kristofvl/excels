@@ -113,14 +113,19 @@ p { margin: 0; }
 	align-self: start;
 	flex: none;
 	width: clamp(15.4rem, 23vw, 23rem);
-	height: 5.5rem;
+	height: clamp(4.693rem, 7.01vw, 7.01rem);
+	margin-bottom: min(0rem, calc(5.5rem - clamp(4.693rem, 7.01vw, 7.01rem)));
+	background-image: url("Assets/uni-siegen-nt-logo.svg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: auto 100%;
 	overflow: visible;
 }
 
 .university-logo {
 	display: block;
-	width: 100%;
-	height: auto;
+	width: 61.190476%;
+	height: 100%;
 }
 
 .project-brand {
@@ -2166,7 +2171,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 		min-height: 5.25rem;
 	}
 
-	.university-link { width: 14rem; height: 5.25rem; }
+	.university-link { width: 14rem; height: 4.267rem; margin-bottom: 0; }
 	.project-brand { justify-self: start; }
 
 	.nav-toggle { grid-column: 3; grid-row: 1; }
@@ -2242,7 +2247,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 
 @media (max-width: 700px) {
 	.header-shell { gap: 0.7rem; padding: 0 0.85rem 0 0; }
-	.university-link { width: 12rem; }
+	.university-link { width: 12rem; height: 3.657rem; }
 	.project-brand { padding-left: 0.75rem; }
 	.project-name { font-size: 1.15rem; }
 
@@ -2322,7 +2327,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 }
 
 @media (max-width: 360px) {
-	.university-link { width: 9.5rem; }
+	.university-link { width: 9.5rem; height: 2.895rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
