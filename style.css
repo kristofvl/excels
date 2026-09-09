@@ -101,32 +101,26 @@ p { margin: 0; }
 	align-items: center;
 	gap: clamp(1rem, 2vw, 2rem);
 	width: 100%;
-	min-height: 6rem;
+	min-height: 5.5rem;
 	margin-inline: 0;
 	padding: 0 clamp(1rem, 4vw, 3rem) 0 0;
 }
 
 .university-link {
-	display: flex;
-	align-self: stretch;
-	align-items: center;
+	position: relative;
+	z-index: 2;
+	display: block;
+	align-self: start;
 	flex: none;
-	overflow: hidden;
+	width: clamp(15.4rem, 23vw, 23rem);
+	height: 5.5rem;
+	overflow: visible;
 }
 
 .university-logo {
 	display: block;
-	width: clamp(10rem, 14vw, 14rem);
+	width: 100%;
 	height: auto;
-	flex: none;
-}
-
-.faculty-logo {
-	display: block;
-	width: clamp(8.2rem, 11.5vw, 11.5rem);
-	height: auto;
-	margin-left: clamp(-2.55rem, -2.55vw, -1.8rem);
-	flex: none;
 }
 
 .project-brand {
@@ -2172,8 +2166,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 		min-height: 5.25rem;
 	}
 
-	.university-logo { width: 8.5rem; }
-	.faculty-logo { width: 7rem; margin-left: -1.55rem; }
+	.university-link { width: 14rem; height: 5.25rem; }
 	.project-brand { justify-self: start; }
 
 	.nav-toggle { grid-column: 3; grid-row: 1; }
@@ -2249,8 +2242,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 
 @media (max-width: 700px) {
 	.header-shell { gap: 0.7rem; padding: 0 0.85rem 0 0; }
-	.university-logo { width: 7.35rem; }
-	.faculty-logo { width: 6.05rem; margin-left: -1.35rem; }
+	.university-link { width: 12rem; }
 	.project-brand { padding-left: 0.75rem; }
 	.project-name { font-size: 1.15rem; }
 
@@ -2329,8 +2321,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.site-footer-legal a { width: fit-content; }
 }
 
-@media (max-width: 380px) {
-	.faculty-logo { display: none; }
+@media (max-width: 360px) {
+	.university-link { width: 9.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
