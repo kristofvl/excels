@@ -1260,6 +1260,7 @@ p { margin: 0; }
 }
 
 .section.application-section,
+.section.key-dates-section,
 .section.faq-section {
 	max-width: none;
 	margin: 0;
@@ -1269,14 +1270,17 @@ p { margin: 0; }
 }
 
 .section.application-section { background: #ffffff; }
+.section.key-dates-section { background: #e7f1f7; }
 .section.faq-section { background: #f7fafc; }
 
 .section.application-section::before,
+.section.key-dates-section::before,
 .section.faq-section::before { display: none; }
 
 .application-heading { max-width: 100%; }
 
 .section.application-section h2,
+.section.key-dates-section h2,
 .section.faq-section h2 {
 	max-width: 22ch;
 	margin: 0;
@@ -1290,6 +1294,7 @@ p { margin: 0; }
 }
 
 .section.application-section h2::after,
+.section.key-dates-section h2::after,
 .section.faq-section h2::after { display: none; }
 
 .section.application-section h2,
@@ -1566,6 +1571,141 @@ p { margin: 0; }
 	font-size: 0.82rem;
 	line-height: 1.5;
 	color: var(--uni-dark-blue);
+}
+
+.key-dates-heading { max-width: none; }
+
+.section.key-dates-section h2 { max-width: 100%; }
+
+.key-dates-intro {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: end;
+	gap: 1.5rem 3rem;
+	margin-top: 1.1rem;
+}
+
+.key-dates-intro > p:first-child {
+	max-width: 54rem;
+	margin: 0;
+	font-size: 1.08rem;
+	line-height: 1.6;
+}
+
+.key-dates-status {
+	margin: 0;
+	font-size: 0.78rem;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #456375;
+}
+
+.key-dates-list {
+	margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+	padding: 0;
+	border-top: 1px solid #b9ccd7;
+	list-style: none;
+}
+
+.key-dates-list li {
+	display: grid;
+	grid-template-columns: 3.75rem minmax(13rem, 0.3fr) minmax(0, 1fr);
+	align-items: start;
+	gap: clamp(1rem, 3vw, 3rem);
+	padding: 1.35rem 0;
+	border-bottom: 1px solid #b9ccd7;
+}
+
+.key-date-number {
+	font-size: 1.45rem;
+	font-weight: 700;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	color: #21788c;
+}
+
+.key-date-window {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.55;
+	color: var(--uni-text);
+}
+
+.key-date-copy h3 {
+	margin: 0;
+	font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+	line-height: 1.35;
+	letter-spacing: -0.015em;
+	color: var(--uni-dark-blue);
+}
+
+.key-date-copy p {
+	max-width: 53rem;
+	margin: 0.45rem 0 0;
+	font-size: 0.92rem;
+	line-height: 1.6;
+}
+
+.key-date-copy a {
+	font-weight: 700;
+	color: var(--uni-dark-blue);
+	text-decoration: underline;
+	text-decoration-color: var(--uni-light-blue);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.2rem;
+}
+
+.key-date-copy a:hover { color: #005b8f; }
+
+.key-dates-note {
+	display: grid;
+	grid-template-columns: minmax(0, 1.25fr) minmax(22rem, 0.75fr);
+	align-items: center;
+	gap: clamp(1.5rem, 4vw, 4rem);
+	margin-top: clamp(2rem, 4vw, 3rem);
+	padding: clamp(1.5rem, 3vw, 2.2rem);
+	border-left: 0.3rem solid var(--uni-light-blue);
+	background: var(--uni-dark-blue);
+	color: #ffffff;
+}
+
+.key-dates-note .panel-kicker {
+	margin: 0 0 0.65rem;
+	color: #8fd8f0;
+}
+
+.key-dates-note p:last-child {
+	max-width: 50rem;
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.key-dates-note-links {
+	display: grid;
+	gap: 0.7rem;
+}
+
+.key-dates-note-links a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 3.25rem;
+	padding: 0.75rem 1rem;
+	border: 1px solid rgba(255, 255, 255, 0.65);
+	font-size: 0.9rem;
+	font-weight: 700;
+	line-height: 1.3;
+	color: #ffffff;
+	transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.key-dates-note-links a:hover {
+	border-color: #ffffff;
+	background: rgba(255, 255, 255, 0.1);
 }
 
 .process-track {
@@ -2104,6 +2244,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.student-support-media { width: 100%; max-width: 44rem; }
 	.application-materials-layout { grid-template-columns: 1fr; }
 	.application-ready-card { width: min(100%, 38rem); }
+	.key-dates-note { grid-template-columns: 1fr; }
+	.key-dates-note-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.masters-admission-note,
 	.funding-layout { grid-template-columns: 1fr; }
 	.funding-layout { gap: 1.75rem; }
@@ -2146,6 +2288,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.student-support-media img { clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%); }
 	.student-support-links a { padding: 0.85rem 1rem; }
 	.section.application-section,
+	.section.key-dates-section,
 	.section.faq-section { padding: 4rem 1rem; }
 	.section.funding-section { padding: 2rem 1rem 3rem; }
 	.application-checklist li { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1rem; }
@@ -2163,6 +2306,18 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 	.application-material-number { width: 2.75rem; height: 2.75rem; }
 	.application-material-answer { padding: 1rem 1rem 1.2rem; }
 	.application-ready-card { width: 100%; padding: 1.4rem; }
+	.key-dates-intro { grid-template-columns: 1fr; gap: 0.9rem; }
+	.key-dates-list li {
+		grid-template-columns: 2.75rem minmax(0, 1fr);
+		gap: 0.3rem 1rem;
+		padding: 1.15rem 0;
+	}
+	.key-date-number { grid-row: 1 / span 2; font-size: 1.2rem; }
+	.key-date-window { font-size: 0.9rem; }
+	.key-date-copy { grid-column: 2; }
+	.key-date-copy h3 { font-size: 1.08rem; }
+	.key-dates-note { padding: 1.35rem 1.2rem; }
+	.key-dates-note-links { grid-template-columns: 1fr; }
 	.masters-admission-note { padding: 1.5rem 1.25rem; }
 	.masters-admission-links a { align-items: flex-start; }
 	.process-step { padding: 1.25rem; }
