@@ -66,6 +66,13 @@ if (navToggle && primaryNavigation) {
 		});
 	});
 
+	document.addEventListener("click", (event) => {
+		if (!primaryNavigation.classList.contains("is-open")) return;
+		if (primaryNavigation.contains(event.target) || navToggle.contains(event.target)) return;
+
+		closeNavigation();
+	});
+
 	document.addEventListener("keydown", (event) => {
 		if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
 			closeNavigation();
@@ -73,7 +80,7 @@ if (navToggle && primaryNavigation) {
 		}
 	});
 
-	window.matchMedia("(min-width: 1081px)").addEventListener("change", closeNavigation);
+	window.matchMedia("(min-width: 1200px)").addEventListener("change", closeNavigation);
 }
 
 const openFaqCategory = (hash) => {
