@@ -26,27 +26,17 @@ const openInNewTab = (link) => {
 	link.append(hint);
 };
 
-// Elements marked data-live="…" appear once the matching URL is set on <body>; data-pending="…" elements show until then.
-const launchUrls = {
+// Paste the published URLs into data-application-url and data-contact-url on <body>; until then each button keeps its in-page placeholder link.
+const configuredUrls = {
 	application: document.body.dataset.applicationUrl?.trim(),
 	contact: document.body.dataset.contactUrl?.trim(),
 };
 
-Object.entries(launchUrls).forEach(([name, url]) => {
-	document.querySelectorAll(`[data-live="${name}"]`).forEach((element) => {
-		element.hidden = !url;
+Object.entries(configuredUrls).forEach(([name, url]) => {
+	if (!url) return;
 
-		if (element instanceof HTMLAnchorElement) {
-			if (url) {
-				element.href = url;
-			} else {
-				element.removeAttribute("href");
-			}
-		}
-	});
-
-	document.querySelectorAll(`[data-pending="${name}"]`).forEach((element) => {
-		element.hidden = Boolean(url);
+	document.querySelectorAll(`[data-link="${name}"]`).forEach((link) => {
+		link.href = url;
 	});
 });
 
