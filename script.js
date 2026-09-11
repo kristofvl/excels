@@ -1,37 +1,58 @@
-document.documentElement.classList.add("js");
-
 const currentYear = document.querySelector("[data-current-year]");
 
 if (currentYear) {
 	currentYear.textContent = String(new Date().getFullYear());
 }
 
-const openLinkInNewTab = (link) => {
+const isWebAddress = (url) => /^(https?:)?\/\//i.test(url ?? "");
+
+const openInNewTab = (link) => {
 	link.target = "_blank";
 	link.rel = "noopener noreferrer";
+
+	const label = link.getAttribute("aria-label");
+
+	if (label) {
+		if (!/new tab/i.test(label)) link.setAttribute("aria-label", `${label} (opens in a new tab)`);
+		return;
+	}
+
+	if (link.querySelector("[data-new-tab-hint]")) return;
+
+	const hint = document.createElement("span");
+	hint.className = "sr-only";
+	hint.dataset.newTabHint = "";
+	hint.textContent = " (opens in a new tab)";
+	link.append(hint);
 };
 
-const configureOptionalLinks = (selector, url) => {
-	document.querySelectorAll(selector).forEach((link) => {
-		const unavailableStatus = link.querySelector("[data-unavailable-status]");
+// Elements marked data-live="…" appear once the matching URL is set on <body>; data-pending="…" elements show until then.
+const launchUrls = {
+	application: document.body.dataset.applicationUrl?.trim(),
+	contact: document.body.dataset.contactUrl?.trim(),
+};
 
-		if (url) {
-			link.href = url;
-			openLinkInNewTab(link);
-			link.removeAttribute("aria-disabled");
-			unavailableStatus?.setAttribute("hidden", "");
-		} else {
-			link.removeAttribute("href");
-			link.setAttribute("aria-disabled", "true");
-			unavailableStatus?.removeAttribute("hidden");
+Object.entries(launchUrls).forEach(([name, url]) => {
+	document.querySelectorAll(`[data-live="${name}"]`).forEach((element) => {
+		element.hidden = !url;
+
+		if (element instanceof HTMLAnchorElement) {
+			if (url) {
+				element.href = url;
+			} else {
+				element.removeAttribute("href");
+			}
 		}
 	});
-};
 
-configureOptionalLinks("[data-application-link]", document.body.dataset.applicationUrl?.trim());
-configureOptionalLinks("[data-contact-link]", document.body.dataset.contactUrl?.trim());
+	document.querySelectorAll(`[data-pending="${name}"]`).forEach((element) => {
+		element.hidden = Boolean(url);
+	});
+});
 
-document.querySelectorAll('a[href^="http://"], a[href^="https://"], a[href^="//"]').forEach(openLinkInNewTab);
+document.querySelectorAll("a[href]").forEach((link) => {
+	if (isWebAddress(link.getAttribute("href"))) openInNewTab(link);
+});
 
 const navToggle = document.querySelector(".nav-toggle");
 const primaryNavigation = document.getElementById("primary-navigation");

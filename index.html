@@ -3,13 +3,26 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="EXCELS prepares selected international Bachelor&rsquo;s students for research-oriented Master&rsquo;s study in Computer Science, Electrical Engineering, and Mechatronics at the University of Siegen." />
-		<meta name="theme-color" content="#00385f" />
 		<title>EXCELS | Research-oriented Master&rsquo;s pathway | University of Siegen</title>
+		<meta name="description" content="Online Digital Prep and a 14-day Summer School in Siegen for international Bachelor&rsquo;s students preparing for research-oriented Master&rsquo;s study." />
+		<meta name="theme-color" content="#00385f" />
+		<!-- On deployment, make og:image an absolute URL and add og:url and a canonical link with the published address. -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="EXCELS &middot; University of Siegen" />
+		<meta property="og:title" content="EXCELS: Research-oriented Master&rsquo;s pathway at the University of Siegen" />
+		<meta property="og:description" content="Online Digital Prep and a 14-day Summer School in Siegen for international Bachelor&rsquo;s students preparing for research-oriented Master&rsquo;s study." />
+		<meta property="og:image" content="Assets/og-excels.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="EXCELS, University of Siegen: research-oriented Master&rsquo;s pathway for international Bachelor&rsquo;s students." />
+		<meta property="og:locale" content="en_GB" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<script>document.documentElement.classList.add("js");</script>
 		<link rel="icon" type="image/svg+xml" href="Assets/favicon.svg" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="apple-touch-icon" href="Assets/apple-touch-icon.png" />
+		<link rel="stylesheet" href="style.css?v=2026-09-11" />
 	</head>
-	<!-- Add the published EXCELS application and contact-form URLs to the data attributes below. -->
+	<!-- Launch settings: add the published MoveON application URL and the EXCELS contact URL (a web form or a mailto: address). Every application and contact action switches from its pre-launch state automatically. -->
 	<body data-application-url="" data-contact-url="">
 		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header class="site-header">
@@ -25,10 +38,10 @@
 					<span class="sr-only">Open navigation</span><span></span><span></span><span></span>
 				</button>
 				<nav id="primary-navigation" aria-label="Primary navigation">
-					<a href="#about">About</a>
-					<a href="#program">Programme</a>
+					<a href="#about">Overview</a>
+					<a href="#program">Pathway</a>
 					<a href="#research">Research</a>
-					<a href="#support">Support &amp; life</a>
+					<a href="#support">Life &amp; support</a>
 					<a href="#faq">FAQ</a>
 					<a class="nav-application" href="#apply">Application guide</a>
 				</nav>
@@ -40,31 +53,37 @@
 			<div class="hero-shell">
 				<div class="hero-content">
 					<p class="hero-eyebrow">International study and research pathway</p>
-					<h1 id="hero-title">Prepare for a Master&rsquo;s study and research in Germany.</h1>
-					<p class="hero-lead">Excellence in Computer Science and Electrical Engineering Leadership in Siegen
-						(EXCELS) programme prepares selected international Bachelor&rsquo;s students for a tuition-free and research-oriented Master&rsquo;s study at the University of Siegen.</p>
+					<h1 id="hero-title">Prepare for a research Master&rsquo;s in Siegen, Germany.</h1>
+					<p class="hero-lead">Excellence in Computer Science and Electrical Engineering Leadership in Siegen (EXCELS) prepares selected international Bachelor&rsquo;s students for tuition-free, research-oriented Master&rsquo;s study at the University of Siegen.</p>
 					<div class="hero-actions">
-						<div class="application-action application-action-hero">
-							<a class="application-button" data-application-link aria-describedby="hero-application-deadline" aria-disabled="true"><span>Start your application</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
-							<span id="hero-application-deadline" class="application-deadline">
-								<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
-									<path d="M7 2.5v4M17 2.5v4M3.5 9h17M5.5 4.5h13a2 2 0 0 1 2 2v14h-17v-14a2 2 0 0 1 2-2Z" />
-									<path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01" />
-								</svg>
-								<span><span class="application-deadline-label">Application deadline</span><span class="application-deadline-value">To be announced</span><span class="sr-only">. The application form is not yet active.</span></span>
-							</span>
-						</div>
+						<a class="application-button application-button-primary" data-live="application" hidden><span>Start your application</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
+						<a class="application-button application-button-primary" href="#apply" data-pending="application"><span>Prepare your application</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
+						<p class="application-deadline">
+							<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+								<path d="M7 2.5v4M17 2.5v4M3.5 9h17M5.5 4.5h13a2 2 0 0 1 2 2v14h-17v-14a2 2 0 0 1 2-2Z" />
+								<path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01" />
+							</svg>
+							<span><span class="application-deadline-label">Application period</span><span class="application-deadline-value">October&ndash;November 2026</span></span>
+						</p>
 					</div>
 				</div>
 				<figure class="hero-media">
 					<div class="hero-image-frame">
-						<img src="Assets/excels-impression-no-text.png" alt="Illustration of international students collaborating on sensor systems and robotics in a university laboratory." width="1672" height="941" fetchpriority="high" decoding="async" />
+						<img src="Assets/excels-impression-1200.webp" srcset="Assets/excels-impression-800.webp 800w, Assets/excels-impression-1200.webp 1200w" sizes="(max-width: 980px) calc(100vw - 2rem), min(42vw, 38rem)" alt="Illustration of international students collaborating on sensor systems and robotics in a university laboratory." width="1200" height="675" fetchpriority="high" />
 					</div>
-					<aside class="hero-glance" aria-label="EXCELS at a glance">
-						<p class="hero-glance-kicker">At a glance</p>
-						<p class="hero-glance-title">Digital preparation & summer school</p>
-						<p class="hero-glance-copy">A pathway towards Master&rsquo;s study, upon successful selection and  admission.</p>
-					</aside>
+					<div class="hero-glance">
+						<p class="hero-glance-kicker">Two stages</p>
+						<dl class="hero-glance-list">
+							<div>
+								<dt>Digital Prep</dt>
+								<dd>Online &middot; January&ndash;March 2027</dd>
+							</div>
+							<div>
+								<dt>Summer School</dt>
+								<dd>14 days in Siegen &middot; June or July 2027</dd>
+							</div>
+						</dl>
+					</div>
 				</figure>
 			</div>
 		</section>
@@ -72,32 +91,37 @@
 		<section id="about" class="section overview-section" aria-labelledby="overview-title">
 			<div class="section-shell">
 				<header class="section-heading">
-					<p id="overview-title" class="section-eyebrow">Quick facts</p>
+					<h2 id="overview-title" class="section-eyebrow">Quick facts</h2>
 				</header>
 
 				<dl class="glance-stats">
 					<div>
-						<dt>Initial Preparation</dt>
-						<dd>Online </dd>
-					</div>
-					<div>
-						<dt>Travel &amp; stay</dt>
-						<dd>Support planned</dd>
+						<dt>Digital Prep</dt>
+						<dd>Online, no fee</dd>
 					</div>
 					<div>
 						<dt>Summer School</dt>
-						<dd>14 days, no fee</dd>
+						<dd>14 days, 15 places</dd>
 					</div>
 					<div>
-						<dt>After Master&rsquo;s enrolment</dt>
-						<dd>&euro;992 /month</dd>
+						<dt>Summer School travel &amp; stay</dt>
+						<dd>Supported</dd>
 					</div>
-
 					<div>
-						<dt>Possible MSC programmes</dt>
-						<dd>3 programmes</dd>
+						<dt>Master&rsquo;s programmes</dt>
+						<dd>3, English-taught</dd>
 					</div>
 				</dl>
+
+				<div class="date-strip">
+					<p class="date-strip-label" id="date-strip-title">Next dates</p>
+					<ol class="date-strip-list" role="list" aria-labelledby="date-strip-title">
+						<li><span class="date-strip-when">October&ndash;November 2026</span> <span>Applications</span></li>
+						<li><span class="date-strip-when">January&ndash;March 2027</span> <span>Digital Prep</span></li>
+						<li><span class="date-strip-when">June or July 2027</span> <span>Summer School</span></li>
+					</ol>
+					<a class="date-strip-link" href="#key-dates">All dates <span aria-hidden="true">&rarr;</span></a>
+				</div>
 			</div>
 		</section>
 
@@ -106,25 +130,25 @@
 				<div class="eligibility-copy">
 					<header class="section-heading">
 						<p class="section-eyebrow">Early fit check</p>
-						<h2 id="eligibility-title">Is EXCELS for you?</h2>
-						<p class="section-lead">EXCELS is designed for students whose academic background, study stage, and research interests align with the project.</p>
+						<h2 id="eligibility-title">Who EXCELS is for.</h2>
+						<p class="section-lead">EXCELS suits students whose study stage, academic background, and research interests match the six points below.</p>
 					</header>
 
 					<ul class="eligibility-list">
 						<li><strong>Study stage</strong><span>You are in the penultimate or final year of a Bachelor&rsquo;s degree.</span></li>
 						<li><strong>Academic background</strong><span>You study Computer Science, Electrical Engineering, Mechatronics, or a closely related STEM subject.</span></li>
 						<li><strong>Academic strength</strong><span>You have a strong academic record and a solid foundation in your subject.</span></li>
-						<li><strong>English proficiency</strong><span>You can provide proof of English at C1 level, or official confirmation that your Bachelor&rsquo;s programme is taught in English.</span></li>
+						<li><strong>English</strong><span>You can study confidently in English. The required level and accepted evidence are set in the official call.</span></li>
 						<li><strong>Research direction</strong><span>You are seriously interested in AI, sensor systems, or microelectronics and in research-oriented Master&rsquo;s study.</span></li>
-						<li><strong>Programme fit</strong><span>You are ready for active online preparation and, if separately selected, a 14-day Summer School in Siegen.</span></li>
+						<li><strong>Commitment</strong><span>You are ready for active online preparation and, if separately selected, a 14-day Summer School in Siegen.</span></li>
 					</ul>
 				</div>
 
 				<figure class="outreach-panel" aria-labelledby="outreach-title">
-					<img class="outreach-map" src="Assets/outreach-countries.png" alt="World map with dots marking China, Ghana, India, Kenya, Pakistan, Thailand and Vietnam." width="3200" height="1680" loading="lazy" decoding="async" />
+					<img class="outreach-map" src="Assets/outreach-countries-1200.webp" alt="World map with dots marking China, Ghana, India, Kenya, Pakistan, Thailand and Vietnam." width="1200" height="630" loading="lazy" decoding="async" />
 					<figcaption class="outreach-glance">
-						<p id="outreach-title" class="panel-kicker">WHERE WE RECRUIT</p>
-						<p class="outreach-glance-copy">At the moment, EXCELS recruits prospective Master&rsquo;s students in China, Ghana, India, Kenya, Pakistan, Thailand, and Vietnam.</p>
+						<p id="outreach-title" class="panel-kicker">Where we recruit</p>
+						<p class="outreach-glance-copy">EXCELS currently recruits prospective Master&rsquo;s students in China, Ghana, India, Kenya, Pakistan, Thailand, and Vietnam.</p>
 					</figcaption>
 				</figure>
 			</div>
@@ -134,37 +158,37 @@
 			<div class="section-shell">
 				<header class="section-heading pathway-heading">
 					<p class="section-eyebrow">The EXCELS pathway</p>
-					<h2 id="pathway-title">From selection to research experience in Siegen.</h2>
-					<p class="section-lead">EXCELS begins with online Digital Preparation and continues through separate selection for the 14-day Summer School. Admission to a Master&rsquo;s programme and selection for a stipend are separate decisions.</p>
+					<h2 id="pathway-title">Online first, then Siegen.</h2>
+					<p class="section-lead">EXCELS starts with online Digital Prep. A separate selection then decides the 15 Summer School places in Siegen. Master&rsquo;s admission and the ZESS stipend are separate decisions again.</p>
 				</header>
 
 				<ol class="process-track" role="list" aria-label="Four stages of the EXCELS pathway">
 					<li class="process-step">
 						<span class="process-number"><span class="sr-only">Stage </span>01</span>
 						<div>
-							<h3>Intake information</h3>
-							<p>Apply for Digital Preparation under the published intake requirements. Selection is based primarily on academic performance.</p>
+							<h3>Apply</h3>
+							<p>Apply for Digital Prep during the application period. Selection is based mainly on your academic performance.</p>
 						</div>
 					</li>
 					<li class="process-step">
 						<span class="process-number"><span class="sr-only">Stage </span>02</span>
 						<div>
-							<h3>Digital preparation</h3>
-							<p>Complete online preparation in AI and sensor systems, academic orientation, University guidance, and exchange with researchers.</p>
+							<h3>Digital Prep</h3>
+							<p>Complete online modules in AI and sensor systems, learn how studying in Germany works, and exchange ideas with researchers.</p>
 						</div>
 					</li>
 					<li class="process-step">
 						<span class="process-number"><span class="sr-only">Stage </span>03</span>
 						<div>
-							<h3>Summer school</h3>
-							<p>Selection considers the required documents, academic strength, research fit, and a technical interview. Participants spend 14 days at the University of Siegen, joining project work, laboratory visits, research exchange, and networking.</p>
+							<h3>Summer School</h3>
+							<p>A separate selection considers your documents, academic strength, research fit, and a short technical interview. The 15 selected participants spend 14 days in Siegen on project work, lab visits, and research exchange.</p>
 						</div>
 					</li>
 					<li class="process-step">
 						<span class="process-number"><span class="sr-only">Stage </span>04</span>
 						<div>
 							<h3>Master&rsquo;s study</h3>
-							<p>Master&rsquo;s admission is decided separately by the University. Following enrolment, up to two participants may be selected for a &euro;992 monthly stipend for up to 24 months.</p>
+							<p>You apply for your Master&rsquo;s programme separately, and the University decides admission. After enrolment, up to two participants may be selected for a ZESS stipend of &euro;992 per month for up to 24 months.</p>
 						</div>
 					</li>
 				</ol>
@@ -208,24 +232,24 @@
 					</article>
 				</div>
 
-				<aside class="masters-admission-note" aria-labelledby="masters-admission-title">
+				<div class="masters-admission-note">
 					<div>
 						<p class="panel-kicker">Independent University process</p>
 						<h3 id="masters-admission-title">EXCELS selection is not Master&rsquo;s admission.</h3>
-						<p>Participation in Digital Prep or the Summer School does not replace a University application or guarantee admission. Admission to a degree programme likewise does not automatically include an EXCELS or Summer School place.</p>
+						<p>Taking part in Digital Prep or the Summer School does not replace a University application or guarantee admission. Likewise, admission to a degree programme does not automatically include an EXCELS or Summer School place.</p>
 					</div>
-					<nav class="masters-admission-links" aria-label="Official University application guidance">
-						<a href="https://www.uni-siegen.de/en/ETI/application-for-our-study-programs-eti">Read the ETI Master&rsquo;s application overview <span aria-hidden="true">&rarr;</span></a>
-						<a href="https://www.uni-siegen.de/en/starting/how-do-i-apply-international-students">Read the international applicant guidance <span aria-hidden="true">&rarr;</span></a>
-					</nav>
-				</aside>
+					<ul class="masters-admission-links" aria-label="Official University application guidance">
+						<li><a href="https://www.uni-siegen.de/en/ETI/application-for-our-study-programs-eti">Read the ETI Master&rsquo;s application overview <span aria-hidden="true">&rarr;</span></a></li>
+						<li><a href="https://www.uni-siegen.de/en/starting/how-do-i-apply-international-students">Read the international applicant guidance <span aria-hidden="true">&rarr;</span></a></li>
+					</ul>
+				</div>
 
 				<div class="zess-environment">
 					<section class="zess-research" aria-labelledby="zess-research-title">
 						<header class="zess-research-heading">
 							<p class="section-eyebrow">Research at ZESS</p>
 							<h3 id="zess-research-title">From sensing to intelligent systems.</h3>
-							<p class="zess-research-intro">At ZESS, sensor development connects with data processing and artificial intelligence in interdisciplinary research at the University of Siegen.</p>
+							<p class="zess-research-intro">At the Center for Sensor Systems (ZESS), sensor development connects with data processing and artificial intelligence in interdisciplinary research at the University of Siegen.</p>
 						</header>
 
 						<div class="zess-research-cards">
@@ -255,18 +279,18 @@
 					<section class="zess-stories" aria-labelledby="zess-stories-title">
 						<header class="zess-stories-heading">
 							<p class="section-eyebrow">Inside ZESS</p>
-							<h3 id="zess-stories-title">Research, exchange and recognition.</h3>
+							<h3 id="zess-stories-title">Research, exchange, and recognition.</h3>
 						</header>
 
-						<div class="zess-story-grid">
+						<div class="zess-story-grid" role="region" aria-label="ZESS stories" tabindex="0">
 							<article class="zess-story-card zess-story-building">
 								<div class="zess-story-image">
-									<img src="Assets/zess-building.webp" alt="Glass-fronted exterior of the Center for Sensor Systems at the University of Siegen at dusk." width="1400" height="840" loading="lazy" decoding="async" />
+									<img src="Assets/zess-building-1000.webp" alt="Glass-fronted exterior of the Center for Sensor Systems at the University of Siegen at dusk." width="1000" height="600" loading="lazy" decoding="async" />
 								</div>
 								<div class="zess-story-copy">
 									<p class="panel-kicker">Center for Sensor Systems (ZESS)</p>
 									<h4>Where disciplines meet around sensing</h4>
-									<p>ZESS is an interdisciplinary research hub spanning electrical engineering, computer science, mechanical engineering, mechatronics, mathematics, and biology. It combines fundamental and applied research with industry projects and transfers knowledge into teaching and postgraduate education.</p>
+									<p>ZESS is an interdisciplinary research hub spanning electrical engineering, computer science, mechanical engineering, mechatronics, mathematics, and biology. It combines fundamental and applied research with industry projects and brings that knowledge into teaching and postgraduate education.</p>
 									<a class="zess-link" href="https://www.zess.uni-siegen.de/">Explore the official ZESS website <span aria-hidden="true">&rarr;</span></a>
 									<p class="zess-story-credit">ZESS building at dusk &middot; Photo: Jan S&ouml;hlke / ZESS, University of Siegen.</p>
 								</div>
@@ -279,19 +303,19 @@
 								<div class="zess-story-copy">
 									<p class="panel-kicker">ZESS Research Forum</p>
 									<h4>A direct view into research culture</h4>
-									<p>The Summer School is planned to connect with the annual ZESS Research Forum, where doctoral researchers share their work through talks and poster presentations. Structured conversations are intended to help participants meet researchers, explore topics, and understand potential research pathways.</p>
+									<p>The Summer School is planned to connect with the annual ZESS Research Forum, where doctoral researchers present their work in talks and posters. Participants can meet researchers, explore topics, and see where research could take them.</p>
 									<p class="zess-story-credit">Research presentation at the 2026 forum &middot; Photo: Jan S&ouml;hlke / ZESS, University of Siegen.</p>
 								</div>
 							</article>
 
 							<article class="zess-story-card zess-story-awards">
 								<div class="zess-story-image">
-									<img src="Assets/forum-awards.webp" alt="Winners of the 2026 ZESS PhD Research Forum awards pose with blue VDI folders." width="1400" height="934" loading="lazy" decoding="async" />
+									<img src="Assets/forum-awards-1000.webp" alt="Winners of the 2026 ZESS PhD Research Forum awards pose with blue VDI folders." width="1000" height="667" loading="lazy" decoding="async" />
 								</div>
 								<div class="zess-story-copy">
 									<p class="panel-kicker">Research recognition</p>
 									<h4>Awards at the Research Forum</h4>
-									<p>VDI-sponsored awards recognise the Best Poster and Best Lightning Talk presentations after a day of interdisciplinary exchange at ZESS.</p>
+									<p>Awards sponsored by the VDI, the Association of German Engineers, recognise the best poster and the best lightning talk after a day of interdisciplinary exchange at ZESS.</p>
 									<p class="zess-story-credit">2026 forum award recipients &middot; Photo: Jan S&ouml;hlke / ZESS, University of Siegen.</p>
 								</div>
 							</article>
@@ -304,25 +328,25 @@
 		<section id="support" class="section siegen-experience-section" aria-labelledby="siegen-experience-title">
 			<div class="section-shell">
 				<header class="siegen-experience-heading">
-					<p class="section-eyebrow">Study and live in Siegen</p>
+					<p class="section-eyebrow">Life in Siegen</p>
 					<h2 id="siegen-experience-title">More than study and research.</h2>
-					<p class="siegen-experience-lead">EXCELS opens the door to an international university community in a compact city where campus, culture and green surroundings are close at hand.</p>
+					<p class="siegen-experience-lead">EXCELS opens the door to an international university community in a compact city where campus, culture, and green surroundings are close at hand.</p>
 				</header>
 
 				<div class="siegen-experience-grid">
 					<div class="siegen-link-panel">
-						<h3>Liveable and lovable!</h3>
-						<nav class="siegen-link-list" aria-label="Discover the University of Siegen and its campuses">
-							<a href="https://www.uni-siegen.de/en/overview-university"><span>Discover the University of Siegen</span><span aria-hidden="true">&rarr;</span></a>
-							<a href="https://www.uni-siegen.de/en/student-life/"><span>Explore campus and student life</span><span aria-hidden="true">&rarr;</span></a>
-							<a href="https://www.uni-siegen.de/en/driving-directions-and-map"><span>View campus locations</span><span aria-hidden="true">&rarr;</span></a>
-							<a href="https://www.uni-siegen.de/en/incoming-students-international-start"><span>Information for international students</span><span aria-hidden="true">&rarr;</span></a>
-						</nav>
+						<h3 id="siegen-links-title">Explore the University and the city</h3>
+						<ul class="link-rows" aria-labelledby="siegen-links-title">
+							<li><a href="https://www.uni-siegen.de/en/overview-university"><span>Discover the University of Siegen</span><span aria-hidden="true">&rarr;</span></a></li>
+							<li><a href="https://www.uni-siegen.de/en/student-life/"><span>Explore campus and student life</span><span aria-hidden="true">&rarr;</span></a></li>
+							<li><a href="https://www.uni-siegen.de/en/driving-directions-and-map"><span>View campus locations</span><span aria-hidden="true">&rarr;</span></a></li>
+							<li><a href="https://www.uni-siegen.de/en/incoming-students-international-start"><span>Information for international students</span><span aria-hidden="true">&rarr;</span></a></li>
+						</ul>
 					</div>
 
 					<figure class="siegen-city-media">
 						<div class="siegen-city-image">
-							<img src="Assets/siegenUni.jpg" alt="Aerial view across Siegen&rsquo;s historic city centre and the University&rsquo;s Lower Castle campus at sunset." width="1000" height="997" loading="lazy" decoding="async" />
+							<img src="Assets/siegen-city-1000.webp" alt="Aerial view across Siegen&rsquo;s historic city centre and the University&rsquo;s Lower Castle campus at sunset." width="1000" height="997" loading="lazy" decoding="async" />
 						</div>
 					</figure>
 				</div>
@@ -333,23 +357,23 @@
 			<div class="section-shell student-support-layout">
 				<div class="student-support-copy">
 					<header>
-						<p class="section-eyebrow">International student support</p>
-						<h2 id="student-support-title">Support at every stage.</h2>
-						<p class="student-support-lead">Alongside EXCELS, the University&rsquo;s International Office and student services help international students prepare for their arrival, settle into Siegen and navigate university life.</p>
+						<p class="section-eyebrow">Arrival and support</p>
+						<h2 id="student-support-title">Help with visas, housing, and your first weeks.</h2>
+						<p class="student-support-lead">Alongside EXCELS, the University&rsquo;s International Office and student services help international students prepare for their arrival, settle into Siegen, and navigate university life.</p>
 					</header>
 
-					<nav class="student-support-links" aria-label="Official support for international students">
-						<a href="https://www.uni-siegen.de/en/planning-and-organization-incoming"><span>Plan your stay in Siegen</span><span aria-hidden="true">&rarr;</span></a>
-						<a href="https://www.uni-siegen.de/en/visa-residence-permit-incoming"><span>Visa and residence</span><span aria-hidden="true">&rarr;</span></a>
-						<a href="https://www.uni-siegen.de/en/accommodation-incoming"><span>Accommodation</span><span aria-hidden="true">&rarr;</span></a>
-						<a href="https://www.uni-siegen.de/en/financing-incoming"><span>Funding your studies</span><span aria-hidden="true">&rarr;</span></a>
-						<a href="https://www.uni-siegen.de/en/orientation-program-incoming"><span>Orientation and first days</span><span aria-hidden="true">&rarr;</span></a>
-						<a href="https://www.uni-siegen.de/en/team/international-office"><span>International Office</span><span aria-hidden="true">&rarr;</span></a>
-					</nav>
+					<ul class="link-rows" aria-label="Official support for international students">
+						<li><a href="https://www.uni-siegen.de/en/planning-and-organization-incoming"><span>Plan your stay in Siegen</span><span aria-hidden="true">&rarr;</span></a></li>
+						<li><a href="https://www.uni-siegen.de/en/visa-residence-permit-incoming"><span>Visa and residence</span><span aria-hidden="true">&rarr;</span></a></li>
+						<li><a href="https://www.uni-siegen.de/en/accommodation-incoming"><span>Accommodation</span><span aria-hidden="true">&rarr;</span></a></li>
+						<li><a href="https://www.uni-siegen.de/en/financing-incoming"><span>Funding your studies</span><span aria-hidden="true">&rarr;</span></a></li>
+						<li><a href="https://www.uni-siegen.de/en/orientation-program-incoming"><span>Orientation and first days</span><span aria-hidden="true">&rarr;</span></a></li>
+						<li><a href="https://www.uni-siegen.de/en/team/international-office"><span>International Office</span><span aria-hidden="true">&rarr;</span></a></li>
+					</ul>
 				</div>
 
 				<figure class="student-support-media">
-					<img src="Assets/international.webp" alt="Four students walk together on a University of Siegen campus path." width="785" height="500" loading="lazy" decoding="async" />
+					<img src="Assets/international-students.webp" alt="Four students walk together on a University of Siegen campus path." width="785" height="500" loading="lazy" decoding="async" />
 				</figure>
 			</div>
 		</section>
@@ -359,49 +383,49 @@
 				<header class="section-heading application-heading">
 					<p class="section-eyebrow">Application guide</p>
 					<h2 id="application-title">Your EXCELS application, step by step.</h2>
-					<p class="section-lead">EXCELS has separate selection stages for Digital Prep and the research-oriented Summer School. Check the applicable intake information for eligibility, required items, dates, and participation details.</p>
+					<p class="section-lead">Digital Prep and the Summer School have separate selections. The official call for the 2026/27 round will confirm eligibility, required documents, and deadlines; until then, use this guide to prepare.</p>
 				</header>
 
 				<section class="application-checklist-block" aria-labelledby="application-checklist-title">
 					<header class="application-subheading">
-						<p class="panel-kicker">Application checklist</p>
-						<h3 id="application-checklist-title">Prepare in one clear order.</h3>
+						<p class="panel-kicker">How to prepare</p>
+						<h3 id="application-checklist-title">Five steps to a complete application</h3>
 					</header>
 
-					<ol class="application-checklist application-process-list" role="list">
+					<ol class="application-process-list" role="list">
 						<li>
 							<span class="application-step-number"><span class="sr-only">Step </span>01</span>
 							<div>
 								<h4>Check your fit</h4>
-								<p>Use the <a href="#target">early fit guide</a> to review your study stage, academic background, academic strength, and research direction.</p>
+								<p>Use the <a href="#target">fit check</a> to review your study stage, academic background, academic strength, and research direction.</p>
 							</div>
 						</li>
 						<li>
 							<span class="application-step-number"><span class="sr-only">Step </span>02</span>
 							<div>
-								<h4>Master&rsquo;s direction</h4>
-								<p>Compare the relevant <a href="#research">Master&rsquo;s programmes</a> and their individual admission requirements.</p>
+								<h4>Choose a Master&rsquo;s direction</h4>
+								<p>Compare the <a href="#research">Master&rsquo;s programmes</a> and their individual admission requirements.</p>
 							</div>
 						</li>
 						<li>
 							<span class="application-step-number"><span class="sr-only">Step </span>03</span>
 							<div>
-								<h4>EXCELS information</h4>
-								<p>Confirm the applicant scope, eligibility rules, requirements, and <a href="#key-dates">dates</a> for that intake.</p>
+								<h4>Read the call</h4>
+								<p>When the official call is published, check eligibility, required documents, and <a href="#key-dates">dates</a>.</p>
 							</div>
 						</li>
 						<li>
 							<span class="application-step-number"><span class="sr-only">Step </span>04</span>
 							<div>
-								<h4>Preparation</h4>
-								<p>Gather the items specified for the intake, ready for submission.</p>
+								<h4>Gather your documents</h4>
+								<p>Prepare the documents listed below so they are ready to upload.</p>
 							</div>
 						</li>
 						<li>
 							<span class="application-step-number"><span class="sr-only">Step </span>05</span>
 							<div>
 								<h4>Apply</h4>
-								<p>Submit your EXCELS application and required documents through the official form by the published deadline.</p>
+								<p>Submit your application and documents through the official EXCELS form before the deadline.</p>
 							</div>
 						</li>
 					</ol>
@@ -409,54 +433,55 @@
 
 				<section class="application-materials" aria-labelledby="application-materials-title">
 					<header class="application-subheading">
-						<p class="panel-kicker">Application requirements</p>
-						<h3 id="application-materials-title">Have these core items ready?</h3>
+						<p class="panel-kicker">Documents</p>
+						<h3 id="application-materials-title">Documents to prepare</h3>
 					</header>
 
 					<div class="application-materials-layout">
-						<ol class="application-materials-list">
+						<ul class="application-materials-list">
 							<li class="application-material-item">
 								<details>
-									<summary><span class="application-material-number" aria-hidden="true">01</span><span class="application-material-title">Curriculum Vitae</span></summary>
-									<div class="application-material-answer"><p>Prepare a concise overview of your education, relevant coursework, technical skills, projects, research exposure, internships, and other relevant experience.</p></div>
+									<summary><span class="application-material-title">Curriculum vitae</span></summary>
+									<div class="application-material-answer"><p>Prepare a concise overview of your education, relevant coursework, technical skills, projects, research experience, internships, and other relevant experience.</p></div>
 								</details>
 							</li>
 							<li class="application-material-item">
 								<details>
-									<summary><span class="application-material-number" aria-hidden="true">02</span><span class="application-material-title">Academic record and degree status</span></summary>
-									<div class="application-material-answer"><p>Have a current transcript or equivalent academic record ready, together with evidence of enrolment or completion. It should make your grades and relevant mathematical or algorithmic preparation clear.</p></div>
+									<summary><span class="application-material-title">Academic record and degree status</span></summary>
+									<div class="application-material-answer"><p>Have a current transcript or equivalent academic record ready, together with evidence of enrolment or completion. It should make your grades and your mathematical or algorithmic preparation clear.</p></div>
 								</details>
 							</li>
 							<li class="application-material-item">
 								<details>
-									<summary><span class="application-material-number" aria-hidden="true">03</span><span class="application-material-title">Technical and research work</span></summary>
-									<div class="application-material-answer"><p>Collect relevant project summaries, thesis work, publications, presentations, research placements, internships, or comparable technical work. State your own contribution and its connection to AI, sensor systems, or microelectronics.</p></div>
+									<summary><span class="application-material-title">Technical and research work</span></summary>
+									<div class="application-material-answer"><p>Collect relevant project summaries, thesis work, publications, presentations, research placements, internships, or comparable technical work. State your own contribution and how it connects to AI, sensor systems, or microelectronics.</p></div>
 								</details>
 							</li>
 							<li class="application-material-item">
 								<details>
-									<summary><span class="application-material-number" aria-hidden="true">04</span><span class="application-material-title">Motivation letter</span></summary>
-									<div class="application-material-answer"><p>Explain why EXCELS and research-oriented Master&rsquo;s study in Siegen fit your background, interests, development goals, and intended technology-oriented career.</p></div>
+									<summary><span class="application-material-title">Motivation letter</span></summary>
+									<div class="application-material-answer"><p>Explain why EXCELS and research-oriented Master&rsquo;s study in Siegen fit your background, interests, development goals, and the technology career you intend to pursue.</p></div>
 								</details>
 							</li>
 							<li class="application-material-item">
 								<details>
-									<summary><span class="application-material-number" aria-hidden="true">05</span><span class="application-material-title">Intake-specific supporting evidence</span></summary>
-									<div class="application-material-answer"><p>Prepare any language evidence, translations, recommendations, certificates, or contextual information requested for the intake, following the stated requirements exactly.</p></div>
+									<summary><span class="application-material-title">Additional evidence</span></summary>
+									<div class="application-material-answer"><p>Prepare any language evidence, translations, recommendations, certificates, or background information the official call asks for, and follow its requirements exactly.</p></div>
 								</details>
 							</li>
-						</ol>
+						</ul>
 
-						<aside class="application-ready-card" aria-labelledby="application-ready-title">
+						<div class="application-ready-card">
 							<svg class="application-ready-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
 								<path d="M8.5 3.5h10l5 5v20h-15Z" />
 								<path d="M18.5 3.5v6h5" />
 							</svg>
-							<h4 id="application-ready-title" class="panel-kicker">Submit application</h4>
-							<p class="application-ready-copy">Gather the documents required for your intake, then submit them through the official EXCELS application form by the published deadline.</p>
-							<a class="application-ready-link" data-application-link aria-disabled="true"><span>Start your application</span><span aria-hidden="true">&rarr;</span></a>
+							<p class="panel-kicker">Submit your application</p>
+							<p class="application-ready-copy" data-pending="application">The application form opens in October 2026. Prepare your documents now so you are ready when it does.</p>
+							<p class="application-ready-copy" data-live="application" hidden>Submit your documents through the official EXCELS application form before the deadline.</p>
+							<a class="application-ready-link" data-live="application" hidden><span>Start your application</span><span aria-hidden="true">&rarr;</span></a>
 							<p class="application-review-note">Summer School selection decisions are made jointly by representatives of ETI, ZESS, and the International Office.</p>
-						</aside>
+						</div>
 					</div>
 				</section>
 
@@ -466,224 +491,218 @@
 		<section id="key-dates" class="section key-dates-section" aria-labelledby="key-dates-title">
 			<div class="section-shell">
 				<header class="section-heading key-dates-heading">
-					<p class="section-eyebrow">2027 timeline</p>
-					<h2 id="key-dates-title">Important Dates for the 2027/28 academic year</h2>
-					<p class="section-lead">The EXCELS milestones sit alongside the separate Master&rsquo;s application windows for winter 2027/28. Any changes will be published here.</p>
+					<p class="section-eyebrow">Timeline</p>
+					<h2 id="key-dates-title">Important dates, October 2026 to October 2027</h2>
+					<p class="section-lead">EXCELS milestones alongside the separate Master&rsquo;s application window for the 2027/28 winter semester.</p>
 				</header>
 
 				<ol class="key-dates-list" role="list">
 					<li>
-						<span class="key-date-number" aria-hidden="true">01</span>
-						<p class="key-date-window">October&ndash;November 2026</p>
 						<span class="key-date-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4.5" width="14" height="16.5" rx="1.5" /><path d="M9 5V3h6v2M8.5 10h7M8.5 14h7M8.5 18h4.5" /></svg>
 						</span>
+						<p class="key-date-window">October&ndash;November 2026</p>
 						<div class="key-date-copy">
 							<h3>EXCELS application period</h3>
 						</div>
 					</li>
 					<li>
-						<span class="key-date-number" aria-hidden="true">02</span>
-						<p class="key-date-window">January&ndash;March 2027</p>
 						<span class="key-date-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24" focusable="false"><rect x="4" y="4.5" width="16" height="11.5" rx="1.5" /><path d="M2.5 19.5h19M9 19.5l.8-3.5h4.4l.8 3.5" /></svg>
 						</span>
+						<p class="key-date-window">January&ndash;March 2027</p>
 						<div class="key-date-copy">
 							<h3>Digital Prep online programme</h3>
 						</div>
 					</li>
 					<li>
-						<span class="key-date-number" aria-hidden="true">03</span>
-						<p class="key-date-window">1 January&ndash;30 April 2027</p>
 						<span class="key-date-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24" focusable="false"><path d="M2.5 9 12 4l9.5 5-9.5 5L2.5 9Z" /><path d="M6.5 11.2v5c2.9 2.3 8.1 2.3 11 0v-5M21.5 9v6" /></svg>
 						</span>
+						<p class="key-date-window">1 January&ndash;30 April 2027</p>
 						<div class="key-date-copy">
 							<h3>Separate Master&rsquo;s application window</h3>
 						</div>
 					</li>
 					<li>
-						<span class="key-date-number" aria-hidden="true">04</span>
-						<p class="key-date-window">March 2027</p>
 						<span class="key-date-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24" focusable="false"><circle cx="11" cy="13" r="8" /><circle cx="11" cy="13" r="4" /><path d="m13.8 10.2 6.7-6.7M16.5 3.5h4v4" /></svg>
 						</span>
+						<p class="key-date-window">March 2027</p>
 						<div class="key-date-copy">
 							<h3>Summer School selection</h3>
 						</div>
 					</li>
 					<li>
-						<span class="key-date-number" aria-hidden="true">05</span>
-						<p class="key-date-window">March&ndash;June 2027</p>
 						<span class="key-date-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24" focusable="false"><rect x="4" y="7" width="16" height="13" rx="2" /><path d="M9 7V4h6v3M4 12h16M8 12v2M16 12v2M8 20v1M16 20v1" /></svg>
 						</span>
+						<p class="key-date-window">March&ndash;June 2027</p>
 						<div class="key-date-copy">
 							<h3>Visa and travel preparation</h3>
-							<p>Consult the <a href="https://www.auswaertiges-amt.de/en/about-us/auslandsvertretungen/deutsche-auslandsvertretungen">German mission</a> responsible for your place of residence immediately after selection.</p>
+							<p>Contact the <a href="https://www.auswaertiges-amt.de/en/about-us/auslandsvertretungen/deutsche-auslandsvertretungen">German mission</a> responsible for your place of residence as soon as you are selected.</p>
 						</div>
 					</li>
 					<li>
-						<span class="key-date-number" aria-hidden="true">06</span>
-						<p class="key-date-window">June or July 2027</p>
 						<span class="key-date-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9" /><path d="M3.5 9h17M3.5 15h17M12 3c2.2 2.4 3.3 5.4 3.3 9S14.2 18.6 12 21c-2.2-2.4-3.3-5.4-3.3-9S9.8 5.4 12 3Z" /></svg>
 						</span>
+						<p class="key-date-window">June or July 2027</p>
 						<div class="key-date-copy">
 							<h3>14-day EXCELS Summer School in Siegen</h3>
 						</div>
 					</li>
 					<li>
-						<span class="key-date-number" aria-hidden="true">07</span>
-						<p class="key-date-window">1 October 2027</p>
 						<span class="key-date-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24" focusable="false"><path d="m3 9 9-5 9 5M5 10v9M19 10v9M3 20h18M9 10v7M15 10v7M9 13h6M11 20v-3h2v3" /></svg>
 						</span>
+						<p class="key-date-window">1 October 2027</p>
 						<div class="key-date-copy">
 							<h3>Winter semester 2027/28 begins</h3>
 						</div>
 					</li>
 				</ol>
+				<p class="key-dates-updated">Dates may change; any update will appear here. Last updated <time datetime="2026-09-11">11 September 2026</time>.</p>
 			</div>
 		</section>
 
 		<section id="faq" class="section faq-section" aria-labelledby="faq-title">
-			<div class="section-shell faq-layout">
+			<div class="section-shell">
 				<header class="section-heading faq-heading">
 					<p class="section-eyebrow">Applicant guidance</p>
 					<h2 id="faq-title">Frequently asked questions</h2>
-					<p class="section-lead">Explore the complete EXCELS pathway by topic. Whenever an answer depends on a particular round, the published intake information takes precedence.</p>
+					<p class="section-lead">Answers grouped by topic. If an answer differs from the official call for a round, the call applies.</p>
 				</header>
 
 				<div class="faq-groups">
 					<details id="faq-eligibility" class="faq-group" name="faq-topics">
 						<summary class="faq-group-header">
-							<h3 id="faq-eligibility-title"><span class="faq-group-kicker">01 &middot; Before you apply</span><span class="faq-group-title">Eligibility and study routes</span></h3>
+							<h3 id="faq-eligibility-title"><span class="faq-group-kicker">01 &middot; Before you apply</span><span class="sr-only">: </span><span class="faq-group-title">Eligibility and study routes</span></h3>
 						</summary>
 
 						<div class="faq-list">
 							<details class="faq-item">
 								<summary>Is EXCELS a degree programme, or do I apply separately for a Master&rsquo;s?</summary>
-								<div class="faq-answer"><p>EXCELS is not a degree programme. It is a preparation and connection pathway built around online Digital Prep, a separately selected research Summer School, and planned transition support. You must apply independently for a University Master&rsquo;s programme and meet its admission and enrolment requirements.</p></div>
+								<div class="faq-answer"><p>EXCELS is not a degree programme. It prepares you for Master&rsquo;s study through online Digital Prep, a separately selected Summer School, and support during the transition. You apply for a Master&rsquo;s programme separately and must meet its admission and enrolment requirements.</p></div>
 							</details>
 							<details class="faq-item">
-								<summary>Who should consider the EXCELS pathway?</summary>
-								<div class="faq-answer"><p>EXCELS is intended for high-performing international Bachelor&rsquo;s students nearing the end of a relevant degree who want to explore research-oriented Master&rsquo;s study in Siegen. A strong interest in artificial intelligence, sensor systems, or microelectronics is central; each intake defines its binding applicant scope.</p></div>
+								<summary>Who should consider EXCELS?</summary>
+								<div class="faq-answer"><p>High-performing international Bachelor&rsquo;s students nearing the end of a relevant degree who want to explore research-oriented Master&rsquo;s study in Siegen. A strong interest in artificial intelligence, sensor systems, or microelectronics is essential. The official call for each round defines who can apply.</p></div>
 							</details>
 							<details class="faq-item">
-								<summary>Can I participate before completing my Bachelor&rsquo;s degree?</summary>
-								<div class="faq-answer"><p>Yes. The planned target group includes students in the penultimate or final year of their Bachelor&rsquo;s studies. You will need to demonstrate your current academic standing as required by the intake, while later Master&rsquo;s admission remains conditional on meeting the chosen degree programme&rsquo;s requirements.</p></div>
+								<summary>Can I take part before completing my Bachelor&rsquo;s degree?</summary>
+								<div class="faq-answer"><p>Yes. EXCELS is aimed at students in the penultimate or final year of their Bachelor&rsquo;s studies. You show your current academic standing as the call requires; admission to a Master&rsquo;s programme later depends on meeting that programme&rsquo;s requirements.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Which academic backgrounds are relevant?</summary>
-								<div class="faq-answer"><p>Computer science, electrical engineering, mechatronics, and closely related STEM fields are the clearest starting points. The <a href="#target">early fit guide</a> explains the expected academic strength, mathematical or algorithmic preparation, and thematic direction.</p></div>
+								<div class="faq-answer"><p>Computer science, electrical engineering, mechatronics, and closely related STEM fields are the clearest starting points. The <a href="#target">fit check</a> explains the expected academic strength and research direction.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>How do priority countries and my current place of study affect eligibility?</summary>
-								<div class="faq-answer"><p>EXCELS concentrates its outreach on selected universities and regions in Asia and Sub-Saharan Africa. That recruitment focus is not a permanent substitute for formal eligibility rules. The Academic Horizons programme is intended to attract prospective international Master&rsquo;s students to Germany, rather than students already studying at a German university; the applicable EXCELS intake states the exact country, institution, and residence conditions.</p></div>
+								<div class="faq-answer"><p>EXCELS focuses its outreach on selected universities and regions in Asia and Sub-Saharan Africa, but that focus is not itself an eligibility rule. The Academic Horizons programme aims to bring prospective international Master&rsquo;s students to Germany, so it is not intended for students already studying at a German university. The official call states the exact country, institution, and residence conditions.</p></div>
 							</details>
 							<details class="faq-item">
-								<summary>Which Master&rsquo;s directions should I explore?</summary>
-								<div class="faq-answer"><p>This site introduces <a href="#research">Computer Science, Electrical Engineering, and Mechatronics</a> as relevant English-taught study directions. Their subject requirements and accepted forms of English-language evidence may differ; their examination boards decide admission independently, and the applicable EXCELS intake identifies the routes connected with that round.</p></div>
+								<summary>Which Master&rsquo;s programmes can I aim for?</summary>
+								<div class="faq-answer"><p>EXCELS connects with three English-taught Master&rsquo;s programmes: <a href="#research">Computer Science, Electrical Engineering, and Mechatronic Engineering</a>. Each has its own subject and English-language requirements, and each programme&rsquo;s examination board decides admission independently.</p></div>
 							</details>
 						</div>
 					</details>
 
 					<details id="faq-application" class="faq-group" name="faq-topics">
 						<summary class="faq-group-header">
-							<h3 id="faq-application-title"><span class="faq-group-kicker">02 &middot; Build your case</span><span class="faq-group-title">Preparing an application</span></h3>
+							<h3 id="faq-application-title"><span class="faq-group-kicker">02 &middot; Build your case</span><span class="sr-only">: </span><span class="faq-group-title">Preparing an application</span></h3>
 						</summary>
 
 						<div class="faq-list">
 							<details class="faq-item">
 								<summary>When and where do I submit an EXCELS application?</summary>
-								<div class="faq-answer"><p>EXCELS applications are submitted through a dedicated University of Siegen MoveON form. Use the form link and application deadline published on this page for the relevant intake. Do not use another University MoveON form; the University&rsquo;s Master&rsquo;s application remains a separate process.</p></div>
+								<div class="faq-answer"><p>Through a dedicated University of Siegen MoveON form during the application period, planned for October&ndash;November 2026. The form link and exact deadline will be published on this page. Do not use any other MoveON form; your Master&rsquo;s application is a separate process.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Do I apply for a particular research project?</summary>
-								<div class="faq-answer"><p>EXCELS is organised around a shared AI and sensor-systems pathway, not a standing catalogue of individually advertised research projects. Present a coherent research direction and follow any topic-choice or ranking instructions that appear in the relevant intake.</p></div>
+								<div class="faq-answer"><p>No. EXCELS is built around a shared AI and sensor-systems pathway rather than a list of individual research projects. Describe a clear research direction, and follow any topic-choice instructions in the official call.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>What evidence should I begin preparing?</summary>
-								<div class="faq-answer"><p>Start with a concise academic CV, a current transcript and evidence of degree status, examples of relevant technical or research work, and a focused motivation statement. The <a href="#application-materials-title">preparation checklist</a> is a guide, not a final document call; only the evidence named in the applicable intake is mandatory.</p></div>
+								<div class="faq-answer"><p>Start with a concise academic CV, a current transcript and evidence of your degree status, examples of relevant technical or research work, and a focused motivation letter. The <a href="#application-materials-title">document list</a> helps you prepare; the official call confirms which documents are required.</p></div>
 							</details>
 							<details class="faq-item">
-								<summary>What should my CV and motivation statement make clear?</summary>
-								<div class="faq-answer"><p>If requested for the intake, your CV should make your preparation visible through specific coursework, technical skills, projects, internships, thesis work, or research exposure, including your own contribution. Your motivation statement should connect that evidence to the EXCELS research focus, your preferred study direction in Siegen, and the development goals you genuinely intend to pursue.</p></div>
+								<summary>What should my CV and motivation letter make clear?</summary>
+								<div class="faq-answer"><p>Your CV should show your preparation through specific coursework, technical skills, projects, internships, thesis work, or research experience, including your own contribution. Your motivation letter should connect that evidence to the EXCELS research focus, your preferred study direction in Siegen, and your goals.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Can I demonstrate potential without formal research experience?</summary>
-								<div class="faq-answer"><p>Formal research employment or a publication is not the only evidence of potential. A substantial thesis, capstone, laboratory assignment, course project, internship, or self-directed technical investigation can be valuable when you explain the problem, your decisions, your individual contribution, and what you learned.</p></div>
+								<div class="faq-answer"><p>Yes. A research job or a publication is not the only evidence of potential. A substantial thesis, capstone, laboratory assignment, course project, internship, or self-directed technical investigation can be valuable when you explain the problem, your decisions, your individual contribution, and what you learned.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Which language evidence, translations, or recommendations do I need?</summary>
-								<div class="faq-answer"><p>For EXCELS, provide proof of English at C1 level or official confirmation that your Bachelor&rsquo;s programme is taught in English. Master&rsquo;s programmes have separate language requirements; an English-taught degree does not automatically replace a language test. Check the <a href="https://www.uni-siegen.de/en/ETI/application-for-our-study-programs-eti">official ETI application overview</a> for Master&rsquo;s requirements and the EXCELS intake notice for accepted documents, translations, recommendations, and file formats.</p></div>
+								<div class="faq-answer"><p>You need strong English. The official call sets the required level and the accepted evidence for EXCELS, such as a test certificate or confirmation that your Bachelor&rsquo;s programme is taught in English, along with any translations or recommendations. Master&rsquo;s programmes have their own language requirements, and an English-taught degree does not automatically replace a language test; check the <a href="https://www.uni-siegen.de/en/ETI/application-for-our-study-programs-eti">ETI application overview</a>.</p></div>
 							</details>
 						</div>
 					</details>
 
 					<details id="faq-selection" class="faq-group" name="faq-topics">
 						<summary class="faq-group-header">
-							<h3 id="faq-selection-title"><span class="faq-group-kicker">03 &middot; Two decisions</span><span class="faq-group-title">Selection and progression</span></h3>
+							<h3 id="faq-selection-title"><span class="faq-group-kicker">03 &middot; Two decisions</span><span class="sr-only">: </span><span class="faq-group-title">Selection and progression</span></h3>
 						</summary>
 
 						<div class="faq-list">
 							<details class="faq-item">
 								<summary>How are Digital Prep participants selected?</summary>
-								<div class="faq-answer"><p>Previous academic performance, particularly grades, is the planned primary basis. The project plan describes candidates as generally being in the top quartile of their cohort or demonstrably among the stronger students in their degree programme; the intake notice provides the operative assessment rules.</p></div>
+								<div class="faq-answer"><p>Mainly on your academic performance, especially your grades. Successful applicants are usually in the top quarter of their year or can show that they are among the stronger students in their programme. The official call sets out the exact criteria.</p></div>
 							</details>
 							<details class="faq-item">
-								<summary>How are Summer School invitations decided, and is there an interview?</summary>
-								<div class="faq-answer"><p>The separate review is planned to consider academic excellence, mathematical and algorithmic foundations, thematic fit, relevant work, motivation, development potential, and active preparation. Qualified candidates are expected to complete a brief online technical interview before a joint decision by representatives of ETI, ZESS, and the International Office.</p></div>
+								<summary>How are Summer School places decided, and is there an interview?</summary>
+								<div class="faq-answer"><p>A separate review considers academic excellence, mathematical and algorithmic foundations, research fit, relevant work, motivation, development potential, and your active participation in Digital Prep. Shortlisted candidates have a short online technical interview, and representatives of ETI, ZESS, and the International Office then decide together.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Does completing Digital Prep secure a Summer School place?</summary>
-								<div class="faq-answer"><p>No. Digital Prep and the Summer School have separate selection decisions. Participation may strengthen the evidence of active preparation, but it does not create an automatic right to join the in-person cohort.</p></div>
+								<div class="faq-answer"><p>No. Digital Prep and the Summer School have separate selection decisions. Taking part can strengthen the evidence of your active preparation, but it does not guarantee a place in the in-person cohort.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Can someone be considered for the Summer School without Digital Prep?</summary>
-								<div class="faq-answer"><p>The project expects most Summer School participants to come from Digital Prep, but the plan does not establish that as an absolute rule. Each intake must say whether any other route is available; applicants should not assume a direct-entry option.</p></div>
+								<div class="faq-answer"><p>Most Summer School participants are expected to come from Digital Prep. Do not assume there is a direct route; the official call will say whether any other route is open.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Can circumstances affecting my academic record be considered?</summary>
-								<div class="faq-answer"><p>The planned Summer School review is transparent and non-discriminatory, with a holistic view that can recognise educational barriers overcome alongside academic strength, intercultural competence, and social engagement. Provide contextual or sensitive information only through the route and evidence rules stated for the intake.</p></div>
+								<div class="faq-answer"><p>Yes. The Summer School review is transparent and non-discriminatory. Alongside academic strength, it can recognise educational barriers you have overcome, intercultural competence, and social engagement. Share any context or sensitive information only in the way the official call describes.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>What if I am not selected for the Summer School or admitted to a Master&rsquo;s programme?</summary>
-								<div class="faq-answer"><p>Each decision applies only to its own process. Not receiving a Summer School invitation does not become a Master&rsquo;s rejection, so you may still make a separate degree application if eligible. Equally, EXCELS participation cannot override the examination board&rsquo;s admission decision or guarantee a place on a degree.</p></div>
+								<div class="faq-answer"><p>Each decision applies only to its own process. Not receiving a Summer School invitation is not a Master&rsquo;s rejection, so you can still apply for a degree programme if you are eligible. Equally, EXCELS participation cannot override an examination board&rsquo;s admission decision or guarantee a place on a degree.</p></div>
 							</details>
 						</div>
 					</details>
 
 					<details id="faq-participation" class="faq-group" name="faq-topics">
 						<summary class="faq-group-header">
-							<h3 id="faq-participation-title"><span class="faq-group-kicker">04 &middot; Know what to expect</span><span class="faq-group-title">Participation and support</span></h3>
+							<h3 id="faq-participation-title"><span class="faq-group-kicker">04 &middot; Know what to expect</span><span class="sr-only">: </span><span class="faq-group-title">Participation and support</span></h3>
 						</summary>
 
 						<div class="faq-list">
 							<details class="faq-item">
 								<summary>What happens during Digital Prep?</summary>
-								<div class="faq-answer"><p>The online programme is planned to combine academic modules in AI and sensor systems with orientation to German teaching, learning, and examination culture, administrative guidance, and moderated exchange with teachers and researchers. The intake information defines the schedule, platform, workload, and participation conditions.</p></div>
+								<div class="faq-answer"><p>Online modules in AI and sensor systems, an introduction to teaching, learning, and exams at German universities, practical guidance, and moderated exchange with lecturers and researchers. The official call gives the schedule, platform, and expected workload.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Can the Summer School be completed remotely?</summary>
-								<div class="faq-answer"><p>No. Digital Prep is the online stage; the Summer School is planned as a 14-day experience in Siegen for a selected cohort of 15. See the <a href="#key-dates">2027 planning timeline</a>; later rounds are expected in June or July 2028 and 2029, with exact dates published for each intake.</p></div>
+								<div class="faq-answer"><p>No. Digital Prep is the online stage; the Summer School takes place in Siegen over 14 days for a cohort of 15. See the <a href="#key-dates">timeline</a> for 2027. Later rounds are expected in June or July 2028 and 2029.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Which participation costs does EXCELS cover?</summary>
-								<div class="faq-answer"><p>No participation fee is planned for Digital Prep or the Summer School, and travel and accommodation support is planned for the selected in-person cohort. The intake information must define eligible costs, booking or reimbursement arrangements, and anything participants must pay themselves.</p><p>This does not fund an entire Master&rsquo;s degree. The University currently charges no tuition, but enrolled students pay a <a href="https://www.uni-siegen.de/en/semester-fee">semester contribution</a> and must finance their living costs, health insurance, and immigration requirements where applicable; use the University&rsquo;s <a href="https://www.uni-siegen.de/en/financing-incoming">current financing guidance</a> when planning.</p></div>
+								<div class="faq-answer"><p>Digital Prep and the Summer School have no participation fee, and the selected Summer School cohort receives support for travel and accommodation. The official call explains which costs are covered and how. EXCELS never charges application fees, so be cautious of anyone who asks you to pay for a place.</p><p>EXCELS does not fund a whole Master&rsquo;s degree. The University currently charges no tuition, but enrolled students pay a <a href="https://www.uni-siegen.de/en/semester-fee">semester contribution</a> and must cover their living costs, health insurance, and immigration requirements where applicable; use the University&rsquo;s <a href="https://www.uni-siegen.de/en/financing-incoming">financing guidance</a> when planning.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Does EXCELS guarantee a scholarship, admission, internship, or job?</summary>
-								<div class="faq-answer"><p>No. EXCELS is not a general Master&rsquo;s scholarship and does not guarantee degree admission, an internship, or employment. The limited ZESS stipend is a separate award for up to two selected newly enrolled international Master&rsquo;s students and is not automatic; applicants should never plan their study finances on the basis of EXCELS participation alone.</p></div>
+								<div class="faq-answer"><p>No. EXCELS is not a general Master&rsquo;s scholarship and does not guarantee degree admission, an internship, or employment. The ZESS stipend is a separate, limited award for up to two selected newly enrolled international Master&rsquo;s students, so do not plan your study finances on EXCELS participation alone. Personal mentoring is offered in a later, selected transition phase rather than to every Digital Prep participant.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Who is responsible for visas, insurance, and accommodation?</summary>
-								<div class="faq-answer"><p>Participants remain responsible for meeting immigration and insurance requirements, and an EXCELS selection does not guarantee a visa. A short Summer School visit and later degree study may require different immigration steps; consult the <a href="https://www.auswaertiges-amt.de/en/about-us/auslandsvertretungen/deutsche-auslandsvertretungen">responsible German diplomatic mission</a> and the University&rsquo;s <a href="https://www.uni-siegen.de/en/visa-residence-permit-incoming">visa and residence guidance</a>.</p><p>Degree students arrange their own housing, and admission does not include a room. Use the University&rsquo;s <a href="https://www.uni-siegen.de/en/accommodation-incoming">accommodation guidance</a>; Summer School travel and lodging arrangements are communicated separately to the selected cohort.</p></div>
+								<div class="faq-answer"><p>You are responsible for meeting immigration and insurance requirements, and selection for EXCELS does not guarantee a visa. A short Summer School visit and later degree study may require different immigration steps; consult the <a href="https://www.auswaertiges-amt.de/en/about-us/auslandsvertretungen/deutsche-auslandsvertretungen">responsible German diplomatic mission</a> and the University&rsquo;s <a href="https://www.uni-siegen.de/en/visa-residence-permit-incoming">visa and residence guidance</a>.</p><p>Degree students arrange their own housing, and admission does not include a room. Use the University&rsquo;s <a href="https://www.uni-siegen.de/en/accommodation-incoming">accommodation guidance</a>; Summer School travel and accommodation arrangements are shared separately with the selected cohort.</p></div>
 							</details>
 							<details class="faq-item">
 								<summary>Where should I take a question that is not answered here?</summary>
-								<div class="faq-answer"><p>Use the <a href="#excels-contact">EXCELS contact form</a> for questions about the pathway. For degree applications, use the <a href="https://www.uni-siegen.de/en/ETI/application-for-our-study-programs-eti">ETI application guidance</a>; for arrival and international-student services, contact the <a href="https://www.uni-siegen.de/en/team/international-office">International Office</a>. Personal mentoring belongs to a later selected transition phase and is not automatic for every Digital Prep participant.</p></div>
+								<div class="faq-answer"><p>Use the <a href="#excels-contact">EXCELS contact</a> at the end of this page once it is published. For Master&rsquo;s applications, see the <a href="https://www.uni-siegen.de/en/ETI/application-for-our-study-programs-eti">ETI application guidance</a>; for arrival and international-student services, contact the <a href="https://www.uni-siegen.de/en/team/international-office">International Office</a>.</p></div>
 							</details>
 						</div>
 					</details>
@@ -697,13 +716,19 @@
 					<div class="application-cta-copy">
 						<p class="panel-kicker">EXCELS 2027</p>
 						<h2 id="application-cta-title">Start online. Build in Siegen.</h2>
+						<p class="application-cta-note">EXCELS does not charge application or participation fees.</p>
 					</div>
-					<a id="excels-contact" class="application-contact-link" data-contact-link aria-disabled="true">
-						<span>Ask us about EXCELS</span>
-						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M3.5 4.5h17v12h-11l-5 4v-4h-1Z" /><path d="M8 8.5h8M8 12.5h5" /></svg>
-						<span class="sr-only" data-unavailable-status>Contact form coming soon.</span>
-					</a>
-					<a class="application-button" data-application-link aria-disabled="true"><span>Start your application</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
+					<div id="excels-contact" class="application-cta-action">
+						<a class="application-contact-link" data-live="contact" hidden>
+							<span>Ask us about EXCELS</span>
+							<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M3.5 4.5h17v12h-11l-5 4v-4h-1Z" /><path d="M8 8.5h8M8 12.5h5" /></svg>
+						</a>
+						<p class="application-cta-status" data-pending="contact"><span class="application-cta-status-label">Contact</span><span class="application-cta-status-value">Details coming soon</span></p>
+					</div>
+					<div class="application-cta-action">
+						<a class="application-button" data-live="application" hidden><span>Start your application</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
+						<p class="application-cta-status" data-pending="application"><span class="application-cta-status-label">Applications</span><span class="application-cta-status-value">Open October 2026</span></p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -711,22 +736,22 @@
 		<section class="section funding-section" aria-labelledby="funding-title">
 			<div class="section-shell funding-layout">
 				<header class="section-heading funding-heading">
-					<p class="section-eyebrow">Project background and funding</p>
+					<p class="section-eyebrow">Project and funding</p>
 					<h2 id="funding-title">EXCELS at the University of Siegen.</h2>
 					<p class="funding-lead">EXCELS is led by the Department of Electrical Engineering and Computer Science (ETI), working with the Center for Sensor Systems (ZESS) and the International Office.</p>
 				</header>
 
 				<div class="funding-content">
-					<p class="funding-acknowledgement">EXCELS is funded by the German Academic Exchange Service (DAAD) with funds from the Federal Ministry of Research, Technology and Space (BMFTR) through the programme <cite>Academic Horizons &ndash; Attracting Global Minds</cite>, part of the 1.000-K&ouml;pfe-Plus-Programm.</p>
+					<p class="funding-acknowledgement">EXCELS is funded by the German Academic Exchange Service (DAAD) with funds from the Federal Ministry of Research, Technology and Space (BMFTR) through the programme <cite>Academic Horizons &ndash; Attracting Global Minds</cite>, part of the <span lang="de">1.000-K&ouml;pfe-Plus-Programm</span>.</p>
 
-					<nav class="funding-organisations" aria-label="Funding organisations">
-						<a class="funding-logo funding-logo-bmftr" href="https://www.bmftr.bund.de/" aria-label="Federal Ministry of Research, Technology and Space">
-							<img src="Assets/bmftr-logo.png" alt="" width="1803" height="912" loading="lazy" decoding="async" />
+					<div class="funding-organisations">
+						<a class="funding-logo funding-logo-bmftr" href="https://www.bmftr.bund.de/EN/Home/home_node.html" aria-label="Federal Ministry of Research, Technology and Space">
+							<img src="Assets/bmftr-logo-600.webp" alt="" width="600" height="303" loading="lazy" decoding="async" />
 						</a>
-						<a class="funding-logo funding-logo-daad" href="https://www.daad.de/de/infos-services-fuer-hochschulen/weiterfuehrende-infos-zu-daad-foerderprogrammen/academichorizons/" aria-label="DAAD – German Academic Exchange Service">
+						<a class="funding-logo funding-logo-daad" href="https://www.daad.de/de/infos-services-fuer-hochschulen/weiterfuehrende-infos-zu-daad-foerderprogrammen/academichorizons/" aria-label="DAAD, German Academic Exchange Service">
 							<img src="Assets/daad-logo.png" alt="" width="1300" height="334" loading="lazy" decoding="async" />
 						</a>
-					</nav>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -736,35 +761,52 @@
 		<footer class="site-footer">
 			<div class="site-footer-main">
 				<div class="footer-identity">
-					<strong>EXCELS</strong>
-					<span>Excellence in Computer Science and Electrical Engineering Leadership in Siegen</span>
+					<p class="footer-wordmark">EXCELS</p>
+					<p class="footer-expansion">Excellence in Computer Science and Electrical Engineering Leadership in Siegen</p>
 				</div>
 
-				<div class="footer-address">
-					<p class="footer-heading">University of Siegen</p>
-					<address>Adolf-Reichwein-Stra&szlig;e 2a<br />57076 Siegen<br />Germany</address>
-					<a href="https://www.uni-siegen.de/en/contact-us">Central University contact <span aria-hidden="true">&rarr;</span></a>
+				<div class="footer-contact">
+					<h2 class="footer-heading">Contact</h2>
+					<a class="footer-contact-link" data-live="contact" hidden><span>Ask the EXCELS team</span><span aria-hidden="true">&rarr;</span></a>
+					<p class="footer-contact-pending" data-pending="contact">EXCELS contact details will be published here before applications open. For general enquiries, use the <a href="https://www.uni-siegen.de/en/contact-us">University contact page</a>.</p>
+					<address>University of Siegen<br /><span lang="de">Adolf-Reichwein-Stra&szlig;e 2a</span><br />57076 Siegen, Germany</address>
 				</div>
 
-				<nav class="footer-navigation" aria-label="University and project links">
-					<p class="footer-heading">University and project</p>
-					<a href="https://www.uni-siegen.de/en/">University of Siegen</a>
-					<a href="https://www.uni-siegen.de/en/department-of-electrical-engineering-and-computer-science">ETI</a>
-					<a href="https://www.zess.uni-siegen.de/">ZESS</a>
-					<a href="https://www.uni-siegen.de/en/team/international-office">International Office</a>
+				<nav class="footer-links" aria-label="Footer">
+					<div>
+						<h2 class="footer-heading">On this page</h2>
+						<ul>
+							<li><a href="#program">Pathway</a></li>
+							<li><a href="#apply">Application guide</a></li>
+							<li><a href="#key-dates">Key dates</a></li>
+							<li><a href="#faq">FAQ</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2 class="footer-heading">University</h2>
+						<ul>
+							<li><a href="https://www.uni-siegen.de/en/">University of Siegen</a></li>
+							<li><a href="https://www.uni-siegen.de/en/nt/elektrotechnik-informatik/department-of-electrical-engineering-and-computer-science">ETI</a></li>
+							<li><a href="https://www.zess.uni-siegen.de/">ZESS</a></li>
+							<li><a href="https://www.uni-siegen.de/en/team/international-office">International Office</a></li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 
 			<div class="site-footer-legal">
-				<p>&copy; <span data-current-year>2026</span> <a href="https://www.uni-siegen.de/en/">Universit&auml;t Siegen</a></p>
+				<p>&copy; <span data-current-year>2026</span> <span lang="de">Universit&auml;t Siegen</span></p>
 				<nav aria-label="Legal information">
-					<a href="https://www.uni-siegen.de/impressum">Legal notice</a>
-					<a href="https://www.uni-siegen.de/en/privacy-policy">Privacy policy</a>
-					<a href="https://www.uni-siegen.de/en/declaration-on-accessibility">University accessibility information</a>
+					<ul>
+						<li><a href="https://www.uni-siegen.de/impressum">Legal notice</a></li>
+						<li><a href="https://www.uni-siegen.de/en/privacy-policy">Privacy policy</a></li>
+						<li><a href="https://www.uni-siegen.de/en/declaration-on-accessibility">University accessibility information</a></li>
+					</ul>
 				</nav>
+				<a class="footer-top-link" href="#main-content">Back to top <span aria-hidden="true">&uarr;</span></a>
 			</div>
 		</footer>
 
-		<script src="script.js"></script>
+		<script src="script.js?v=2026-09-11"></script>
 	</body>
 </html>
