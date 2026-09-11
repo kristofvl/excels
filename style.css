@@ -2209,6 +2209,13 @@ summary:focus-visible,
 	.university-link { width: 9.5rem; height: 2.895rem; }
 }
 
+/* Keeps the menu button clear of the EXCELS name on very narrow screens, including a 320px viewport with a classic scrollbar. */
+@media (max-width: 340px) {
+	.header-shell { gap: 0.5rem; }
+	.university-link { width: 8.5rem; height: 2.591rem; }
+	.project-brand { padding-left: 0.6rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
 	*, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
