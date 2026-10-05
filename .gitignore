@@ -14,6 +14,3 @@ node_modules/
 .env
 .env.*
 
-# Local planning documents (website assets in Assets/ must remain tracked)
-/Projektbeschreibung_WoM_Academic_Horizons_2026-2029_v7_KVL-KS_clean.docx
-/Finanzierungsplan_KVLv2.pdf
