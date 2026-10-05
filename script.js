@@ -110,3 +110,16 @@ document.querySelectorAll('a[href^="#faq-"]').forEach((link) => {
 
 window.addEventListener("hashchange", () => openFaqCategory(window.location.hash));
 openFaqCategory(window.location.hash);
+
+const backToTop = document.querySelector(".back-to-top");
+const hero = document.querySelector(".hero");
+
+if (backToTop) {
+	if (hero && "IntersectionObserver" in window) {
+		new IntersectionObserver(([entry]) => {
+			backToTop.classList.toggle("is-visible", !entry.isIntersecting);
+		}).observe(hero);
+	} else {
+		backToTop.classList.add("is-visible");
+	}
+}

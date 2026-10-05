@@ -590,65 +590,6 @@ summary:focus-visible,
 	color: var(--uni-dark-blue);
 }
 
-.date-strip {
-	display: grid;
-	grid-template-columns: auto minmax(0, 1fr) auto;
-	align-items: center;
-	gap: 0.75rem clamp(1.5rem, 3vw, 2.5rem);
-	margin-top: var(--section-content-gap);
-	padding-top: 1.25rem;
-	border-top: 1px solid #c3d1da;
-}
-
-.date-strip-label {
-	font-size: 0.76rem;
-	font-weight: 700;
-	line-height: 1.35;
-	letter-spacing: 0.065em;
-	text-transform: uppercase;
-	color: #586773;
-}
-
-.date-strip-list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem clamp(1.5rem, 3vw, 2.5rem);
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.date-strip-list li {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	gap: 0 0.45rem;
-	font-size: 1rem;
-	line-height: 1.4;
-	color: var(--uni-text);
-}
-
-.date-strip-when {
-	font-weight: 700;
-	color: var(--uni-dark-blue);
-}
-
-.date-strip-link {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.45rem;
-	min-height: 2.75rem;
-	font-weight: 700;
-	white-space: nowrap;
-	color: var(--uni-dark-blue);
-	text-decoration: underline;
-	text-decoration-color: var(--uni-light-blue);
-	text-decoration-thickness: 2px;
-	text-underline-offset: 0.2rem;
-}
-
-.date-strip-link:hover { color: var(--uni-hover-blue); }
-
 /* Eligibility */
 
 .eligibility-section h2 { max-width: 18ch; }
@@ -1845,10 +1786,10 @@ summary:focus-visible,
 }
 
 .footer-expansion {
-	max-width: 30ch;
 	margin-top: 0.75rem;
 	font-size: 0.88rem;
 	line-height: 1.55;
+	text-wrap: balance;
 	color: #bcd3df;
 }
 
@@ -1891,12 +1832,24 @@ summary:focus-visible,
 }
 
 .footer-links a {
-	display: inline-flex;
-	align-items: center;
+	position: relative;
+	display: inline-block;
 	min-width: 2.75rem;
-	min-height: 2.5rem;
+	padding: 0.5rem 0 0.5rem 1.4rem;
 	color: #ffffff;
 }
+
+/* Positioned out of flow so the hover underline stays on the link text; aligned with the first line when a link wraps. */
+.footer-links a > [aria-hidden="true"] {
+	position: absolute;
+	top: calc(0.5rem + 0.85em);
+	left: 0;
+	color: var(--on-dark-accent);
+	transform: translateY(-50%);
+	transition: transform 0.2s ease;
+}
+
+.footer-links a:hover > [aria-hidden="true"] { transform: translate(0.2rem, -50%); }
 
 .site-footer-legal {
 	display: flex;
@@ -1905,6 +1858,8 @@ summary:focus-visible,
 	gap: 0.25rem 2rem;
 	min-height: 4.5rem;
 	padding-block: 0.75rem;
+	/* Leaves room for the floating back-to-top button at the bottom of the page. */
+	padding-inline-end: 4rem;
 	border-top: 1px solid rgba(255, 255, 255, 0.22);
 	font-size: 0.84rem;
 	color: #bcd3df;
@@ -1926,8 +1881,43 @@ summary:focus-visible,
 	color: #ffffff;
 }
 
-.footer-top-link { font-weight: 700; }
-.footer-top-link > [aria-hidden="true"] { color: var(--on-dark-accent); }
+/* Back to top */
+
+.back-to-top {
+	--focus-ring: var(--uni-light-blue);
+	position: fixed;
+	right: clamp(1rem, 2vw, 1.5rem);
+	bottom: calc(clamp(1rem, 2vw, 1.5rem) + env(safe-area-inset-bottom, 0px));
+	z-index: 50;
+	display: grid;
+	place-items: center;
+	width: 3rem;
+	height: 3rem;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	background: var(--uni-dark-blue);
+	box-shadow: 0 0.35rem 1rem rgba(0, 43, 73, 0.28);
+	color: #ffffff;
+	transition: background 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-top svg {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2.2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.back-to-top:hover { background: var(--uni-hover-blue); }
+
+/* With JavaScript, the button stays hidden until the hero has scrolled out of view. */
+.js .back-to-top:not(.is-visible) {
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(0.75rem);
+	transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+}
 
 /* Responsive */
 
@@ -2013,9 +2003,8 @@ summary:focus-visible,
 
 @media (max-width: 1080px) {
 	html { scroll-padding-top: 6rem; }
-	.date-strip { grid-template-columns: minmax(0, 1fr) auto; }
-	.date-strip-label { grid-column: 1 / -1; }
 	.funding-layout { grid-template-columns: 1fr; gap: 1.75rem; }
+	.funding-heading { max-width: none; }
 	.application-final-cta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.application-cta-copy { grid-column: 1 / -1; }
 }
@@ -2024,6 +2013,7 @@ summary:focus-visible,
 	.hero-shell { grid-template-columns: 1fr; gap: 3.25rem; }
 	.hero-content { max-width: 47rem; }
 	.hero-media { max-width: 47rem; margin-top: 0; }
+	.hero-lead { max-width: none; }
 	.hero-glance { margin-left: clamp(1rem, 5vw, 2.25rem); }
 	.eligibility-layout { grid-template-columns: 1fr; }
 	.outreach-panel { width: 100%; max-width: 36rem; justify-self: center; }
@@ -2035,6 +2025,7 @@ summary:focus-visible,
 	.siegen-city-media { max-width: 44rem; }
 	.siegen-city-media { justify-self: start; }
 	.student-support-layout { grid-template-columns: 1fr; grid-template-areas: "copy" "visual"; gap: 3rem; }
+	.student-support-lead,
 	.student-support-media { width: 100%; max-width: 44rem; }
 	.application-materials-layout { grid-template-columns: 1fr; }
 	.application-ready-card { width: min(100%, 38rem); }
@@ -2046,9 +2037,6 @@ summary:focus-visible,
 
 @media (max-width: 900px) {
 	.glance-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 2rem; }
-	.date-strip { grid-template-columns: 1fr; gap: 0.6rem; }
-	.date-strip-list { flex-direction: column; gap: 0.35rem; }
-	.date-strip-link { justify-self: start; }
 
 	.key-dates-list li {
 		grid-template-columns: 2.75rem minmax(0, 1fr);
