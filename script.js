@@ -15,7 +15,7 @@ if (contactLink) {
 
         // Keep the complete email address out of the HTML.
         const recipient = [
-            "excels_siegen",
+            "excels",
             "uni-siegen.de"
         ].join("@");
 
