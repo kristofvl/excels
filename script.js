@@ -12,20 +12,10 @@ const contactLink = document.getElementById("excels-contact");
 if (contactLink) {
     contactLink.addEventListener("click", (event) => {
         event.preventDefault();
-
         // Keep the complete email address out of the HTML.
-        const recipient = [
-            "excels",
-            "uni-siegen.de"
-        ].join("@");
-
-        const subject = encodeURIComponent(
-            "Question about EXCELS"
-        );
-
-        const mailtoUrl =
-            `mailto:${recipient}?subject=${subject}`;
-
+        const recipient = ["excels","uni-siegen.de"].join("@");
+        const subject = encodeURIComponent("Question about EXCELS");
+        const mailtoUrl =`mailto:${recipient}?subject=${subject}`;
         window.location.href = mailtoUrl;
     });
 }
