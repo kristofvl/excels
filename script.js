@@ -6,6 +6,30 @@ if (currentYear) {
 
 const isWebAddress = (url) => /^(https?:)?\/\//i.test(url ?? "");
 
+
+const contactLink = document.getElementById("excels-contact");
+
+if (contactLink) {
+    contactLink.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        // Keep the complete email address out of the HTML.
+        const recipient = [
+            "excels_siegen",
+            "uni-siegen.de"
+        ].join("@");
+
+        const subject = encodeURIComponent(
+            "Question about EXCELS"
+        );
+
+        const mailtoUrl =
+            `mailto:${recipient}?subject=${subject}`;
+
+        window.location.href = mailtoUrl;
+    });
+}
+
 const openInNewTab = (link) => {
 	link.target = "_blank";
 	link.rel = "noopener noreferrer";
