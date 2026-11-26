@@ -58,8 +58,6 @@
 				color: var(--uni-dark-blue);
 			}
 
-			.dp-hero-actions { margin-top: 1.75rem; }
-
 			.dp-schedule-section,
 			.dp-speakers-section { background: #e7f1f7; }
 
@@ -259,8 +257,8 @@
 			}
 		</style>
 	</head>
-	<body data-zoom-url="">
-		<!-- Paste the Zoom invite link into data-zoom-url above. Until then the page says the link will follow; once set, the Join on Zoom buttons appear. -->
+	<body data-zoom-url="https://uni-siegen.zoom-x.de/meeting/register/zuzE6WflSDGsY_x4pWPi6g">
+		<!-- Paste the Zoom registration link (shown on the meeting's page in Zoom) into data-zoom-url above. Until then the page says the link will follow; once set, the Register for Zoom button appears below the checklist. -->
 		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header class="site-header">
 			<div class="header-shell">
@@ -285,9 +283,6 @@
 						<div><dt>Where</dt><dd>Online, on Zoom</dd></div>
 						<div><dt>Time zone</dt><dd>Siegen time (CET, UTC+1)</dd></div>
 					</dl>
-					<div class="dp-hero-actions" data-zoom-ready hidden>
-						<a class="application-button application-button-primary" href="#joining" data-zoom-link><span>Join on Zoom</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
-					</div>
 				</div>
 			</section>
 
@@ -323,7 +318,7 @@
 									<p class="dp-session-time"><time datetime="2026-12-01T14:30+01:00">14:30</time></p>
 									<div>
 										<p class="dp-speaker">Prof. Jovita Lukasik</p>
-										<p class="dp-talk dp-talk-pending">Title coming soon</p>
+										<p class="dp-talk">Automated and Robust Machine Learning on Sensors</p>
 									</div>
 								</li>
 							</ol>
@@ -354,7 +349,7 @@
 									<p class="dp-session-time"><time datetime="2026-12-03T11:00+01:00">11:00</time></p>
 									<div>
 										<p class="dp-speaker">Prof. Jovita Lukasik</p>
-										<p class="dp-talk dp-talk-pending">Title coming soon</p>
+										<p class="dp-talk">Automated and Robust Machine Learning on Sensors</p>
 									</div>
 								</li>
 							</ol>
@@ -380,7 +375,7 @@
 						</li>
 					</ol>
 
-					<p class="key-dates-updated">Times may still change. If they do, we&rsquo;ll update this page. Last updated <time datetime="2026-11-18">18 November 2026</time>.</p>
+					<p class="key-dates-updated">Times may still change. If they do, we&rsquo;ll update this page. Last updated <time datetime="2026-11-26">26 November 2026</time>.</p>
 				</div>
 			</section>
 
@@ -391,15 +386,18 @@
 						<h2 id="joining-title">How to join</h2>
 					</header>
 					<div class="dp-join-copy">
-						<p class="dp-zoom-pending" data-zoom-pending>We&rsquo;ll post the Zoom link here before the first session.</p>
-						<div data-zoom-ready hidden>
-							<a class="application-button application-button-primary" href="#joining" data-zoom-link><span>Join on Zoom</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
-						</div>
 						<ul class="dp-checklist" role="list">
-							<li>It&rsquo;s the same Zoom link for every session. It is only for invited participants; sharing it is not allowed.</li>
+							<li>Register by Monday 30 November, with the same name and email address you used in your EXCELS application, so we know it&rsquo;s you.</li>
+							<li>Zoom then shows your personal link and emails it to you. If the email doesn&rsquo;t arrive, check your spam folder.</li>
+							<li>Your link works for every session. It&rsquo;s only for you; sharing it is not allowed.</li>
+							<li>Update your Zoom app to the latest version before 1 December, because older versions may not work properly in the sessions. If you can&rsquo;t update it, join in your web browser instead.</li>
 							<li>Join a few minutes early to check your microphone, camera and connection.</li>
 							<li>Look at this page again before each day, in case a time has changed.</li>
 						</ul>
+						<p class="dp-zoom-pending" data-zoom-pending>We&rsquo;ll post the Zoom registration link here before the first session.</p>
+						<div data-zoom-ready hidden>
+							<a class="application-button application-button-primary" href="#joining" data-zoom-link><span>Register for Zoom</span><span class="application-button-arrow" aria-hidden="true">&rarr;</span></a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -503,7 +501,7 @@
 		</a>
 
 		<script>
-			// Shows the Join on Zoom buttons once data-zoom-url on <body> holds the invite link.
+			// Shows the Register for Zoom button once data-zoom-url on <body> holds the registration link.
 			(() => {
 				const zoomUrl = document.body.dataset.zoomUrl?.trim();
 
